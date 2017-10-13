@@ -3,13 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://BubblesToTheLimit.github.io/procmail_setup/</loc>
+    <lastmod>2017-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://BubblesToTheLimit.github.io/post/monster-fajita-crunch-wrap/</loc>
     <lastmod>2017-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://BubblesToTheLimit.github.io/</loc>
-    <lastmod>2017-09-01T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -28,6 +33,12 @@
   </url>
   
   <url>
+    <loc>https://BubblesToTheLimit.github.io/tags/linux/</loc>
+    <lastmod>2017-10-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://BubblesToTheLimit.github.io/page/</loc>
     <priority>0</priority>
   </url>
@@ -35,6 +46,12 @@
   <url>
     <loc>https://BubblesToTheLimit.github.io/post/</loc>
     <lastmod>2017-09-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://BubblesToTheLimit.github.io/tags/procmail/</loc>
+    <lastmod>2017-10-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
