@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>German on Long Thoughts</title>
-    <link>https://BubblesToTheLimit.github.io/tags/german/</link>
-    <description>Recent content in German on Long Thoughts</description>
+    <title>Recipes on Long Thoughts</title>
+    <link>https://BubblesToTheLimit.github.io/recipes/</link>
+    <description>Recent content in Recipes on Long Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
     <lastBuildDate>Fri, 01 Sep 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://BubblesToTheLimit.github.io/tags/german/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://BubblesToTheLimit.github.io/recipes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

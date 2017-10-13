@@ -14,13 +14,16 @@
     
     <item>
       <title>Procmail learns html</title>
-      <link>https://BubblesToTheLimit.github.io/procmail_setup/</link>
+      <link>https://BubblesToTheLimit.github.io/post/procmail_setup/</link>
       <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/procmail_setup/</guid>
-      <description>Motivation: Why do we need procmail?
-Recently I wrote a procmail filter which filters mail for a ticketing system (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails with attachments bigger than 10 MB. I went through quite a learning curve while writing this filter while I will probably not encounter procmail again soon.
-There is a need for an attachment-filter since request-tracker cant deal with big attachments as of now (version 4.</description>
+      <guid>https://BubblesToTheLimit.github.io/post/procmail_setup/</guid>
+      <description>&lt;p&gt;Recently I wrote a procmail filter which filters mail for a ticketing system
+(request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails
+with attachments bigger than 10 MB. I went through quite a learning curve while writing this
+filter so I&amp;rsquo;d like to share it here.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

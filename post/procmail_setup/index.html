@@ -5,9 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>German</title>
-  <meta property="og:title" content="German" />
-  <meta name="twitter:title" content="German" />
+  <title>Procmail learns html</title>
+  <meta property="og:title" content="Procmail learns html" />
+  <meta name="twitter:title" content="Procmail learns html" />
+  <meta name="description" content="Recently I wrote a procmail filter which filters mail for a ticketing system
+(request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails
+with attachments bigger than 10 MB. I went through quite a learning curve while writing this
+filter so I&rsquo;d like to share it here.
+
+">
+  <meta property="og:description" content="Recently I wrote a procmail filter which filters mail for a ticketing system
+(request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails
+with attachments bigger than 10 MB. I went through quite a learning curve while writing this
+filter so I&rsquo;d like to share it here.
+
+">
+  <meta name="twitter:description" content="Recently I wrote a procmail filter which filters mail for a ticketing system
+(request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails
+with attachments bigger …">
   <meta name="author" content="Felix Brilej"/>
   <link href='https://BubblesToTheLimit.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://BubblesToTheLimit.github.io/img/avatar-icon.png" />
@@ -15,12 +30,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@MondBeton" />
   <meta name="twitter:creator" content="@MondBeton" />
-  <meta property="og:url" content="https://BubblesToTheLimit.github.io/tags/german/" />
+  <meta property="og:url" content="https://BubblesToTheLimit.github.io/post/procmail_setup/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Long Thoughts" />
 
   <meta name="generator" content="Hugo 0.29" />
-  <link rel="canonical" href="https://BubblesToTheLimit.github.io/tags/german/" />
+  <link rel="canonical" href="https://BubblesToTheLimit.github.io/post/procmail_setup/" />
   <link rel="alternate" href="https://BubblesToTheLimit.github.io/index.xml" type="application/rss+xml" title="Long Thoughts">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -154,14 +169,33 @@
 
 
     
+  
+  
+  
+
+
+
+
+  
+
   <header class="header-section ">
+    
     <div class="intro-header no-img">
+      
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
-              <h1>#German</h1>
-              <hr class="small">
+            <div class="post-heading">
+              <h1>Procmail learns html</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on October 13, 2017
+  
+</span>
+
+
+                
             </div>
           </div>
         </div>
@@ -169,49 +203,197 @@
     </div>
   </header>
 
+
     
-  <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        
-        <div class="posts-list">
-          
-            <article class="post-preview">
-              <a href="https://BubblesToTheLimit.github.io/recipes/monster-fajita-crunch-wrap/">
-                <h2 class="post-title">Monster Chicken Fajita Crunch Wrap</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on September 1, 2017
-              </p>
-              <div class="post-entry">
-                
-                  <p>Quelle: <a href="http://twistedfood.co.uk/monster-chicken-fajita-crunchwrap/">http://twistedfood.co.uk/monster-chicken-fajita-crunchwrap/</a></p>
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Recently I wrote a procmail filter which filters mail for a ticketing system
+(request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails
+with attachments bigger than 10 MB. I went through quite a learning curve while writing this
+filter so I&rsquo;d like to share it here.</p>
 
 <p></p>
-                  <a href="https://BubblesToTheLimit.github.io/recipes/monster-fajita-crunch-wrap/" class="post-read-more">[Read More]</a>
-                
-              </div>
 
-              
-                <span class="post-meta">
-                  
-                    #<a href="https://BubblesToTheLimit.github.iotags/recipes/">recipes</a>&nbsp;
-                  
-                    #<a href="https://BubblesToTheLimit.github.iotags/german/">german</a>&nbsp;
-                  
-                </span>
-              
+<p>There is a need for an attachment-filter since request-tracker cant deal with big
+attachments as of now (version 4.4.1) and simply drops them. We ideally want the user to get a
+response informing him about the attachment limit instead of request-tracker silently dropping
+the attachment.</p>
 
-            </article>
-          
-        </div>
+<p>The need for a CC filter comes from the ticketing system functionality. Mails should address
+the ticketing system in “TO” without Ccs optimally. If the ticketing system gets addressed in
+Cc there definately is going to be a problem since every following mail from the mail
+participents is going to create a new ticket with a new ticket id.</p>
+
+<p>My initial idea was to simply copy together parts from procmail tutorials to have a quick and
+solid solution, however there aren&rsquo;t many procmail tutorials out there which deal with html
+emails. There are plenty of procmail filters available to drop html attachments or html emails
+all together - not very helpful in this case. Procmail as well as its users seem to come from
+an age when html emails (and html attachments especially) where evil.</p>
+
+<h1 id="the-basics">The basics</h1>
+
+<p>I will reference guides here to back my code up. Question the code but dont question the
+references. ;)</p>
+
+<p>This guide shows some of the important elements to understand the following filter:
+<a href="http://porkmail.org/era/procmail/quickref.html">http://porkmail.org/era/procmail/quickref.html</a></p>
+
+<ul>
+<li>VAR1=value # create variables</li>
+<li>Conditions in procmail recipes are <em>optional</em></li>
+<li>The “c” flag</li>
+<li>Lockfiles are defined in the first procmail line after the flags: :0 flags:lockfile</li>
+</ul>
+
+<h1 id="the-code">The code</h1>
+
+<p>The procmail file <code>procmail.support</code></p>
+
+<pre><code>SHELL=/bin/bash           # always always always always always always
+MAILDIR=$HOME/MyMail
+DEFAULT=$HOME/MyMail/prc.out
+VERBOSE=${VERBOSE:-yeah}
+LOGFILE     = $HOME/procmail.log
+LOGABSTRACT = &quot;all&quot;
+#Define getting the sender's address, discard any leading and trailing whitespaces
+FROM_=`formail -rt -xTo: \
+  | expand | sed -e 's/^[ ]*//g' -e 's/[ ]*$//g'`
+MAXSIZE=15728640
+REJECTED_FILE=&quot;procmail.support_rejected&quot;
+MAILBOX=&quot;support@request-tracker.com&quot;
+MAILBOXR=&quot;support@request-tracker\.com&quot;
+MAILBOXALIAS1=&quot;support.de@request-tracker.com&quot;
+MAILBOXALIAS1R=&quot;support\.de@request-tracker\.com&quot;
+MAILQUEUE=&quot;General&quot;
+
+# this is the prefered exit, if none of our filters meet just pass it on to RT
+:0:$HOME/procmail.lock
+* $ !^Cc.*${MAILBOX}
+* $ !^Cc.*${MAILBOXALIAS1}
+* B ?? &lt; $MAXSIZE
+| /opt/rt4/bin/rt-mailgate --url http://request-tracker.com --action correspond --queue $MAILQUEUE
+
+# this part saves the mail to the &quot;_rejected&quot; file (doesn't need a condition)
+:0c:$HOME/procmail.lock
+/home/rtracker/$REJECTED_FILE
+
+# Send a notification back that the mail was too big and exit
+:0
+* B ?? &gt; $MAXSIZE
+* $ ! ^X-Loop: ${MAILBOXR}
+* $ ! ^X-Loop: ${MAILBOXALIAS1R}
+{
+  # Prepare and send the rejection, be sure to customize your sendmail path
+  :0i:$HOME/procmail.lock
+  | (formail -r -I&quot;Subject: Rejected mail: Email size limit exceeded&quot; \
+    -I &quot;MIME-Version: 1.0&quot; \
+    -I &quot;Content-Type: text/html;&quot; \
+    -I &quot;Content-Transfer-Encoding: quoted-printable&quot; \
+    -A &quot;From: ${MAILBOX}&quot; \
+    -A &quot;Precendence: junk&quot; \
+    -A &quot;X-Loop: ${MAILBOX}&quot; ; \
+    cat /home/rtracker/procmail-message-size ) \
+    | $SENDMAIL -t -oi
+}
+
+# Send a notification back that the ticketsystem shouldn't be addressed in Cc and exit
+:0
+* $ ^Cc.*${MAILBOX} |\
+    ^Cc.*${MAILBOXALIAS1}
+* $ ! ^X-Loop: ${MAILBOXR}
+* $ ! ^X-Loop: ${MAILBOXALIAS1R}
+{
+  # Make a temporary file of the message to be returned
+  :0c:$HOME/procmail.lock  # Discard whitespaces, insert a leading blank
+  | expand &gt; message.msg
+  # Prepare and send the rejection
+  # Be sure to customize your sendmail path
+  :0i:$HOME/procmail.lock
+  | (formail -r -I&quot;Subject: Rejected mail: Addressed as CC&quot; \
+    -I &quot;MIME-Version: 1.0&quot; \
+    -I &quot;Content-Type: text/html;&quot; \
+    -I &quot;Content-Transfer-Encoding: quoted-printable&quot; \
+    -A &quot;From: ${MAILBOX}&quot; \
+    -A &quot;Precendence: junk&quot; \
+    -A &quot;X-Loop: ${MAILBOX}&quot; ; \
+    cat /home/rtracker/procmail-message ; \
+    echo &quot;&lt;hr /&gt;&quot; ; \
+    sed -n &quot;/&lt;html/,/&lt;\/html&gt;/p&quot; message.msg ) \
+    | $SENDMAIL -t -oi
+}
+</code></pre>
+
+<p>Notice how all addresses used are defined in the variable section at the top of the file. This
+makes maintenance a little easier.</p>
+
+<p>Also the actual response messages are pasted in from two external files, which also helps with
+maintenance:</p>
+
+<ul>
+<li>procmail-message (complains about the Cc addressing)</li>
+<li>procmail-message-size (complains about attachment)</li>
+</ul>
+
+<p>The fetchmail configuration which hands the mail to procmail:</p>
+
+<pre><code>poll        xx.xx.xx.xx
+proto       pop3
+user        &quot;mailuser@request-tracker.com&quot;
+password    &quot;xxxxx&quot;
+is  &quot;rtracker&quot; here
+options
+fetchall
+nokeep
+#mda &quot;/opt/rt4/bin/rt-mailgate --url http://request-tracker.com --action correspond --queue Support&quot;
+mda &quot;IFS=' '&amp;&amp;exec /usr/bin/procmail -f- /home/rtracker/procmail.support||exit 75 #rtracker&quot;
+set no syslog
+set logfile /var/log/fetchmail.log
+</code></pre>
+
+<p>We see how the fetchmail configuration contains two “mda” commands: the original one which
+directs the mail directly to the request-tracker mailgate, and the new one which directs the
+mail to our procmail filter which takes responsibility for the mail from that point on.</p>
+
+<pre><code>#mda &quot;/opt/rt4/bin/rt-mailgate --url http://request-tracker.com --action correspond --queue Support&quot;
+mda &quot;IFS=' '&amp;&amp;exec /usr/bin/procmail -f- /home/rtracker/procmail.support||exit 75 #rtracker&quot;
+</code></pre>
+
+<h1 id="the-resulting-files">The resulting files</h1>
+
+<p>You might have noticed that the procmail and fetchmail rules work with a user called
+“rtracker”. This user exists on the ticketing system server and is basically only needed for
+fetchmail, since fetchmail doesn&rsquo;t allow to be run by root. I find the resulting filenames to
+be quite convenient for terminal file navigation.</p>
+
+<pre><code>ls -l /home/rtracker/procmail.*
+-rw-r--r--  rtracker rtracker procmail.support
+-rw-r--r--  rtracker rtracker procmail.support_rejected
+-rw-------  rtracker rtracker procmail.log
+</code></pre>
+
+<h1 id="looking-at-the-rejected-mail">Looking at the rejected mail</h1>
+
+<p>Interestingly the rejected mails file can be viewed and edited using <code>mutt</code>, which comes in very
+handy:</p>
+
+<pre><code>mutt -f /home/rtracker/procmail.support_rejected
+</code></pre>
+      </article>
+
+      <ul class="pager blog-pager">
         
-      </div>
+        
+      </ul>
+
+      
+        
+      
+
     </div>
   </div>
+</div>
 
     <footer>
   <div class="container">
