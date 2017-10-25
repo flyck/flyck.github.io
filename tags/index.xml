@@ -22,11 +22,29 @@
     </item>
     
     <item>
+      <title>Icinga</title>
+      <link>https://BubblesToTheLimit.github.io/tags/icinga/</link>
+      <pubDate>Wed, 25 Oct 2017 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://BubblesToTheLimit.github.io/tags/icinga/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Linux</title>
       <link>https://BubblesToTheLimit.github.io/tags/linux/</link>
-      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 25 Oct 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://BubblesToTheLimit.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Monitoring</title>
+      <link>https://BubblesToTheLimit.github.io/tags/monitoring/</link>
+      <pubDate>Wed, 25 Oct 2017 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://BubblesToTheLimit.github.io/tags/monitoring/</guid>
       <description></description>
     </item>
     

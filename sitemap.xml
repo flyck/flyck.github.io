@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://BubblesToTheLimit.github.io/post/cluster_checks/</loc>
+    <lastmod>2017-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://BubblesToTheLimit.github.io/recipes/indian_chicken/</loc>
     <lastmod>2017-10-21T00:00:00+00:00</lastmod>
   </url>
@@ -33,14 +38,26 @@
   </url>
   
   <url>
+    <loc>https://BubblesToTheLimit.github.io/tags/icinga/</loc>
+    <lastmod>2017-10-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://BubblesToTheLimit.github.io/tags/linux/</loc>
-    <lastmod>2017-10-13T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://BubblesToTheLimit.github.io/</loc>
-    <lastmod>2017-10-21T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://BubblesToTheLimit.github.io/tags/monitoring/</loc>
+    <lastmod>2017-10-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -51,7 +68,7 @@
   
   <url>
     <loc>https://BubblesToTheLimit.github.io/post/</loc>
-    <lastmod>2017-10-13T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

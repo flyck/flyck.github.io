@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Icinga2 Cluster Checks</title>
+  <meta property="og:title" content="Icinga2 Cluster Checks" />
+  <meta name="twitter:title" content="Icinga2 Cluster Checks" />
+  <meta name="description" content="Recently I wrote an icinga cluster check which can currently check whether a service runs on
+atleast on one of two servers.
+
+">
+  <meta property="og:description" content="Recently I wrote an icinga cluster check which can currently check whether a service runs on
+atleast on one of two servers.
+
+">
+  <meta name="twitter:description" content="Recently I wrote an icinga cluster check which can currently check whether a service runs on
+atleast on one of two servers.
+
+">
+  <meta name="author" content="Felix Brilej"/>
+  <link href='https://BubblesToTheLimit.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://BubblesToTheLimit.github.io/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://BubblesToTheLimit.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@MondBeton" />
+  <meta name="twitter:creator" content="@MondBeton" />
+  <meta property="og:url" content="https://BubblesToTheLimit.github.io/post/cluster_checks/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Long Thoughts" />
+
+  <meta name="generator" content="Hugo 0.29" />
+  <link rel="canonical" href="https://BubblesToTheLimit.github.io/post/cluster_checks/" />
+  <link rel="alternate" href="https://BubblesToTheLimit.github.io/index.xml" type="application/rss+xml" title="Long Thoughts">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/highlight.min.css" />
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://BubblesToTheLimit.github.io/">Long Thoughts</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Recipes</a>
+              <div class="navlinks-children">
+                
+                  <a href="/recipes/indian_chicken/">Hähnchen mit Reis, indisch</a>
+                
+                  <a href="/recipes/monster-fajita-crunch-wrap/">Monster Chicken Fajita Crunch Wrap</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="Long Thoughts" href="https://BubblesToTheLimit.github.io/">
+            <img class="avatar-img" src="https://BubblesToTheLimit.github.io/img/avatar-icon.png" alt="Long Thoughts" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Icinga2 Cluster Checks</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on October 25, 2017
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Recently I wrote an icinga cluster check which can currently check whether a service runs on
+atleast on one of two servers.</p>
+
+<p></p>
+
+<h1 id="investigation-the-options">Investigation the options</h1>
+
+<p>This post assumes some basic knowledge about icinga2 and icingaweb2, like the utilization of
+check_nrpe.</p>
+
+<p>The aim of this post to put the output of cluster-host1:serviceA and cluster-host2:serviceA
+into one service output. This cluster-service should only show an error if serviceA is down
+on <strong>both</strong> cluster-hosts. If we implement the service-checks the standard way and many services
+on cluster-host1 are down our monitoring is full of critical warnings while there is no
+actual problem. This can be solved by acknowledging all the checks, but this is just not
+right. It is the quick-and-dirty solution. What is needed is to create a proper
+cluster-check!</p>
+
+<p>To do this there are multiple options available:</p>
+
+<ul>
+<li>check_multi</li>
+<li>check_cluster</li>
+<li>icinga dependencies</li>
+<li>icinga business process addon</li>
+</ul>
+
+<p>Investigating these options further I ended up chosing <code>check_multi</code>. Notes on the alternatives
+and why they didn&rsquo;t make it:</p>
+
+<ul>
+<li>check_cluster
+
+<ul>
+<li><a href="https://github.com/monitoring-plugins/monitoring-plugins/issues/1453#issuecomment-265238322">https://github.com/monitoring-plugins/monitoring-plugins/issues/1453#issuecomment-265238322</a>
+dnsmichi created a tutorial on check_cluster over here, at the end he however states:
+“Although check_cluster might be reasonable to call, I&rsquo;d just go for writing functions and
+evaluating the state over there. We&rsquo;ll probably find a way to prevent the call to
+check_dummy at some point, for now it is up to you to choose ;-)”</li>
+<li><a href="https://stackoverflow.com/questions/33279329/icinga2-check-cluster-plugin-and-its-implementation-in-2-3">https://stackoverflow.com/questions/33279329/icinga2-check-cluster-plugin-and-its-implementation-in-2-3</a>
+dnsmichi states the following here: “You should consider dropping the check_cluster plugin
+and use a more generic way to calculate states. Be it using business processes or
+check_multi or - a function to calculate the clusterstate in icinga2&rsquo;s &ldquo;magic&rdquo; language.”</li>
+<li><strong>all in all judging from these suggestions by icinga-god <code>dnsmichi</code> check_cluster just seems
+like a bad option.</strong></li>
+</ul></li>
+<li>icinga dependencies
+
+<ul>
+<li>dependencies enable such relations: if host down, then dont notify / check on child
+service. What we want from a cluster checks looks kind of like this though: if
+hostA:service down and hostB:service down then alert. This cannot really be done with
+dependencies as far as I understood the mechanism.</li>
+<li><a href="https://www.icinga.com/docs/icinga2/latest/doc/03-monitoring-basics/#dependencies">https://www.icinga.com/docs/icinga2/latest/doc/03-monitoring-basics/#dependencies</a></li>
+</ul></li>
+<li>icinga business process addon
+
+<ul>
+<li>check_cluster worked before i tried this, might be good?</li>
+<li><a href="https://www.netways.de/produkte/icinga/addons/business_process_addon/">https://www.netways.de/produkte/icinga/addons/business_process_addon/</a></li>
+</ul></li>
+</ul>
+
+<h1 id="special-qualities-of-this-cluster-check-and-the-command-file">Special qualities of this cluster check and the command file</h1>
+
+<p>For the cluster check I had the following two requirements which complicated the setup, but it
+was worth it:</p>
+
+<ul>
+<li><p>[X] display a pie chart for convenience in icingaweb2</p>
+
+<ul>
+<li><p>requires the perfdata to contain “minValue”, “maxValue” and “value”! From <a href="https://github.com/Icinga/icingaweb2/blob/cd5bc4c4a6554b8db8c3b8d8385c28e62df05a0c/modules/monitoring/library/Monitoring/Plugin/Perfdata.php#L179">here</a>:</p>
+
+<pre><code>public function isVisualizable()
+{
+    return isset($this-&gt;minValue) &amp;&amp; isset($this-&gt;maxValue) &amp;&amp; isset($this-&gt;value);
+}
+</code></pre></li>
+
+<li><p>for this the result of the service checks have to be interpreted. they are really just text
+and an exit code in this case.</p></li>
+</ul></li>
+
+<li><p>[X] make it so the pie charts already indicate which host is down / up</p>
+
+<ul>
+<li>usually icingaweb2 sorts the pie-charts. if this is turned off we can judge which host is
+down without even looking at the exact service output</li>
+<li>/usr/share/icingaweb2/modules/monitoring/application/views/helpers/Perfdata.php</li>
+</ul></li>
+</ul>
+
+<h1 id="the-actual-files-and-setup">The actual files and setup</h1>
+
+<p>The files contain two components:</p>
+
+<ul>
+<li>check_cluster host / service / check_command definition</li>
+<li>the .cmd file which contains all the actual magic (configuration for check_multi)</li>
+</ul>
+
+<!--filler-->
+
+<pre><code>object Host &quot;project-host1&quot; {
+  import &quot;generic-linux&quot;
+
+  address = &quot;10.120.33.178&quot;
+  groups += [ &quot;linux&quot;, &quot;project-hosts&quot; ]
+}
+
+object Host &quot;project-host2&quot; {
+  import &quot;generic-linux&quot;
+
+  address = &quot;10.120.33.245&quot;
+  groups += [ &quot;linux&quot;, &quot;project-hosts&quot; ]
+}
+
+object Host &quot;project-cluster&quot; {
+  import &quot;generic-linux&quot;
+
+  check_command = &quot;dummy&quot;
+  vars.dummy_state = 0
+  vars.dummy_text = &quot;Host can not be pinged, should be up, hopefully...&quot;
+
+  vars.cluster1 = &quot;10.120.33.178&quot;
+  vars.cluster2 = &quot;10.120.33.245&quot;
+
+  groups += [ &quot;linux&quot;, &quot;project-hosts&quot; ]
+}
+</code></pre>
+
+<p>Notice how a dummy host is created to execute the cluster_checks. Assigning them to either
+“project-host1” or “project-host2” would not be quite right. However like this we introduced a
+dummy host which doesn&rsquo;t actually exist, but I prefer this solution.</p>
+
+<pre><code>object CheckCommand &quot;check_multi&quot; {
+        command = [ PluginDir + &quot;/check_multi&quot;,
+        &quot;--libexec&quot;, &quot;/usr/lib64/nagios/plugins&quot;,
+        &quot;-f&quot;, &quot;$multi_command_file$&quot;,
+        &quot;-s&quot;, &quot;CHECK_COMMAND=$multi_command$&quot;,
+        &quot;-s&quot;, &quot;CLUSTER1=$cluster1$&quot;,
+        &quot;-s&quot;, &quot;CLUSTER2=$cluster2$&quot;,
+        &quot;-c&quot;, &quot;$multi_critical$&quot;,
+        &quot;-w&quot;, &quot;$multi_warning$&quot;,
+        &quot;-n&quot;, &quot;$multi_name$&quot;,
+        &quot;-r&quot;, &quot;$report_style$&quot;
+        ]
+}
+
+template Service &quot;generic-cluster-service&quot; {
+  import &quot;generic-service&quot;
+
+  vars.multi_command = &quot;webservice&quot;
+  vars.multi_warning = &quot;COUNT(CRITICAL)&gt;1&quot;
+  vars.multi_critical = &quot;COUNT(CRITICAL)&gt;1&quot;
+  vars.report_style = &quot;1+4+8&quot;
+  vars.multi_name = &quot;webservice&quot;
+  vars.multi_verbose = &quot;2&quot;
+
+  check_command = &quot;check_multi&quot;
+  vars.multi_command_file = &quot;/usr/lib64/nagios/plugins/distributed_two.cmd&quot;
+}
+
+apply Service &quot;webservice&quot; {
+  import &quot;generic-cluster-service&quot;
+  vars.multi_command =  &quot;webservice&quot;
+  assign where host.name == &quot;project-cluster&quot;
+}
+</code></pre>
+
+<p>Notice how we can define the cluster-ips in the host-definition and other variables like the
+nrpe-command to be executed in the service definition, while they can all be pulled together
+equally in the CheckCommand. I like this about icinga2.</p>
+
+<pre><code>command [ $CLUSTER1$ ] = set -o pipefail; check_nrpe -H $CLUSTER1$ -t $TIMEOUT$ -c $CHECK_COMMAND$ | tee /tmp/check_multi/$CLUSTER1$_$CHECK_COMMAND$
+command [ $CLUSTER2$ ] = set -o pipefail; check_nrpe -H $CLUSTER2$ -t $TIMEOUT$ -c $CHECK_COMMAND$ | tee /tmp/check_multi/$CLUSTER2$_$CHECK_COMMAND$
+
+command [ perfdata::insert_servicename_here_cluster ] = /bin/echo &quot;OK|cluster1=$(if grep -q CRITICAL /tmp/check_multi/$CHECK_COMMAND$_cluster1; then echo '2'; else echo '1'; fi);1;1;0;1 cluster2=$(if grep -q CRITICAL /tmp/check_multi/$CHECK_COMMAND$_cluster2; then echo '2'; else echo '1'; fi);1;1;0;1&quot;
+</code></pre>
+
+<p>Notes on distributed_two.cmd</p>
+
+<ul>
+<li>“set -o pipefail;” carries on any exit status even through piping. otherwise the exit-status
+of check_nrpe gets lost and the checks always return “OK”</li>
+<li>“| tee /tmp/check_multi/” makes it so the output of check_nrpe gets echoed but also written
+to a text-file, so we can digest it later to create the perfdata which is required for the
+piecharts to work
+
+<ul>
+<li>tee saves the file to the standard check_multi tmp directory (check_multi creates this out
+of the box) and saves them to a file which includes the check_command and the node
+name. This way there should be no confict between multiple of these checks being executed
+at the same time</li>
+</ul></li>
+<li>the last line, the perfdata command is straight forward, but to break it down:
+
+<ul>
+<li>echo OK|cluster1=$VAR1;1;1;0;1 cluster2=$VAR2;1;1;0;1
+
+<ul>
+<li>VAR1 = if grep -q CRITICAL /tmp/check_multi/$CHECK_COMMAND$_cluster1; then echo &lsquo;2&rsquo;; else echo &lsquo;1&rsquo;; fi</li>
+<li>VAR2 = if grep -q CRITICAL /tmp/check_multi/$CHECK_COMMAND$_cluster2; then echo &lsquo;2&rsquo;; else echo &lsquo;1&rsquo;; fi</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1 id="the-result-and-the-downsides">The result and the downsides</h1>
+
+<p>I am proud to check clusters this conveniently now!</p>
+
+<p><img src="/img/cluster_check_1.png" alt="cluster1" /></p>
+
+<p>A cluster check as I had imagined can be done as described. I am happy with this solution,
+while I know I have cheated the system at some points. These cheats are included in the
+following downsides:</p>
+
+<ul>
+<li>Modification of icingaweb2 code, may bite me in the ass when i update</li>
+<li>I create a bunch of files in /tmp/check_multi. This may bite me in the ass in huge setups
+performance-wise</li>
+<li>The performance data looks as follows if the check returns “critical”: “2;1;1;0;1”. This is
+a way to create a full red chie part. The value of the check is not actually “2”, but this
+results in the desired behavior so I think its fine.</li>
+<li>Check_multi counts the performance data as another command, which results in 3 commands in
+total. This is not actually what I want, I dont want the performance data generation to show
+up as a seperate command but I couldn&rsquo;t find a way around that.</li>
+<li>I can&rsquo;t display the cluster-checks properly with pnp4nagios. This would be the endgame i
+think. However I have to remind myself that I am working with a check which doesn&rsquo;t even
+return performance data on its own, so I think its fine to just have the exit status without
+a pnp4nagios graph.</li>
+<li>I can only check 2 clusters as of now. This is fine for me but it would be cooler to have
+the check_multi command be more generic.</li>
+<li>I have to define the IP of cluster1 and cluster2 and two places. Configuring the same
+information twice is always bad, but in this case its okay for me.</li>
+</ul>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://BubblesToTheLimit.github.io/post/procmail_setup/" data-toggle="tooltip" data-placement="top" title="Procmail learns html">&larr; Previous Post</a>
+          </li>
+        
+        
+      </ul>
+
+      
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:felix.brilej@googlemail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/BubblesToTheLimit" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/MondBeton" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="https://BubblesToTheLimit.github.io/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="BubblesToTheLimit.github.io">Felix Brilej</a>
+                      
+          
+          
+          &nbsp;&bull;&nbsp;
+          2017
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://BubblesToTheLimit.github.io/">Long Thoughts</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.29</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://BubblesToTheLimit.github.io/js/main.js"></script>
+<script src="https://BubblesToTheLimit.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+<script src="https://BubblesToTheLimit.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+  </body>
+</html>
+
