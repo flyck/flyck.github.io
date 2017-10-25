@@ -21,6 +21,10 @@
       <description>&lt;p&gt;Recently I wrote an icinga cluster check which can currently check whether a service runs on
 atleast on one of two servers.&lt;/p&gt;
 
+&lt;p&gt;A teaser of the results:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://BubblesToTheLimit.github.io/img/cluster_check_1.png&#34; alt=&#34;cluster1&#34; /&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
