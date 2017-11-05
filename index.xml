@@ -65,6 +65,33 @@ filter so I&amp;rsquo;d like to share it here.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Blogging Setup: Workflow for writing a new blogpost</title>
+      <link>https://BubblesToTheLimit.github.io/workflow_for_new_blogpost/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://BubblesToTheLimit.github.io/workflow_for_new_blogpost/</guid>
+      <description>&lt;p&gt;Creating a new blog post using the previously describe setup should be easy and
+comfortable. These are the generic steps for adding a blog-post.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Setting up the blog</title>
+      <link>https://BubblesToTheLimit.github.io/setting_up_the_blog/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://BubblesToTheLimit.github.io/setting_up_the_blog/</guid>
+      <description>&lt;p&gt;Github pages &lt;code&gt;cn&lt;/code&gt; are really an optimal way for org-mode nerds to blog. We usually have a github
+account anyway to manage our 1000+ commits big emacs config accross multiple devices, and we
+have learned enough about emacs to dish out some knowledge through our own blog.&lt;/p&gt;
+
+&lt;p&gt;How can you blog comfortably in this setup? Let&amp;rsquo;s get started&amp;#x2026;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>About me</title>
       <link>https://BubblesToTheLimit.github.io/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
