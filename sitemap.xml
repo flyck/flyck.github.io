@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://BubblesToTheLimit.github.io/post/wie_stehst_du_im_leben/</loc>
+    <lastmod>2017-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://BubblesToTheLimit.github.io/post/cluster_checks/</loc>
     <lastmod>2017-10-25T00:00:00+00:00</lastmod>
   </url>
@@ -23,17 +28,23 @@
   </url>
   
   <url>
-    <loc>https://BubblesToTheLimit.github.io/workflow_for_new_blogpost/</loc>
+    <loc>https://BubblesToTheLimit.github.io/post/workflow_for_new_blogpost/</loc>
     <lastmod>2017-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://BubblesToTheLimit.github.io/setting_up_the_blog/</loc>
+    <loc>https://BubblesToTheLimit.github.io/post/setting_up_the_blog/</loc>
     <lastmod>2017-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://BubblesToTheLimit.github.io/page/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://BubblesToTheLimit.github.io/tags/body-language/</loc>
+    <lastmod>2017-11-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -49,7 +60,7 @@
   
   <url>
     <loc>https://BubblesToTheLimit.github.io/tags/german/</loc>
-    <lastmod>2017-10-21T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -67,7 +78,7 @@
   
   <url>
     <loc>https://BubblesToTheLimit.github.io/</loc>
-    <lastmod>2017-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -84,7 +95,7 @@
   
   <url>
     <loc>https://BubblesToTheLimit.github.io/post/</loc>
-    <lastmod>2017-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -108,7 +119,7 @@
   
   <url>
     <loc>https://BubblesToTheLimit.github.io/tags/</loc>
-    <lastmod>2017-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

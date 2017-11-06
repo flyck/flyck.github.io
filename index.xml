@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
-    <lastBuildDate>Wed, 25 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Nov 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://BubblesToTheLimit.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Wie stehst Du im Leben?</title>
+      <link>https://BubblesToTheLimit.github.io/post/wie_stehst_du_im_leben/</link>
+      <pubDate>Mon, 06 Nov 2017 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://BubblesToTheLimit.github.io/post/wie_stehst_du_im_leben/</guid>
+      <description>&lt;p&gt;Wie stehst du im Leben? Ein einfaches Beobachten der Körperhaltung kann einem schon
+buchstäblich zeigen wie man im Leben steht. Es ist eine Art Haltungs-Check. Jeder liest
+Körperhaltung - zumindest unbewusst, meine Beobachtung dazu teile ich hier.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Icinga2 Cluster Checks</title>
@@ -66,10 +79,10 @@ filter so I&amp;rsquo;d like to share it here.&lt;/p&gt;
     
     <item>
       <title>Blogging Setup: Workflow for writing a new blogpost</title>
-      <link>https://BubblesToTheLimit.github.io/workflow_for_new_blogpost/</link>
+      <link>https://BubblesToTheLimit.github.io/post/workflow_for_new_blogpost/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/workflow_for_new_blogpost/</guid>
+      <guid>https://BubblesToTheLimit.github.io/post/workflow_for_new_blogpost/</guid>
       <description>&lt;p&gt;Creating a new blog post using the previously describe setup should be easy and
 comfortable. These are the generic steps for adding a blog-post.&lt;/p&gt;
 
@@ -78,10 +91,10 @@ comfortable. These are the generic steps for adding a blog-post.&lt;/p&gt;
     
     <item>
       <title>Setting up the blog</title>
-      <link>https://BubblesToTheLimit.github.io/setting_up_the_blog/</link>
+      <link>https://BubblesToTheLimit.github.io/post/setting_up_the_blog/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/setting_up_the_blog/</guid>
+      <guid>https://BubblesToTheLimit.github.io/post/setting_up_the_blog/</guid>
       <description>&lt;p&gt;Github pages &lt;code&gt;cn&lt;/code&gt; are really an optimal way for org-mode nerds to blog. We usually have a github
 account anyway to manage our 1000+ commits big emacs config accross multiple devices, and we
 have learned enough about emacs to dish out some knowledge through our own blog.&lt;/p&gt;
