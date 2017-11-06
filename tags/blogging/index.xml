@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogging on Long Thoughts</title>
+    <link>https://BubblesToTheLimit.github.io/tags/blogging/</link>
+    <description>Recent content in Blogging on Long Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
+    <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
+    <lastBuildDate>Tue, 15 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://BubblesToTheLimit.github.io/tags/blogging/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blogging Setup: Workflow for writing a new blogpost</title>
+      <link>https://BubblesToTheLimit.github.io/post/workflow_for_new_blogpost/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://BubblesToTheLimit.github.io/post/workflow_for_new_blogpost/</guid>
+      <description>&lt;p&gt;Creating a new blog post using the previously describe setup should be easy and
+comfortable. These are the generic steps for adding a blog-post.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Setting up the blog</title>
+      <link>https://BubblesToTheLimit.github.io/post/setting_up_the_blog/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://BubblesToTheLimit.github.io/post/setting_up_the_blog/</guid>
+      <description>&lt;p&gt;Github pages &lt;code&gt;cn&lt;/code&gt; are really an optimal way for org-mode nerds to blog. We usually have a github
+account anyway to manage our 1000+ commits big emacs config accross multiple devices, and we
+have learned enough about emacs to dish out some knowledge through our own blog.&lt;/p&gt;
+
+&lt;p&gt;How can you blog comfortably in this setup? Let&amp;rsquo;s get started&amp;#x2026;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

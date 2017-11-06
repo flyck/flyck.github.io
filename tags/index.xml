@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
-    <lastBuildDate>Mon, 06 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Aug 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://BubblesToTheLimit.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blogging</title>
+      <link>https://BubblesToTheLimit.github.io/tags/blogging/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://BubblesToTheLimit.github.io/tags/blogging/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Body Language</title>
@@ -22,11 +31,11 @@
     </item>
     
     <item>
-      <title>Emacs Blogging</title>
-      <link>https://BubblesToTheLimit.github.io/tags/emacs-blogging/</link>
+      <title>Emacs</title>
+      <link>https://BubblesToTheLimit.github.io/tags/emacs/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/emacs-blogging/</guid>
+      <guid>https://BubblesToTheLimit.github.io/tags/emacs/</guid>
       <description></description>
     </item>
     
