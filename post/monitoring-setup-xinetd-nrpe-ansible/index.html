@@ -169,7 +169,7 @@ The linux world is big, so you might come here asking: &ldquo;Why the hell do yo
 
 
   
-    <div id="header-big-imgs" data-num-img=1 data-img-src-1="https://BubblesToTheLimit.github.io/img/monitoring_anisble_I_block.png" ></div>
+    <div id="header-big-imgs" data-num-img=1 data-img-src-1="https://BubblesToTheLimit.github.io/img/cluster_check_2_green.png" ></div>
   
 
   <header class="header-section has-img">
@@ -367,22 +367,22 @@ below.</li>
 </span><span class="w">        </span><span class="c"># it should be ok to have multiple IP addresses under the same host-name in case we have multiple</span><span class="w">
 </span><span class="w">        </span><span class="c"># monitoring-servers. this way we add them all with the same hostname to /etc/hosts</span><span class="w">
 </span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Test<span class="w"> </span>the<span class="w"> </span>installation<span class="w"> </span>by<span class="w"> </span>executing<span class="w"> </span>the<span class="w"> </span>command<span class="w"> </span>locally<span class="w">
-</span><span class="w">        </span>raw<span class="p">:</span><span class="w"> </span>$(find<span class="w"> </span>/<span class="w"> </span>-name<span class="w"> </span>check_nrpe<span class="w"> </span><span class="m">2</span>&gt;/dev/<span class="kc">null</span><span class="w"> </span><span class="sd">| head -n 1) -H localhost -c check_users
-</span><span class="sd">        # this command searches for the check_nrpe binary and the executes it.
-</span><span class="sd">        # this is due to the fact, that depending on the OS / packaging the location differs.
-</span><span class="sd">    - name: Install the nrpe check on the monitoring-server
-</span><span class="sd">      hosts: monitoring_servers
-</span><span class="sd">      tasks:
-</span><span class="sd">      - debug: var=monitoring_checks
-</span><span class="sd">      - name: Install required packages
-</span><span class="sd">        package:
-</span><span class="sd">          name: &#34;{{ monitoring_checks }}&#34;
-</span><span class="sd">          state: latest
-</span><span class="sd">    - name: Test the check_users check from the monitoring_servers
-</span><span class="sd">      hosts: monitoring_servers
-</span><span class="sd">      tasks:
-</span><span class="sd">      - raw: $(find / -name check_nrpe 2&gt;/dev/null | head -n 1) -H {{ hostvars[item][&#39;ansible_default_ipv4&#39;][&#39;address&#39;] }} -c check_users
-</span><span class="sd">        with_items: &#34;{{ groups.monitored_servers }}&#34;</span></code></pre></div>
+</span><span class="w">        </span>raw<span class="p">:</span><span class="w"> </span><span class="s2">&#34;$(find / -name check_nrpe 2&gt;/dev/null | head -n 1) -H localhost -c check_users&#34;</span><span class="w">
+</span><span class="w">        </span><span class="c"># this command searches for the check_nrpe binary and the executes it.</span><span class="w">
+</span><span class="w">        </span><span class="c"># this is due to the fact, that depending on the OS / packaging the location differs.</span><span class="w">
+</span><span class="w">    </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>the<span class="w"> </span>nrpe<span class="w"> </span>check<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>monitoring-server<span class="w">
+</span><span class="w">      </span>hosts<span class="p">:</span><span class="w"> </span>monitoring_servers<span class="w">
+</span><span class="w">      </span>tasks<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>debug<span class="p">:</span><span class="w"> </span>var=monitoring_checks<span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>required<span class="w"> </span>packages<span class="w">
+</span><span class="w">        </span>package<span class="p">:</span><span class="w">
+</span><span class="w">          </span>name<span class="p">:</span><span class="w"> </span><span class="s2">&#34;{{ monitoring_checks }}&#34;</span><span class="w">
+</span><span class="w">          </span>state<span class="p">:</span><span class="w"> </span>latest<span class="w">
+</span><span class="w">    </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Test<span class="w"> </span>the<span class="w"> </span>check_users<span class="w"> </span>check<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span>monitoring_servers<span class="w">
+</span><span class="w">      </span>hosts<span class="p">:</span><span class="w"> </span>monitoring_servers<span class="w">
+</span><span class="w">      </span>tasks<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>raw<span class="p">:</span><span class="w"> </span><span class="s2">&#34;$(find / -name check_nrpe 2&gt;/dev/null | head -n 1) -H {{ hostvars[item][&#39;ansible_default_ipv4&#39;][&#39;address&#39;] }} -c check_users&#34;</span><span class="w">
+</span><span class="w">        </span>with_items<span class="p">:</span><span class="w"> </span><span class="s2">&#34;{{ groups.monitored_servers }}&#34;</span></code></pre></div>
 
 <p>The host-specific file ubuntu.yml:</p>
 
