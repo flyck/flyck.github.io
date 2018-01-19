@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Monitoring &amp; Ansible, Part I: NRPE daemon setup</title>
+  <meta property="og:title" content="Monitoring &amp; Ansible, Part I: NRPE daemon setup" />
+  <meta name="twitter:title" content="Monitoring &amp; Ansible, Part I: NRPE daemon setup" />
+  <meta name="description" content="Monitoring servers using icinga usually requires a small setup on the monitored server. From the different choices of agents, the nrpe daemon ontop of xinetd is easy enough to set up, while it can provide any kind of information that is available on the monitored server locally. To automate this setup task and as a learning exercise I wrote up an Ansible playbook, which I describe here.
+The linux world is big, so you might come here asking: &ldquo;Why the hell do you use xinetd and nrpe for monitoring?">
+  <meta property="og:description" content="Monitoring servers using icinga usually requires a small setup on the monitored server. From the different choices of agents, the nrpe daemon ontop of xinetd is easy enough to set up, while it can provide any kind of information that is available on the monitored server locally. To automate this setup task and as a learning exercise I wrote up an Ansible playbook, which I describe here.
+The linux world is big, so you might come here asking: &ldquo;Why the hell do you use xinetd and nrpe for monitoring?">
+  <meta name="twitter:description" content="Monitoring servers using icinga usually requires a small setup on the monitored server. From the different choices of agents, the nrpe daemon ontop of xinetd is easy enough to set up, while it can …">
+  <meta name="author" content="Felix Brilej"/>
+  <link href='https://BubblesToTheLimit.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://BubblesToTheLimit.github.io/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://BubblesToTheLimit.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@MondBeton" />
+  <meta name="twitter:creator" content="@MondBeton" />
+  <meta property="og:url" content="https://BubblesToTheLimit.github.io/post/monitoring-setup-xinetd-nrpe-ansible/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Long Thoughts" />
+
+  <meta name="generator" content="Hugo 0.32.4" />
+  <link rel="canonical" href="https://BubblesToTheLimit.github.io/post/monitoring-setup-xinetd-nrpe-ansible/" />
+  <link rel="alternate" href="https://BubblesToTheLimit.github.io/index.xml" type="application/rss+xml" title="Long Thoughts">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/highlight.min.css" />
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://BubblesToTheLimit.github.io/">Long Thoughts</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Recipes</a>
+              <div class="navlinks-children">
+                
+                  <a href="/recipes/indian_chicken/">Hähnchen mit Reis, indisch</a>
+                
+                  <a href="/recipes/monster-fajita-crunch-wrap/">Monster Chicken Fajita Crunch Wrap</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="Long Thoughts" href="https://BubblesToTheLimit.github.io/">
+            <img class="avatar-img" src="https://BubblesToTheLimit.github.io/img/avatar-icon.png" alt="Long Thoughts" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 data-img-src-1="https://BubblesToTheLimit.github.io/img/monitoring_anisble_I_block.png" ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-heading">
+                <h1>Monitoring &amp; Ansible, Part I: NRPE daemon setup</h1>
+                  
+                  
+                    <span class="post-meta">
+  Posted on January 19, 2018
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Monitoring &amp; Ansible, Part I: NRPE daemon setup</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on January 19, 2018
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>Monitoring servers using icinga usually requires a small setup on the monitored server. From
+the different choices of agents, the nrpe daemon ontop of xinetd is easy enough to set up,
+while it can provide any kind of information that is available on the monitored server
+locally. To automate this setup task and as a learning exercise I wrote up an Ansible
+playbook, which I describe here.</p>
+
+<!-- more -->
+
+<p>The linux world is big, so you might come here asking: &ldquo;Why the hell do you use xinetd and
+nrpe for monitoring?&ldquo;. Well, looking at the available options from the <a href="https://www.icinga.com/docs/icinga2/latest/doc/07-agent-based-monitoring/">official documentation</a>
+it turns out there are actually many different techniques which can work, I just happen to
+always use nrpe in an environment of mostly linux servers. Here is the list of all the options
+which I should probably check out in a future post:</p>
+
+<ul>
+<li>SNMP</li>
+<li>SSH</li>
+<li>NSClient++ (<a href="https://nsclient.org/">https://nsclient.org/</a>)</li>
+<li>NSCA-NG</li>
+<li>NRPE</li>
+<li>Passive Check Results and SNMP Traps</li>
+</ul>
+
+<h1 id="starting-from-the-bottom-configuring-ansible">Starting from the bottom: Configuring Ansible</h1>
+
+<p>Ansible uses a clientless architecture, but one host still needs to be the &ldquo;master&rdquo; or
+point-of-execution. Using the following playbook, Ansible can be installed on the
+monitoring-server or even on a different machine, like a virtual machine on the engineers
+laptop, which is simply connected to the network during installation or maintenance.</p>
+
+<p>After an easy installation of Ansible through the package manager we are left with
+establishing the ssh-connection between the master and the servers involved in the monitoring
+setup. An article of the <a href="http://www.linuxjournal.com/content/ansible-automation-framework-thinks-sysadmin">Linux Journal</a> is a great ressource on how to go about
+this. Basically, the more comfortable you are able to connect to the servers you are dealing
+with using Ansible, the less secure it will be. In my case I decided for an insecure but
+comfortable solution for the testing setup on my laptop: a password-less ssl-keypair which
+allows the holder of the private key to log into the remote server&rsquo;s root account. While this
+really screws any security mechanisms that might have been established before, it is probably
+<strong>optimal for playing around and learning Ansible</strong>.</p>
+
+<pre><code>ssh-keygen
+# repeat the step below for every involved server
+ssh-copy-id -i .ssh/id_dsa.pub root@remote.computer.ip
+ssh root@remote.computer.ip
+</code></pre>
+
+<p>After the ssh-setup we need to declare the servers on the Ansible-server. In my setup i
+declared the exact IPs in /etc/hosts and refered to the declared hostnames in
+/etc/ansible/hosts. This is due to the fact that my test-environment doesn&rsquo;t have static IP
+addresses, and I&rsquo;d like to change them conveniently all at one place (/etc/hosts) in case the
+IP addresses happen to change.</p>
+
+<p>The servers involved in the monitoring-setup will be either monitored-servers or
+monitoring-servers, so it makes sense to declare these two groups for Ansible in
+/etc/Ansible/hosts something like this:</p>
+
+<pre><code>[monitored_servers]
+server1.laptop
+server2.laptop
+
+[monitoring_servers]
+icinga2.laptop
+</code></pre>
+
+<h1 id="the-ansible-playbook">The Ansible Playbook</h1>
+
+<p>The playbook itself is a .yml file and is easily readable once you get the hang of it. It is
+helpful to know that in this Ansible file every entry besides &ldquo;name&rdquo;, &ldquo;hosts&rdquo;, &ldquo;tasks&rdquo; and
+the conditional &ldquo;when&rdquo; refers to an <span class="underline">Ansible module</span>. This means if you stumble across any
+section of this .yml file and it is not clear to you how it works, simply search for the name
+in the <a href="http://docs.ansible.com/ansible/latest/modules_by_category.html">Ansible module documentation</a>. To me all the different names where confusing at the
+start and once I figured this out playbooks became much easier to read.</p>
+
+<p>Things worth pointing out:</p>
+
+<ul>
+<li>For this task we need a specific monitoring package. This has a different name depending on
+the platform, which is exactly what we load at the beginning below &ldquo;Include OS specific
+variables&rdquo;. This depends on two short additional files which can be found below this
+playbook.</li>
+<li>Depending on the OS / monitoring package the check used to test the connectivity in the end
+also is in a different location. To solve this problem the playbook first searches for the
+location of the check using find, and pipes the output of that into the final command.</li>
+<li>The playbook copies over the nrpe configuration file, which is expected to be in
+nrpe.d/nrpe relative to the playbook path. The configuration of this file can also found
+below.</li>
+</ul>
+
+<div class="highlight"><pre class="chroma"><code class="language-YAML" data-lang="YAML"><span class="w">    </span>---<span class="w">
+</span><span class="w">    </span>-<span class="w"> </span>name<span class="p">:</span><span class="w">  </span>Include<span class="w"> </span>OS<span class="w"> </span>specific<span class="w"> </span>variables<span class="w">
+</span><span class="w">      </span>hosts<span class="p">:</span><span class="w"> </span>all<span class="w">
+</span><span class="w">      </span>tasks<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>debug<span class="p">:</span><span class="w"> </span>var=hostvars<span class="p">[</span>inventory_hostname<span class="p">][</span><span class="s1">&#39;ansible_distribution&#39;</span><span class="p">]</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>include_vars<span class="p">:</span><span class="w"> </span>oel.yml<span class="w">
+</span><span class="w">        </span>when<span class="p">:</span><span class="w"> </span>ansible_distribution<span class="w"> </span>==<span class="w"> </span><span class="s2">&#34;OracleLinux&#34;</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>include_vars<span class="p">:</span><span class="w"> </span>ubuntu.yml<span class="w">
+</span><span class="w">        </span>when<span class="p">:</span><span class="w"> </span>ansible_distribution<span class="w"> </span>==<span class="w"> </span><span class="s2">&#34;Ubuntu&#34;</span><span class="w">
+</span><span class="w">      </span><span class="c"># TODO include a default case, for now this works though</span><span class="w">
+</span><span class="w">    </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>the<span class="w"> </span>nrpe<span class="w"> </span>check<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>monitoring-server<span class="w">
+</span><span class="w">      </span>hosts<span class="p">:</span><span class="w"> </span>monitoring_servers<span class="w">
+</span><span class="w">      </span>tasks<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>debug<span class="p">:</span><span class="w"> </span>var=monitoring_checks<span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>required<span class="w"> </span>packages<span class="w">
+</span><span class="w">        </span>package<span class="p">:</span><span class="w">
+</span><span class="w">          </span>name<span class="p">:</span><span class="w"> </span><span class="s2">&#34;{{ monitoring_checks }}&#34;</span><span class="w">
+</span><span class="w">          </span>state<span class="p">:</span><span class="w"> </span>latest<span class="w">
+</span><span class="w">    </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>nrpe<span class="w"> </span>daemon<span class="w"> </span>with<span class="w"> </span>monitoring-configuration<span class="w">
+</span><span class="w">      </span>hosts<span class="p">:</span><span class="w"> </span>monitored_servers<span class="w">
+</span><span class="w">      </span>tasks<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>debug<span class="p">:</span><span class="w"> </span>var=hostvars<span class="p">[</span>inventory_hostname<span class="p">][</span><span class="s1">&#39;ansible_default_ipv4&#39;</span><span class="p">][</span><span class="s1">&#39;address&#39;</span><span class="p">]</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>debug<span class="p">:</span><span class="w"> </span>var=monitoring_checks<span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Disable<span class="w"> </span>the<span class="w"> </span>firewall<span class="w">
+</span><span class="w">        </span>when<span class="p">:</span><span class="w"> </span>ansible_distribution<span class="w"> </span>==<span class="w"> </span><span class="s2">&#34;OracleLinux&#34;</span><span class="w"> </span><span class="c">#TODO handle different firewalls</span><span class="w">
+</span><span class="w">        </span>service<span class="p">:</span><span class="w">
+</span><span class="w">          </span>name<span class="p">:</span><span class="w"> </span>firewalld<span class="w">
+</span><span class="w">          </span>enabled<span class="p">:</span><span class="w"> </span>no<span class="w"> </span><span class="c">#TODO create a rule instead of just disabling it</span><span class="w">
+</span><span class="w">          </span>state<span class="p">:</span><span class="w"> </span>stopped<span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>required<span class="w"> </span>packages<span class="w">
+</span><span class="w">        </span>package<span class="p">:</span><span class="w">
+</span><span class="w">          </span>name<span class="p">:</span><span class="w"> </span>nrpe<span class="p">,</span><span class="w"> </span>{{<span class="w"> </span>monitoring_checks<span class="w"> </span>}}<span class="p">,</span><span class="w"> </span>xinetd<span class="w">
+</span><span class="w">          </span>state<span class="p">:</span><span class="w"> </span>latest<span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Copy<span class="w"> </span>over<span class="w"> </span>the<span class="w"> </span>configuration<span class="w"> </span>file<span class="w"> </span>for<span class="w"> </span>the<span class="w"> </span>nrpe<span class="w"> </span>daemon<span class="w">
+</span><span class="w">        </span>synchronize<span class="p">:</span><span class="w">
+</span><span class="w">           </span>src<span class="p">:</span><span class="w"> </span>nrpe.d/nrpe<span class="w">
+</span><span class="w">           </span>dest<span class="p">:</span><span class="w"> </span>/etc/xinetd.d/nrpe<span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Add<span class="w"> </span>xinetd<span class="w"> </span>to<span class="w"> </span>autostart<span class="w"> </span>and<span class="w"> </span>start<span class="w"> </span>it<span class="w">
+</span><span class="w">        </span>service<span class="p">:</span><span class="w">
+</span><span class="w">           </span>name<span class="p">:</span><span class="w"> </span>xinetd<span class="w">
+</span><span class="w">           </span>enabled<span class="p">:</span><span class="w"> </span>yes<span class="w">
+</span><span class="w">           </span>state<span class="p">:</span><span class="w"> </span>started<span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Add<span class="w"> </span>the<span class="w"> </span>required<span class="w"> </span>entry<span class="w"> </span>to<span class="w"> </span>/etc/hosts<span class="w">
+</span><span class="w">        </span>lineinfile<span class="p">:</span><span class="w">
+</span><span class="w">           </span>path<span class="p">:</span><span class="w"> </span>/etc/hosts<span class="w">
+</span><span class="w">           </span>state<span class="p">:</span><span class="w"> </span>present<span class="w">
+</span><span class="w">           </span>line<span class="p">:</span><span class="w"> </span><span class="s2">&#34;{{ hostvars[item][&#39;ansible_default_ipv4&#39;][&#39;address&#39;] }}       monitoring-server&#34;</span><span class="w">
+</span><span class="w">        </span>with_items<span class="p">:</span><span class="w"> </span><span class="s2">&#34;{{ groups.monitoring_servers }}&#34;</span><span class="w">
+</span><span class="w">        </span><span class="c"># it should be ok to have multiple IP addresses under the same host-name in case we have multiple</span><span class="w">
+</span><span class="w">        </span><span class="c"># monitoring-servers. this way we add them all with the same hostname to /etc/hosts</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Test<span class="w"> </span>the<span class="w"> </span>installation<span class="w"> </span>by<span class="w"> </span>executing<span class="w"> </span>the<span class="w"> </span>command<span class="w"> </span>locally<span class="w">
+</span><span class="w">        </span>raw<span class="p">:</span><span class="w"> </span>$(find<span class="w"> </span>/<span class="w"> </span>-name<span class="w"> </span>check_nrpe<span class="w"> </span><span class="m">2</span>&gt;/dev/<span class="kc">null</span><span class="w"> </span><span class="sd">| head -n 1) -H localhost -c check_users
+</span><span class="sd">        # this command searches for the check_nrpe binary and the executes it.
+</span><span class="sd">        # this is due to the fact, that depending on the OS / packaging the location differs.
+</span><span class="sd">    - name: Install the nrpe check on the monitoring-server
+</span><span class="sd">      hosts: monitoring_servers
+</span><span class="sd">      tasks:
+</span><span class="sd">      - debug: var=monitoring_checks
+</span><span class="sd">      - name: Install required packages
+</span><span class="sd">        package:
+</span><span class="sd">          name: &#34;{{ monitoring_checks }}&#34;
+</span><span class="sd">          state: latest
+</span><span class="sd">    - name: Test the check_users check from the monitoring_servers
+</span><span class="sd">      hosts: monitoring_servers
+</span><span class="sd">      tasks:
+</span><span class="sd">      - raw: $(find / -name check_nrpe 2&gt;/dev/null | head -n 1) -H {{ hostvars[item][&#39;ansible_default_ipv4&#39;][&#39;address&#39;] }} -c check_users
+</span><span class="sd">        with_items: &#34;{{ groups.monitored_servers }}&#34;</span></code></pre></div>
+
+<p>The host-specific file ubuntu.yml:</p>
+
+<pre><code>---
+# define variables which are specific to the ubuntu setup
+monitoring_checks: monitoring-plugins-common
+</code></pre>
+
+<p>The host-specific file oel.yml:</p>
+
+<pre><code>---
+# define variables which are specific to the oel setup
+monitoring_checks: nagios-plugins-all, nagios-plugins-nrpe
+</code></pre>
+
+<p>The nrpe configuration file:</p>
+
+<pre><code># default: off
+# description: NRPE (Nagios Remote Plugin Executor)
+service nrpe
+{
+        flags           = IPv4
+        socket_type     = stream
+        type            = UNLISTED
+        port            = 5666
+        wait            = no
+        user            = nagios
+        group           = nagios
+        server          = /usr/sbin/nrpe
+        server_args     = -c /etc/nagios/nrpe.cfg --inetd
+        log_on_failure  += USERID
+        disable         = no
+        only_from       = 127.0.0.1 localhost monitoring-server
+}
+</code></pre>
+
+<p>Finally, in order to execute the playbook on the hosts defined in /etc/ansible/hosts simply
+execute the following:</p>
+
+<pre><code>ansible-playbook -s nrpe.yml
+</code></pre>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://BubblesToTheLimit.github.io/post/wie_stehst_du_im_leben/" data-toggle="tooltip" data-placement="top" title="Wie stehst Du im Leben?">&larr; Previous Post</a>
+          </li>
+        
+        
+      </ul>
+
+      
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:felix.brilej@googlemail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/BubblesToTheLimit" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/MondBeton" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="https://BubblesToTheLimit.github.io/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="BubblesToTheLimit.github.io">Felix Brilej</a>
+                      
+          
+          
+          &nbsp;&bull;&nbsp;
+          2018
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://BubblesToTheLimit.github.io/">Long Thoughts</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.32.4</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://BubblesToTheLimit.github.io/js/main.js"></script>
+<script src="https://BubblesToTheLimit.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+<script src="https://BubblesToTheLimit.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+  </body>
+</html>
+
