@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
-    <lastBuildDate>Fri, 19 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://BubblesToTheLimit.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The three most important skills to have as a young adult</title>
+      <link>https://BubblesToTheLimit.github.io/post/young_adult_top_skills/</link>
+      <pubDate>Sun, 28 Jul 2019 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://BubblesToTheLimit.github.io/post/young_adult_top_skills/</guid>
+      <description>This is a long one. Get ready for it.
+TL;DR:
+ The skill to change your habits, so you could start trying new ones (better or worse than your current ones) to begin with. The skill to build the desire of trying things truely out of your comfort zone, so you could expand your horizon and thereby change more of your habits. The skill of writing, so you could articulate what it is that you want.</description>
+    </item>
     
     <item>
       <title>Monitoring &amp; Ansible, Part I: NRPE daemon setup</title>
