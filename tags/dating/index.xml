@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dating on Long Thoughts</title>
+    <link>https://BubblesToTheLimit.github.io/tags/dating/</link>
+    <description>Recent content in Dating on Long Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
+    <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
+    <lastBuildDate>Sun, 04 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://BubblesToTheLimit.github.io/tags/dating/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My Tinder Manifesto</title>
+      <link>https://BubblesToTheLimit.github.io/tinder_manifesto/</link>
+      <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://BubblesToTheLimit.github.io/tinder_manifesto/</guid>
+      <description>&lt;p&gt;I feel like there is a right way to use tinder.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
