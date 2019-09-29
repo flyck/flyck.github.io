@@ -8,16 +8,13 @@
   <title>Blogging Setup: Workflow for writing a new blogpost</title>
   <meta property="og:title" content="Blogging Setup: Workflow for writing a new blogpost" />
   <meta name="twitter:title" content="Blogging Setup: Workflow for writing a new blogpost" />
-  <meta name="description" content="Creating a new blog post using the previously describe setup should be easy and
-comfortable. These are the generic steps for adding a blog-post.
+  <meta name="description" content="Creating a new blog post using the previously describe setup should be easy and comfortable. These are the generic steps for adding a blog-post.
 
 ">
-  <meta property="og:description" content="Creating a new blog post using the previously describe setup should be easy and
-comfortable. These are the generic steps for adding a blog-post.
+  <meta property="og:description" content="Creating a new blog post using the previously describe setup should be easy and comfortable. These are the generic steps for adding a blog-post.
 
 ">
-  <meta name="twitter:description" content="Creating a new blog post using the previously describe setup should be easy and
-comfortable. These are the generic steps for adding a blog-post.
+  <meta name="twitter:description" content="Creating a new blog post using the previously describe setup should be easy and comfortable. These are the generic steps for adding a blog-post.
 
 ">
   <meta name="author" content="Felix Brilej"/>
@@ -208,8 +205,7 @@ comfortable. These are the generic steps for adding a blog-post.
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>Creating a new blog post using the previously describe setup should be easy and
-comfortable. These are the generic steps for adding a blog-post.</p>
+        <p>Creating a new blog post using the previously describe setup should be easy and comfortable. These are the generic steps for adding a blog-post.</p>
 
 <p></p>
 
@@ -217,33 +213,29 @@ comfortable. These are the generic steps for adding a blog-post.</p>
 <li><strong>Create the content in org-mode</strong>: Open any org-file on the computer and write a blogpost.
 
 <ul>
-<li>Any existing org-mode heading could be turned into a blogpost, but most generic notes
-dont make for a good blog post. Some of them can be a good basis though.</li>
+<li>Any existing org-mode heading could be turned into a blogpost, but most generic notes dont make for a good blog post. Some of them can be a good basis though.</li>
 </ul></li>
-<li><strong>Tag it so i can find it again later</strong>: Tag it with “blog” so I can find it through the
-agenda. Enables me to list how much time i spend blogging in a week / month / year.</li>
-<li><strong>Create hugo variable placeholders</strong>: Navigate to the headline and press <code>M-x hugo</code></li>
+<li><strong>Tag it so i can find it again later</strong>: Tag it with “blog” so I can find it through the agenda. Enables me to list how much time i spend blogging in a week / month / year.</li>
+<li><strong>Create hugo variable placeholders</strong>: Navigate to the headline and press `M-x hugo`</li>
 
 <li><p><strong>Fill in the hugo variables</strong>. An example is below:</p>
 
-<pre><code>:PROPERTIES:
-:TITLE:    Setting up the blog
-:HUGO_TAGS: emacs blogging
-:HUGO_TOPICS: emacs
-:HUGO_FILE: setting_up_the_blog.md
-:HUGO_DATE: [2017-08-15 Di 22:14]
-:END:
+<pre><code class="language-sh">        :PROPERTIES:
+        :TITLE:    Setting up the blog
+        :HUGO_TAGS: emacs blogging
+        :HUGO_TOPICS: emacs
+        :HUGO_FILE: setting_up_the_blog.md
+        :HUGO_DATE: [2017-08-15 Di 22:14]
+        :END:
 </code></pre>
 
 <ul>
 <li>It is hidden in an org-mode drawer which makes it easy to hide</li>
 </ul></li>
 
-<li><p><strong>Convert the headline into a markdown file according to the hugo variables</strong>: Navigate to the
-headline and press <code>M-x hugo</code></p></li>
+<li><p><strong>Convert the headline into a markdown file according to the hugo variables</strong>: Navigate to the headline and press `M-x hugo`</p></li>
 
-<li><p><strong>Regenerate the website including the new markdown file</strong>: Open a shell (I use git bash on
-Windows), navigate to the blog directory and execute <code>hugo</code></p>
+<li><p><strong>Regenerate the website including the new markdown file</strong>: Open a shell (I use git bash on Windows), navigate to the blog directory and execute `hugo`</p>
 
 <ul>
 <li>Optional: Debugging, check the blog post formatting before uploading it</li>
@@ -253,8 +245,8 @@ Windows), navigate to the blog directory and execute <code>hugo</code></p>
 
 <li><p><strong>Publish the website</strong></p>
 
-<pre><code>cd public
-git add * &amp;&amp; git commit -m &quot;site update&quot; &amp;&amp; git push origin master
+<pre><code class="language-sh">        cd public
+        git add * &amp;&amp; git commit -m &quot;site update&quot; &amp;&amp; git push origin master
 </code></pre></li>
 </ol>
       </article>
