@@ -39,5 +39,18 @@ have learned enough about emacs to dish out some knowledge through our own blog.
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Setting up the blog</title>
+      <link>https://BubblesToTheLimit.github.io/setting_up_the_blog/</link>
+      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://BubblesToTheLimit.github.io/setting_up_the_blog/</guid>
+      <description>Steps:
+Create a test org-mode file so I don&amp;rsquo;t destroy everything on accident Create a directory where I want the blog to be, in my case ~/Dropbox/org/blog Follow the steps from here: http://www.holgerschurig.de/en/emacs-blog-from-org-to-hugo/ Install hugo (on Windows 10)
+ Install chocolatey https://chocolatey.org/install#install-with-cmdexe
+# for the powershell, close it after execution Set-ExecutionPolicy Bypass; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))  Install hugo using chocolatey:
+# on the normal shell choco install hugo -confirm   Follow the startup steps for hugo to setup a site and get the server running</description>
+    </item>
+    
   </channel>
 </rss>
