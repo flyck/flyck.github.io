@@ -8,18 +8,15 @@
   <title>Setting up the blog</title>
   <meta property="og:title" content="Setting up the blog" />
   <meta name="twitter:title" content="Setting up the blog" />
-  <meta name="description" content="Steps:
-Create a test org-mode file so I don&rsquo;t destroy everything on accident Create a directory where I want the blog to be, in my case ~/Dropbox/org/blog Follow the steps from here: http://www.holgerschurig.de/en/emacs-blog-from-org-to-hugo/ Install hugo (on Windows 10)
- Install chocolatey https://chocolatey.org/install#install-with-cmdexe
-# for the powershell, close it after execution Set-ExecutionPolicy Bypass; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))  Install hugo using chocolatey:
-# on the normal shell choco install hugo -confirm   Follow the startup steps for hugo to setup a site and get the server running">
-  <meta property="og:description" content="Steps:
-Create a test org-mode file so I don&rsquo;t destroy everything on accident Create a directory where I want the blog to be, in my case ~/Dropbox/org/blog Follow the steps from here: http://www.holgerschurig.de/en/emacs-blog-from-org-to-hugo/ Install hugo (on Windows 10)
- Install chocolatey https://chocolatey.org/install#install-with-cmdexe
-# for the powershell, close it after execution Set-ExecutionPolicy Bypass; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))  Install hugo using chocolatey:
-# on the normal shell choco install hugo -confirm   Follow the startup steps for hugo to setup a site and get the server running">
-  <meta name="twitter:description" content="Steps:
-Create a test org-mode file so I don&rsquo;t destroy everything on accident Create a directory where I want the blog to be, in my case ~/Dropbox/org/blog Follow the steps from here: …">
+  <meta name="description" content="A quick howto on how I used Hugo to setup this blog.
+
+">
+  <meta property="og:description" content="A quick howto on how I used Hugo to setup this blog.
+
+">
+  <meta name="twitter:description" content="A quick howto on how I used Hugo to setup this blog.
+
+">
   <meta name="author" content="Felix Brilej"/>
   <link href='https://BubblesToTheLimit.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://BubblesToTheLimit.github.io/img/avatar-icon.png" />
@@ -201,9 +198,11 @@ Create a test org-mode file so I don&rsquo;t destroy everything on accident Crea
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        
+        <p>A quick howto on how I used Hugo to setup this blog.</p>
 
-<p>Steps:</p>
+<p></p>
+
+<p>The Steps:</p>
 
 <ul class="task-list">
 <li>Create a test org-mode file so I don&rsquo;t destroy everything on accident</li>
@@ -215,25 +214,25 @@ Create a test org-mode file so I don&rsquo;t destroy everything on accident Crea
 <ol>
 <li><p>Install chocolatey <a href="https://chocolatey.org/install#install-with-cmdexe">https://chocolatey.org/install#install-with-cmdexe</a></p>
 
-<pre><code class="language-sh">          # for the powershell, close it after execution
-          Set-ExecutionPolicy Bypass; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+<pre><code class="language-sh"># for the powershell, close it after execution
+Set-ExecutionPolicy Bypass; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 </code></pre></li>
 
 <li><p>Install hugo using chocolatey:</p>
 
-<pre><code class="language-sh">          # on the normal shell
-          choco install hugo -confirm
+<pre><code class="language-sh"># on the normal shell
+choco install hugo -confirm
 </code></pre></li>
 </ol></li>
 
 <li><p>Follow the startup steps for hugo to setup a site and get the server running</p>
 
-<pre><code class="language-sh">       # some command to create a default site
-       # then download a theme
-       # copy the exampleSite structure into the main blog directory to have some dummy content
-       cp -R theme/$theme_name/exampleSite .
-       hugo server
-       # look at the site
+<pre><code class="language-sh"># some command to create a default site
+# then download a theme
+# copy the exampleSite structure into the main blog directory to have some dummy content
+cp -R theme/$theme_name/exampleSite .
+hugo server
+# look at the site
 </code></pre></li>
 
 <li><p>Next steps:</p>
@@ -249,9 +248,6 @@ Create a test org-mode file so I don&rsquo;t destroy everything on accident Crea
 <li><label><input type="checkbox" disabled class="task-list-item"> Check out this link: <a href="https://vurt.co.uk/post/blogging-with-emacs-and-hugo/">https://vurt.co.uk/post/blogging-with-emacs-and-hugo/</a></label></li>
 </ul></li>
 </ul>
-
-<h1 id="add-the-setup-steps-to-my-config-and-blog-them">Add the setup steps to my config and blog them</h1>
-
       </article>
 
       <ul class="pager blog-pager">
