@@ -274,11 +274,11 @@
       <article role="main" class="blog-post">
         <p>My emacs behaves differently when I'm at home. This enables me to have my private org-mode files loaded automatically when I'm at home, while I have all my work-settings enabled otherwise.</p>
 <p>Emacs&rsquo; org-mode is a tool I use almost daily for my note-taking. I don't attempt to capture everything in emacs, but most of my notes eventually end up either there or in one of my physical notebooks. In emacs, I use different notebooks depending on whether I'm at work or not. With the following snippet in my config, the information on the kind of environment is set as the environment variable <code>SYSENV</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(<span style="color:#a6e22e">message</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Updating the SYSENV based on the connected wifi...</span><span style="color:#e6db74">&#34;</span>)
-(setq home-wifi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">FRITZ!Box 7530 RG</span><span style="color:#e6db74">\n</span><span style="color:#e6db74">&#34;</span>)
-(if (<span style="color:#a6e22e">string-equal</span> home-wifi (shell-command-to-string <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">nmcli -g NAME connection show --active</span><span style="color:#e6db74">&#34;</span>))
-    (setenv <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SYSENV</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">home</span><span style="color:#e6db74">&#34;</span>))
-</code></pre></div><p>I then make use of that information in other places, for example for my shortcut to open my notebook:</p>
+<pre><code>(message &quot;Updating the SYSENV based on the connected wifi...&quot;)
+(setq home-wifi &quot;FRITZ!Box 7530 RG\n&quot;)
+(if (string-equal home-wifi (shell-command-to-string &quot;nmcli -g NAME connection show --active&quot;))
+    (setenv &quot;SYSENV&quot; &quot;home&quot;))
+</code></pre><p>I then make use of that information in other places, for example for my shortcut to open my notebook:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(defun fbr/open_main_agenda_file()
   (interactive)
   (case (<span style="color:#a6e22e">intern</span> (getenv <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SYSENV</span><span style="color:#e6db74">&#34;</span>))
