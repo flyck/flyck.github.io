@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Making Emacs recognize its location - Long Thoughts</title>
+  <meta name="description" content="My emacs behaves differently when I&#39;m at home. This enables me to have my private org-mode files loaded automatically when I&#39;m at home, while I have all my work-settings enabled otherwise.">
+  <meta name="author" content="Felix Brilej"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Long Thoughts",
+    
+    "url": "https:\/\/BubblesToTheLimit.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/BubblesToTheLimit.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/BubblesToTheLimit.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/BubblesToTheLimit.github.io\/post\/emacs_appartment_recognition\/",
+          "name": "Making emacs recognize its location"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Felix Brilej"
+  },
+  "headline": "Making Emacs recognize its location",
+  "description" : "My emacs behaves differently when I\x27m at home. This enables me to have my private org-mode files loaded automatically when I\x27m at home, while I have all my work-settings enabled otherwise.\n",
+  "inLanguage" : "en",
+  "wordCount":  343 ,
+  "datePublished" : "2019-12-27T00:00:00",
+  "dateModified" : "2019-12-27T00:00:00",
+  "image" : "https:\/\/BubblesToTheLimit.github.io\/img\/avatar-icon.png",
+  "keywords" : [ "english, emacs" ],
+  "mainEntityOfPage" : "https:\/\/BubblesToTheLimit.github.io\/post\/emacs_appartment_recognition\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/BubblesToTheLimit.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/BubblesToTheLimit.github.io\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Making Emacs recognize its location" />
+<meta property="og:description" content="My emacs behaves differently when I&#39;m at home. This enables me to have my private org-mode files loaded automatically when I&#39;m at home, while I have all my work-settings enabled otherwise.">
+<meta property="og:image" content="https://BubblesToTheLimit.github.io/img/avatar-icon.png" />
+<meta property="og:url" content="https://BubblesToTheLimit.github.io/post/emacs_appartment_recognition/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Long Thoughts" />
+
+  <meta name="twitter:title" content="Making Emacs recognize its location" />
+  <meta name="twitter:description" content="My emacs behaves differently when I&#39;m at home. This enables me to have my private org-mode files loaded automatically when I&#39;m at home, while I have all my work-settings enabled otherwise.">
+  <meta name="twitter:image" content="https://BubblesToTheLimit.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@MondBeton" />
+  <meta name="twitter:creator" content="@MondBeton" />
+  <link href='https://BubblesToTheLimit.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.61.0" />
+  <link rel="alternate" href="https://BubblesToTheLimit.github.io/index.xml" type="application/rss+xml" title="Long Thoughts"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/syntax.css" /><link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://BubblesToTheLimit.github.io/">Long Thoughts</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Recipes</a>
+              <div class="navlinks-children">
+                
+                  <a href="/recipes/indian_chicken/">Hähnchen mit Reis, indisch</a>
+                
+                  <a href="/recipes/monster-fajita-crunch-wrap/">Monster Chicken Fajita Crunch Wrap</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Long Thoughts" href="https://BubblesToTheLimit.github.io/">
+            <img class="avatar-img" src="https://BubblesToTheLimit.github.io/img/avatar-icon.png" alt="Long Thoughts" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Making Emacs recognize its location</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on December 27, 2019
+  
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Felix Brilej
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>My emacs behaves differently when I'm at home. This enables me to have my private org-mode files loaded automatically when I'm at home, while I have all my work-settings enabled otherwise.</p>
+<p>Emacs&rsquo; org-mode is a tool I use almost daily for my note-taking. I don't attempt to capture everything in emacs, but most of my notes eventually end up either there or in one of my physical notebooks. In emacs, I use different notebooks depending on whether I'm at work or not. With the following snippet in my config, the information on the kind of environment is set as the environment variable <code>SYSENV</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nf">message</span> <span class="s">&#34;</span><span class="s">Updating the SYSENV based on the connected wifi...</span><span class="s">&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">setq</span> <span class="nv">home-wifi</span> <span class="s">&#34;</span><span class="s">FRITZ!Box 7530 RG</span><span class="s">\n</span><span class="s">&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nf">string-equal</span> <span class="nv">home-wifi</span> <span class="p">(</span><span class="nv">shell-command-to-string</span> <span class="s">&#34;</span><span class="s">nmcli -g NAME connection show --active</span><span class="s">&#34;</span><span class="p">)</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">setenv</span> <span class="s">&#34;</span><span class="s">SYSENV</span><span class="s">&#34;</span> <span class="s">&#34;</span><span class="s">home</span><span class="s">&#34;</span><span class="p">)</span><span class="p">)</span>
+</code></pre></div><p>I then make use of that information in other places, for example for my shortcut to open my notebook:</p>
+<div class="highlight"><pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">fbr/open_main_agenda_file</span><span class="p">(</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">case</span> <span class="p">(</span><span class="nf">intern</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;</span><span class="s">SYSENV</span><span class="s">&#34;</span><span class="p">)</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">home</span> <span class="p">(</span><span class="nv">find-file</span> <span class="s">&#34;</span><span class="s">~/Dropbox/org/gtd/tasks.org</span><span class="s">&#34;</span><span class="p">)</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">work</span> <span class="p">(</span><span class="nv">find-file</span> <span class="s">&#34;</span><span class="s">~/Documents/org/projects.org</span><span class="s">&#34;</span><span class="p">)</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">otherwise</span> <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;</span><span class="s">No SYSENV found. Don&#39;t know what to open.</span><span class="s">&#34;</span><span class="p">)</span><span class="p">)</span>
+    <span class="p">)</span>
+  <span class="p">)</span>
+
+<span class="p">(</span><span class="nf">define-key</span> <span class="nv">global-map</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;</span><span class="s">&lt;f6&gt;</span><span class="s">&#34;</span><span class="p">)</span> <span class="ss">&#39;fbr/open_main_agenda_file</span><span class="p">)</span>
+</code></pre></div><p>The <code>SYSENV</code> environment variable configuration is an idea I borrowed from some other config. It allows me to set this configuration outside of my emacs, for example in the <code>.bashrc</code>. This helped me out in the past, and allowed me have the same configuration running on a windows home PC, a debian study laptop and a redhat work laptop. Configuration that only worked with a certain OS or was only needed for example for studying could be loaded conditionally and reliably.</p>
+<p>These days I only have a single OS I'm working with and even only a single piece of hardware. In the <code>.bashrc</code> the <code>SYSENV</code> is therefor set to <code>work</code> as a default and conditionally overwritten based on the connected WIFI. Even though the amount of environments has now decreased, the <code>SYSENV</code> is still helping me out with my purpose-dependant org-mode configuration.</p>
+<p>I hope you found this small snippet useful or inspiring, as it shows how easy it is to make your emacs smarter.</p>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://BubblesToTheLimit.github.io//tags/english/">english</a>&nbsp;
+            
+              <a href="https://BubblesToTheLimit.github.io//tags/emacs/">emacs</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://BubblesToTheLimit.github.io/post/self_revelation/" data-toggle="tooltip" data-placement="top" title="The Process of Self-Revelation">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:felix.brilej@googlemail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/BubblesToTheLimit" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/MondBeton" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="BubblesToTheLimit.github.io">Felix Brilej</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://BubblesToTheLimit.github.io/">Long Thoughts</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.61.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://BubblesToTheLimit.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://BubblesToTheLimit.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

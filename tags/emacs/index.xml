@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
-    <lastBuildDate>Tue, 15 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://BubblesToTheLimit.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Making Emacs recognize its location</title>
+      <link>https://BubblesToTheLimit.github.io/post/emacs_appartment_recognition/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://BubblesToTheLimit.github.io/post/emacs_appartment_recognition/</guid>
+      <description>&lt;p&gt;My emacs behaves differently when I&#39;m at home. This enables me to have my private org-mode files loaded automatically when I&#39;m at home, while I have all my work-settings enabled otherwise.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Blogging Setup: Workflow for writing a new blogpost</title>

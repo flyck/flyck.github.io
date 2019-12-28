@@ -7,26 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
-    <lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://BubblesToTheLimit.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>english</title>
-      <link>https://BubblesToTheLimit.github.io/tags/english/</link>
-      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      <title>emacs</title>
+      <link>https://BubblesToTheLimit.github.io/tags/emacs/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/english/</guid>
+      <guid>https://BubblesToTheLimit.github.io/tags/emacs/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>technology</title>
-      <link>https://BubblesToTheLimit.github.io/tags/technology/</link>
-      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      <title>english</title>
+      <link>https://BubblesToTheLimit.github.io/tags/english/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/technology/</guid>
+      <guid>https://BubblesToTheLimit.github.io/tags/english/</guid>
       <description></description>
     </item>
     
@@ -162,15 +162,6 @@
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://BubblesToTheLimit.github.io/tags/blogging/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>emacs</title>
-      <link>https://BubblesToTheLimit.github.io/tags/emacs/</link>
-      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
-      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/emacs/</guid>
       <description></description>
     </item>
     

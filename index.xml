@@ -7,18 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
-    <lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://BubblesToTheLimit.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Decency in Tech</title>
-      <link>https://BubblesToTheLimit.github.io/post/decency_in_tech/</link>
-      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      <title>Making Emacs recognize its location</title>
+      <link>https://BubblesToTheLimit.github.io/post/emacs_appartment_recognition/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/decency_in_tech/</guid>
-      <description>&lt;p&gt;This week I spontaneously attended a presentation on AWS security. The talk was highly interesting! The presenter showed his personal involvement with the topic, while the content was up-to-date, well chunked, extensively researched and battle-tested. During the Q&amp;amp;A at the end of the presentation though, the presenter got picked apart. The questions all double-checked whether the presenter was as good as he seemed. They were all aimed at finding a technical mistake in the slides, or intended point out a missed opportunity for improvement. This Q&amp;amp;A session really slapped it in my face: &lt;em&gt;The dimension of decency in tech.&lt;/em&gt;&lt;/p&gt;</description>
+      <guid>https://BubblesToTheLimit.github.io/post/emacs_appartment_recognition/</guid>
+      <description>&lt;p&gt;My emacs behaves differently when I&#39;m at home. This enables me to have my private org-mode files loaded automatically when I&#39;m at home, while I have all my work-settings enabled otherwise.&lt;/p&gt;</description>
     </item>
     
     <item>
