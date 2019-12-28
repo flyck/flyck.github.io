@@ -96,7 +96,8 @@
   <link rel="alternate" href="https://BubblesToTheLimit.github.io/index.xml" type="application/rss+xml" title="Long Thoughts"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/syntax.css" /><link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
 
 
@@ -253,10 +254,6 @@
   
   
   
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Felix Brilej
-    
-  
   
 </span>
 
@@ -277,21 +274,21 @@
       <article role="main" class="blog-post">
         <p>My emacs behaves differently when I'm at home. This enables me to have my private org-mode files loaded automatically when I'm at home, while I have all my work-settings enabled otherwise.</p>
 <p>Emacs&rsquo; org-mode is a tool I use almost daily for my note-taking. I don't attempt to capture everything in emacs, but most of my notes eventually end up either there or in one of my physical notebooks. In emacs, I use different notebooks depending on whether I'm at work or not. With the following snippet in my config, the information on the kind of environment is set as the environment variable <code>SYSENV</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nf">message</span> <span class="s">&#34;</span><span class="s">Updating the SYSENV based on the connected wifi...</span><span class="s">&#34;</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">setq</span> <span class="nv">home-wifi</span> <span class="s">&#34;</span><span class="s">FRITZ!Box 7530 RG</span><span class="s">\n</span><span class="s">&#34;</span><span class="p">)</span>
-<span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nf">string-equal</span> <span class="nv">home-wifi</span> <span class="p">(</span><span class="nv">shell-command-to-string</span> <span class="s">&#34;</span><span class="s">nmcli -g NAME connection show --active</span><span class="s">&#34;</span><span class="p">)</span><span class="p">)</span>
-    <span class="p">(</span><span class="nv">setenv</span> <span class="s">&#34;</span><span class="s">SYSENV</span><span class="s">&#34;</span> <span class="s">&#34;</span><span class="s">home</span><span class="s">&#34;</span><span class="p">)</span><span class="p">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(<span style="color:#a6e22e">message</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Updating the SYSENV based on the connected wifi...</span><span style="color:#e6db74">&#34;</span>)
+(setq home-wifi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">FRITZ!Box 7530 RG</span><span style="color:#e6db74">\n</span><span style="color:#e6db74">&#34;</span>)
+(if (<span style="color:#a6e22e">string-equal</span> home-wifi (shell-command-to-string <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">nmcli -g NAME connection show --active</span><span style="color:#e6db74">&#34;</span>))
+    (setenv <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SYSENV</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">home</span><span style="color:#e6db74">&#34;</span>))
 </code></pre></div><p>I then make use of that information in other places, for example for my shortcut to open my notebook:</p>
-<div class="highlight"><pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">fbr/open_main_agenda_file</span><span class="p">(</span><span class="p">)</span>
-  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
-  <span class="p">(</span><span class="nb">case</span> <span class="p">(</span><span class="nf">intern</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;</span><span class="s">SYSENV</span><span class="s">&#34;</span><span class="p">)</span><span class="p">)</span>
-    <span class="p">(</span><span class="nv">home</span> <span class="p">(</span><span class="nv">find-file</span> <span class="s">&#34;</span><span class="s">~/Dropbox/org/gtd/tasks.org</span><span class="s">&#34;</span><span class="p">)</span><span class="p">)</span>
-    <span class="p">(</span><span class="nv">work</span> <span class="p">(</span><span class="nv">find-file</span> <span class="s">&#34;</span><span class="s">~/Documents/org/projects.org</span><span class="s">&#34;</span><span class="p">)</span><span class="p">)</span>
-    <span class="p">(</span><span class="nv">otherwise</span> <span class="p">(</span><span class="nf">message</span> <span class="s">&#34;</span><span class="s">No SYSENV found. Don&#39;t know what to open.</span><span class="s">&#34;</span><span class="p">)</span><span class="p">)</span>
-    <span class="p">)</span>
-  <span class="p">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(defun fbr/open_main_agenda_file()
+  (interactive)
+  (case (<span style="color:#a6e22e">intern</span> (getenv <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SYSENV</span><span style="color:#e6db74">&#34;</span>))
+    (home (find-file <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">~/Dropbox/org/gtd/tasks.org</span><span style="color:#e6db74">&#34;</span>))
+    (work (find-file <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">~/Documents/org/projects.org</span><span style="color:#e6db74">&#34;</span>))
+    (otherwise (<span style="color:#a6e22e">message</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">No SYSENV found. Don&#39;t know what to open.</span><span style="color:#e6db74">&#34;</span>))
+    )
+  )
 
-<span class="p">(</span><span class="nf">define-key</span> <span class="nv">global-map</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;</span><span class="s">&lt;f6&gt;</span><span class="s">&#34;</span><span class="p">)</span> <span class="ss">&#39;fbr/open_main_agenda_file</span><span class="p">)</span>
+(<span style="color:#a6e22e">define-key</span> global-map (kbd <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&lt;f6&gt;</span><span style="color:#e6db74">&#34;</span>) <span style="color:#e6db74">&#39;fbr/open_main_agenda_file</span>)
 </code></pre></div><p>The <code>SYSENV</code> environment variable configuration is an idea I borrowed from some other config. It allows me to set this configuration outside of my emacs, for example in the <code>.bashrc</code>. This helped me out in the past, and allowed me have the same configuration running on a windows home PC, a debian study laptop and a redhat work laptop. Configuration that only worked with a certain OS or was only needed for example for studying could be loaded conditionally and reliably.</p>
 <p>These days I only have a single OS I'm working with and even only a single piece of hardware. In the <code>.bashrc</code> the <code>SYSENV</code> is therefor set to <code>work</code> as a default and conditionally overwritten based on the connected WIFI. Even though the amount of environments has now decreased, the <code>SYSENV</code> is still helping me out with my purpose-dependant org-mode configuration.</p>
 <p>I hope you found this small snippet useful or inspiring, as it shows how easy it is to make your emacs smarter.</p>
@@ -404,7 +401,10 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<script src="https://BubblesToTheLimit.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://BubblesToTheLimit.github.io/js/main.js"></script>
+<script src="https://BubblesToTheLimit.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://BubblesToTheLimit.github.io/js/load-photoswipe.js"></script>
 
 

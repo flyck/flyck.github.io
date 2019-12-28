@@ -60,7 +60,7 @@ The linux world is big, so you might come here asking: &ldquo;Why the hell do yo
   "headline": "Monitoring \x26 Ansible, Part I: NRPE daemon setup",
   "description" : "Monitoring servers using icinga usually requires a small setup on the monitored server. From the different choices of agents, the nrpe daemon ontop of xinetd is easy enough to set up, while it can provide any kind of information that is available on the monitored server locally. To automate this setup task and as a learning exercise I wrote up an Ansible playbook, which I describe here.\nThe linux world is big, so you might come here asking: \x26ldquo;Why the hell do you use xinetd and nrpe for monitoring?",
   "inLanguage" : "en",
-  "wordCount":  919 ,
+  "wordCount":  1120 ,
   "datePublished" : "2018-01-19T00:00:00",
   "dateModified" : "2018-01-19T00:00:00",
   "image" : "https:\/\/BubblesToTheLimit.github.io\/img\/avatar-icon.png",
@@ -98,7 +98,8 @@ The linux world is big, so you might come here asking: &ldquo;Why the hell do yo
   <link rel="alternate" href="https://BubblesToTheLimit.github.io/index.xml" type="application/rss+xml" title="Long Thoughts"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/syntax.css" /><link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
 
 
@@ -261,10 +262,6 @@ The linux world is big, so you might come here asking: &ldquo;Why the hell do yo
   
   
   
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Felix Brilej
-    
-  
   
 </span>
 
@@ -295,10 +292,6 @@ The linux world is big, so you might come here asking: &ldquo;Why the hell do yo
   
   
   
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Felix Brilej
-    
   
   
 </span>
@@ -391,73 +384,73 @@ location of the check using find, and pipes the output of that into the final co
 nrpe.d/nrpe relative to the playbook path. The configuration of this file can also found
 below.</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-YAML" data-lang="YAML"><span class="w">    </span>--<span class="sd">-
-</span><span class="sd">   </span><span class="sd"> </span><span class="sd">- name:  Include OS specific variables</span><span class="w">
-</span><span class="w">      </span>hosts<span class="p">:</span><span class="w"> </span>all<span class="w">
-</span><span class="w">      </span>tasks<span class="p">:</span><span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>debug<span class="p">:</span><span class="w"> </span>var=hostvars<span class="p">[</span>inventory_hostname<span class="p">]</span><span class="p">[</span><span class="s1">&#39;ansible_distribution&#39;</span><span class="p">]</span><span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>include_vars<span class="p">:</span><span class="w"> </span>oel.yml<span class="w">
-</span><span class="w">        </span>when<span class="p">:</span><span class="w"> </span>ansible_distribution<span class="w"> </span>==<span class="w"> </span><span class="s2">&#34;OracleLinux&#34;</span><span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>include_vars<span class="p">:</span><span class="w"> </span>ubuntu.yml<span class="w">
-</span><span class="w">        </span>when<span class="p">:</span><span class="w"> </span>ansible_distribution<span class="w"> </span>==<span class="w"> </span><span class="s2">&#34;Ubuntu&#34;</span><span class="w">
-</span><span class="w">      </span><span class="c"># TODO include a default case, for now this works though</span><span class="w">
-</span><span class="w">    </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>the<span class="w"> </span>nrpe<span class="w"> </span>check<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>monitoring-server<span class="w">
-</span><span class="w">      </span>hosts<span class="p">:</span><span class="w"> </span>monitoring_servers<span class="w">
-</span><span class="w">      </span>tasks<span class="p">:</span><span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>debug<span class="p">:</span><span class="w"> </span>var=monitoring_checks<span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>required<span class="w"> </span>packages<span class="w">
-</span><span class="w">        </span>package<span class="p">:</span><span class="w">
-</span><span class="w">          </span>name<span class="p">:</span><span class="w"> </span><span class="s2">&#34;{{ monitoring_checks }}&#34;</span><span class="w">
-</span><span class="w">          </span>state<span class="p">:</span><span class="w"> </span>latest<span class="w">
-</span><span class="w">    </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>nrpe<span class="w"> </span>daemon<span class="w"> </span>with<span class="w"> </span>monitoring-configuration<span class="w">
-</span><span class="w">      </span>hosts<span class="p">:</span><span class="w"> </span>monitored_servers<span class="w">
-</span><span class="w">      </span>tasks<span class="p">:</span><span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>debug<span class="p">:</span><span class="w"> </span>var=hostvars<span class="p">[</span>inventory_hostname<span class="p">]</span><span class="p">[</span><span class="s1">&#39;ansible_default_ipv4&#39;</span><span class="p">]</span><span class="p">[</span><span class="s1">&#39;address&#39;</span><span class="p">]</span><span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>debug<span class="p">:</span><span class="w"> </span>var=monitoring_checks<span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Disable<span class="w"> </span>the<span class="w"> </span>firewall<span class="w">
-</span><span class="w">        </span>when<span class="p">:</span><span class="w"> </span>ansible_distribution<span class="w"> </span>==<span class="w"> </span><span class="s2">&#34;OracleLinux&#34;</span><span class="w"> </span><span class="c">#TODO handle different firewalls</span><span class="w">
-</span><span class="w">        </span>service<span class="p">:</span><span class="w">
-</span><span class="w">          </span>name<span class="p">:</span><span class="w"> </span>firewalld<span class="w">
-</span><span class="w">          </span>enabled<span class="p">:</span><span class="w"> </span>no<span class="w"> </span><span class="c">#TODO create a rule instead of just disabling it</span><span class="w">
-</span><span class="w">          </span>state<span class="p">:</span><span class="w"> </span>stopped<span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>required<span class="w"> </span>packages<span class="w">
-</span><span class="w">        </span>package<span class="p">:</span><span class="w">
-</span><span class="w">          </span>name<span class="p">:</span><span class="w"> </span>nrpe<span class="p">,</span><span class="w"> </span>{{<span class="w"> </span>monitoring_checks<span class="w"> </span>}}<span class="p">,</span><span class="w"> </span>xinetd<span class="w">
-</span><span class="w">          </span>state<span class="p">:</span><span class="w"> </span>latest<span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Copy<span class="w"> </span>over<span class="w"> </span>the<span class="w"> </span>configuration<span class="w"> </span>file<span class="w"> </span>for<span class="w"> </span>the<span class="w"> </span>nrpe<span class="w"> </span>daemon<span class="w">
-</span><span class="w">        </span>synchronize<span class="p">:</span><span class="w">
-</span><span class="w">           </span>src<span class="p">:</span><span class="w"> </span>nrpe.d/nrpe<span class="w">
-</span><span class="w">           </span>dest<span class="p">:</span><span class="w"> </span>/etc/xinetd.d/nrpe<span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Add<span class="w"> </span>xinetd<span class="w"> </span>to<span class="w"> </span>autostart<span class="w"> </span>and<span class="w"> </span>start<span class="w"> </span>it<span class="w">
-</span><span class="w">        </span>service<span class="p">:</span><span class="w">
-</span><span class="w">           </span>name<span class="p">:</span><span class="w"> </span>xinetd<span class="w">
-</span><span class="w">           </span>enabled<span class="p">:</span><span class="w"> </span>yes<span class="w">
-</span><span class="w">           </span>state<span class="p">:</span><span class="w"> </span>started<span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Add<span class="w"> </span>the<span class="w"> </span>required<span class="w"> </span>entry<span class="w"> </span>to<span class="w"> </span>/etc/hosts<span class="w">
-</span><span class="w">        </span>lineinfile<span class="p">:</span><span class="w">
-</span><span class="w">           </span>path<span class="p">:</span><span class="w"> </span>/etc/hosts<span class="w">
-</span><span class="w">           </span>state<span class="p">:</span><span class="w"> </span>present<span class="w">
-</span><span class="w">           </span>line<span class="p">:</span><span class="w"> </span><span class="s2">&#34;{{ hostvars[item][&#39;ansible_default_ipv4&#39;][&#39;address&#39;] }}       monitoring-server&#34;</span><span class="w">
-</span><span class="w">        </span>with_items<span class="p">:</span><span class="w"> </span><span class="s2">&#34;{{ groups.monitoring_servers }}&#34;</span><span class="w">
-</span><span class="w">        </span><span class="c"># it should be ok to have multiple IP addresses under the same host-name in case we have multiple</span><span class="w">
-</span><span class="w">        </span><span class="c"># monitoring-servers. this way we add them all with the same hostname to /etc/hosts</span><span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Test<span class="w"> </span>the<span class="w"> </span>installation<span class="w"> </span>by<span class="w"> </span>executing<span class="w"> </span>the<span class="w"> </span>command<span class="w"> </span>locally<span class="w">
-</span><span class="w">        </span>raw<span class="p">:</span><span class="w"> </span><span class="s2">&#34;$(find / -name check_nrpe 2&gt;/dev/null | head -n 1) -H localhost -c check_users&#34;</span><span class="w">
-</span><span class="w">        </span><span class="c"># this command searches for the check_nrpe binary and the executes it.</span><span class="w">
-</span><span class="w">        </span><span class="c"># this is due to the fact, that depending on the OS / packaging the location differs.</span><span class="w">
-</span><span class="w">    </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>the<span class="w"> </span>nrpe<span class="w"> </span>check<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>monitoring-server<span class="w">
-</span><span class="w">      </span>hosts<span class="p">:</span><span class="w"> </span>monitoring_servers<span class="w">
-</span><span class="w">      </span>tasks<span class="p">:</span><span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>debug<span class="p">:</span><span class="w"> </span>var=monitoring_checks<span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>required<span class="w"> </span>packages<span class="w">
-</span><span class="w">        </span>package<span class="p">:</span><span class="w">
-</span><span class="w">          </span>name<span class="p">:</span><span class="w"> </span><span class="s2">&#34;{{ monitoring_checks }}&#34;</span><span class="w">
-</span><span class="w">          </span>state<span class="p">:</span><span class="w"> </span>latest<span class="w">
-</span><span class="w">    </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Test<span class="w"> </span>the<span class="w"> </span>check_users<span class="w"> </span>check<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span>monitoring_servers<span class="w">
-</span><span class="w">      </span>hosts<span class="p">:</span><span class="w"> </span>monitoring_servers<span class="w">
-</span><span class="w">      </span>tasks<span class="p">:</span><span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>raw<span class="p">:</span><span class="w"> </span><span class="s2">&#34;$(find / -name check_nrpe 2&gt;/dev/null | head -n 1) -H {{ hostvars[item][&#39;ansible_default_ipv4&#39;][&#39;address&#39;] }} -c check_users&#34;</span><span class="w">
-</span><span class="w">        </span>with_items<span class="p">:</span><span class="w"> </span><span class="s2">&#34;{{ groups.monitored_servers }}&#34;</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML">    --<span style="color:#e6db74">-
+</span><span style="color:#e6db74">   </span><span style="color:#e6db74"> </span><span style="color:#e6db74">- name:  Include OS specific variables</span>
+      hosts: all
+      tasks:
+      - debug: var=hostvars[inventory_hostname][<span style="color:#e6db74">&#39;ansible_distribution&#39;</span>]
+      - include_vars: oel.yml
+        when: ansible_distribution == <span style="color:#e6db74">&#34;OracleLinux&#34;</span>
+      - include_vars: ubuntu.yml
+        when: ansible_distribution == <span style="color:#e6db74">&#34;Ubuntu&#34;</span>
+      <span style="color:#75715e"># TODO include a default case, for now this works though</span>
+    - name: Install the nrpe check on the monitoring-server
+      hosts: monitoring_servers
+      tasks:
+      - debug: var=monitoring_checks
+      - name: Install required packages
+        package:
+          name: <span style="color:#e6db74">&#34;{{ monitoring_checks }}&#34;</span>
+          state: latest
+    - name: Install nrpe daemon with monitoring-configuration
+      hosts: monitored_servers
+      tasks:
+      - debug: var=hostvars[inventory_hostname][<span style="color:#e6db74">&#39;ansible_default_ipv4&#39;</span>][<span style="color:#e6db74">&#39;address&#39;</span>]
+      - debug: var=monitoring_checks
+      - name: Disable the firewall
+        when: ansible_distribution == <span style="color:#e6db74">&#34;OracleLinux&#34;</span> <span style="color:#75715e">#TODO handle different firewalls</span>
+        service:
+          name: firewalld
+          enabled: no <span style="color:#75715e">#TODO create a rule instead of just disabling it</span>
+          state: stopped
+      - name: Install required packages
+        package:
+          name: nrpe, {{ monitoring_checks }}, xinetd
+          state: latest
+      - name: Copy over the configuration file for the nrpe daemon
+        synchronize:
+           src: nrpe.d/nrpe
+           dest: /etc/xinetd.d/nrpe
+      - name: Add xinetd to autostart and start it
+        service:
+           name: xinetd
+           enabled: yes
+           state: started
+      - name: Add the required entry to /etc/hosts
+        lineinfile:
+           path: /etc/hosts
+           state: present
+           line: <span style="color:#e6db74">&#34;{{ hostvars[item][&#39;ansible_default_ipv4&#39;][&#39;address&#39;] }}       monitoring-server&#34;</span>
+        with_items: <span style="color:#e6db74">&#34;{{ groups.monitoring_servers }}&#34;</span>
+        <span style="color:#75715e"># it should be ok to have multiple IP addresses under the same host-name in case we have multiple</span>
+        <span style="color:#75715e"># monitoring-servers. this way we add them all with the same hostname to /etc/hosts</span>
+      - name: Test the installation by executing the command locally
+        raw: <span style="color:#e6db74">&#34;$(find / -name check_nrpe 2&gt;/dev/null | head -n 1) -H localhost -c check_users&#34;</span>
+        <span style="color:#75715e"># this command searches for the check_nrpe binary and the executes it.</span>
+        <span style="color:#75715e"># this is due to the fact, that depending on the OS / packaging the location differs.</span>
+    - name: Install the nrpe check on the monitoring-server
+      hosts: monitoring_servers
+      tasks:
+      - debug: var=monitoring_checks
+      - name: Install required packages
+        package:
+          name: <span style="color:#e6db74">&#34;{{ monitoring_checks }}&#34;</span>
+          state: latest
+    - name: Test the check_users check from the monitoring_servers
+      hosts: monitoring_servers
+      tasks:
+      - raw: <span style="color:#e6db74">&#34;$(find / -name check_nrpe 2&gt;/dev/null | head -n 1) -H {{ hostvars[item][&#39;ansible_default_ipv4&#39;][&#39;address&#39;] }} -c check_users&#34;</span>
+        with_items: <span style="color:#e6db74">&#34;{{ groups.monitored_servers }}&#34;</span></code></pre></div>
 <p>The host-specific file ubuntu.yml:</p>
 <pre><code>---
 # define variables which are specific to the ubuntu setup
@@ -609,7 +602,10 @@ execute the following:</p>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<script src="https://BubblesToTheLimit.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://BubblesToTheLimit.github.io/js/main.js"></script>
+<script src="https://BubblesToTheLimit.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://BubblesToTheLimit.github.io/js/load-photoswipe.js"></script>
 
 
