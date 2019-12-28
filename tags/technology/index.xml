@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>technology on Long Thoughts</title>
+    <link>https://BubblesToTheLimit.github.io/tags/technology/</link>
+    <description>Recent content in technology on Long Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
+    <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
+    <lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://BubblesToTheLimit.github.io/tags/technology/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Decency in Tech</title>
+      <link>https://BubblesToTheLimit.github.io/post/decency_in_tech/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://BubblesToTheLimit.github.io/post/decency_in_tech/</guid>
+      <description>&lt;p&gt;This week I spontaneously attended a presentation on AWS security. The talk was highly interesting! The presenter showed his personal involvement with the topic, while the content was up-to-date, well chunked, extensively researched and battle-tested. During the Q&amp;amp;A at the end of the presentation though, the presenter got picked apart. The questions all double-checked whether the presenter was as good as he seemed. They were all aimed at finding a technical mistake in the slides, or intended point out a missed opportunity for improvement. This Q&amp;amp;A session really slapped it in my face: &lt;em&gt;The dimension of decency in tech.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

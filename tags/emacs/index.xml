@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Emacs on Long Thoughts</title>
+    <title>emacs on Long Thoughts</title>
     <link>https://BubblesToTheLimit.github.io/tags/emacs/</link>
-    <description>Recent content in Emacs on Long Thoughts</description>
+    <description>Recent content in emacs on Long Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
@@ -18,9 +18,7 @@
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://BubblesToTheLimit.github.io/post/workflow_for_new_blogpost/</guid>
-      <description>&lt;p&gt;Creating a new blog post using the previously describe setup should be easy and comfortable. These are the generic steps for adding a blog-post.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Creating a new blog post using the previously describe setup should be easy and comfortable. These are the generic steps for adding a blog-post.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -32,21 +30,7 @@
       <description>&lt;p&gt;Github pages &lt;code&gt;cn&lt;/code&gt; are really an optimal way for org-mode nerds to blog. We usually have a github
 account anyway to manage our 1000+ commits big emacs config accross multiple devices, and we
 have learned enough about emacs to dish out some knowledge through our own blog.&lt;/p&gt;
-
-&lt;p&gt;How can you blog comfortably in this setup? Let&amp;rsquo;s get started&amp;#x2026;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Setting up the blog</title>
-      <link>https://BubblesToTheLimit.github.io/setting_up_the_blog/</link>
-      <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
-      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/setting_up_the_blog/</guid>
-      <description>&lt;p&gt;A quick howto on how I used Hugo to setup this blog.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;How can you blog comfortably in this setup? Let&#39;s get started…&lt;/p&gt;</description>
     </item>
     
   </channel>

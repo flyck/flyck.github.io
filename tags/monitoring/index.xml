@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Monitoring on Long Thoughts</title>
+    <title>monitoring on Long Thoughts</title>
     <link>https://BubblesToTheLimit.github.io/tags/monitoring/</link>
-    <description>Recent content in Monitoring on Long Thoughts</description>
+    <description>Recent content in monitoring on Long Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
@@ -30,12 +30,8 @@ The linux world is big, so you might come here asking: &amp;ldquo;Why the hell d
       <guid>https://BubblesToTheLimit.github.io/post/cluster_checks/</guid>
       <description>&lt;p&gt;Recently I wrote an icinga cluster check which can currently check whether a service runs on
 atleast on one of two servers.&lt;/p&gt;
-
 &lt;p&gt;A teaser of the results:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://BubblesToTheLimit.github.io/img/cluster_check_1.png&#34; alt=&#34;cluster1&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://BubblesToTheLimit.github.io/img/cluster_check_1.png&#34; alt=&#34;cluster1&#34;&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

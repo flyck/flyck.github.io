@@ -24,7 +24,7 @@ The linux world is big, so you might come here asking: &ldquo;Why the hell do yo
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Long Thoughts" />
 
-  <meta name="generator" content="Hugo 0.40.1" />
+  <meta name="generator" content="Hugo 0.61.0" />
   <link rel="canonical" href="https://BubblesToTheLimit.github.io/post/monitoring-setup-xinetd-nrpe-ansible/" />
   <link rel="alternate" href="https://BubblesToTheLimit.github.io/index.xml" type="application/rss+xml" title="Long Thoughts">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -226,22 +226,17 @@ The linux world is big, so you might come here asking: &ldquo;Why the hell do yo
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        
-
-<p>Monitoring servers using icinga usually requires a small setup on the monitored server. From
+        <p>Monitoring servers using icinga usually requires a small setup on the monitored server. From
 the different choices of agents, the nrpe daemon ontop of xinetd is easy enough to set up,
 while it can provide any kind of information that is available on the monitored server
 locally. To automate this setup task and as a learning exercise I wrote up an Ansible
 playbook, which I describe here.</p>
-
-<!-- more -->
-
+<!-- raw HTML omitted -->
 <p>The linux world is big, so you might come here asking: &ldquo;Why the hell do you use xinetd and
-nrpe for monitoring?&ldquo;. Well, looking at the available options from the <a href="https://www.icinga.com/docs/icinga2/latest/doc/07-agent-based-monitoring/">official documentation</a>
+nrpe for monitoring?&quot;. Well, looking at the available options from the <a href="https://www.icinga.com/docs/icinga2/latest/doc/07-agent-based-monitoring/">official documentation</a>
 it turns out there are actually many different techniques which can work, I just happen to
 always use nrpe in an environment of mostly linux servers. Here is the list of all the options
 which I should probably check out in a future post:</p>
-
 <ul>
 <li>SNMP</li>
 <li>SSH</li>
@@ -250,40 +245,33 @@ which I should probably check out in a future post:</p>
 <li>NRPE</li>
 <li>Passive Check Results and SNMP Traps</li>
 </ul>
-
 <h1 id="starting-from-the-bottom-configuring-ansible">Starting from the bottom: Configuring Ansible</h1>
-
 <p>Ansible uses a clientless architecture, but one host still needs to be the &ldquo;master&rdquo; or
 point-of-execution. Using the following playbook, Ansible can be installed on the
 monitoring-server or even on a different machine, like a virtual machine on the engineers
 laptop, which is simply connected to the network during installation or maintenance.</p>
-
 <p>After an easy installation of Ansible through the package manager we are left with
 establishing the ssh-connection between the master and the servers involved in the monitoring
 setup. An article of the <a href="http://www.linuxjournal.com/content/ansible-automation-framework-thinks-sysadmin">Linux Journal</a> is a great ressource on how to go about
 this. Basically, the more comfortable you are able to connect to the servers you are dealing
 with using Ansible, the less secure it will be. In my case I decided for an insecure but
 comfortable solution for the testing setup on my laptop: a password-less ssl-keypair which
-allows the holder of the private key to log into the remote server&rsquo;s root account. While this
+allows the holder of the private key to log into the remote server's root account. While this
 really screws any security mechanisms that might have been established before, it is probably
 <strong>optimal for playing around and learning Ansible</strong>.</p>
-
 <pre><code>ssh-keygen
 # repeat the step below for every involved server
 ssh-copy-id -i .ssh/id_dsa.pub root@remote.computer.ip
 ssh root@remote.computer.ip
 </code></pre>
-
 <p>After the ssh-setup we need to declare the servers on the Ansible-server. In my setup i
 declared the exact IPs in /etc/hosts and refered to the declared hostnames in
-/etc/ansible/hosts. This is due to the fact that my test-environment doesn&rsquo;t have static IP
-addresses, and I&rsquo;d like to change them conveniently all at one place (/etc/hosts) in case the
+/etc/ansible/hosts. This is due to the fact that my test-environment doesn't have static IP
+addresses, and I'd like to change them conveniently all at one place (/etc/hosts) in case the
 IP addresses happen to change.</p>
-
 <p>The servers involved in the monitoring-setup will be either monitored-servers or
 monitoring-servers, so it makes sense to declare these two groups for Ansible in
 /etc/Ansible/hosts something like this:</p>
-
 <pre><code>[monitored_servers]
 server1.laptop
 server2.laptop
@@ -291,18 +279,14 @@ server2.laptop
 [monitoring_servers]
 icinga2.laptop
 </code></pre>
-
 <h1 id="the-ansible-playbook">The Ansible Playbook</h1>
-
 <p>The playbook itself is a .yml file and is easily readable once you get the hang of it. It is
 helpful to know that in this Ansible file every entry besides &ldquo;name&rdquo;, &ldquo;hosts&rdquo;, &ldquo;tasks&rdquo; and
-the conditional &ldquo;when&rdquo; refers to an <span class="underline">Ansible module</span>. This means if you stumble across any
+the conditional &ldquo;when&rdquo; refers to an <!-- raw HTML omitted -->Ansible module<!-- raw HTML omitted -->. This means if you stumble across any
 section of this .yml file and it is not clear to you how it works, simply search for the name
 in the <a href="http://docs.ansible.com/ansible/latest/modules_by_category.html">Ansible module documentation</a>. To me all the different names where confusing at the
 start and once I figured this out playbooks became much easier to read.</p>
-
 <p>Things worth pointing out:</p>
-
 <ul>
 <li>For this task we need a specific monitoring package. This has a different name depending on
 the platform, which is exactly what we load at the beginning below &ldquo;Include OS specific
@@ -315,12 +299,11 @@ location of the check using find, and pipes the output of that into the final co
 nrpe.d/nrpe relative to the playbook path. The configuration of this file can also found
 below.</li>
 </ul>
-
-<div class="highlight"><pre class="chroma"><code class="language-YAML" data-lang="YAML"><span class="w">    </span>---<span class="w">
-</span><span class="w">    </span>-<span class="w"> </span>name<span class="p">:</span><span class="w">  </span>Include<span class="w"> </span>OS<span class="w"> </span>specific<span class="w"> </span>variables<span class="w">
+<div class="highlight"><pre class="chroma"><code class="language-YAML" data-lang="YAML"><span class="w">    </span>--<span class="sd">-
+</span><span class="sd">   </span><span class="sd"> </span><span class="sd">- name:  Include OS specific variables</span><span class="w">
 </span><span class="w">      </span>hosts<span class="p">:</span><span class="w"> </span>all<span class="w">
 </span><span class="w">      </span>tasks<span class="p">:</span><span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>debug<span class="p">:</span><span class="w"> </span>var=hostvars<span class="p">[</span>inventory_hostname<span class="p">][</span><span class="s1">&#39;ansible_distribution&#39;</span><span class="p">]</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>debug<span class="p">:</span><span class="w"> </span>var=hostvars<span class="p">[</span>inventory_hostname<span class="p">]</span><span class="p">[</span><span class="s1">&#39;ansible_distribution&#39;</span><span class="p">]</span><span class="w">
 </span><span class="w">      </span>-<span class="w"> </span>include_vars<span class="p">:</span><span class="w"> </span>oel.yml<span class="w">
 </span><span class="w">        </span>when<span class="p">:</span><span class="w"> </span>ansible_distribution<span class="w"> </span>==<span class="w"> </span><span class="s2">&#34;OracleLinux&#34;</span><span class="w">
 </span><span class="w">      </span>-<span class="w"> </span>include_vars<span class="p">:</span><span class="w"> </span>ubuntu.yml<span class="w">
@@ -337,7 +320,7 @@ below.</li>
 </span><span class="w">    </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>nrpe<span class="w"> </span>daemon<span class="w"> </span>with<span class="w"> </span>monitoring-configuration<span class="w">
 </span><span class="w">      </span>hosts<span class="p">:</span><span class="w"> </span>monitored_servers<span class="w">
 </span><span class="w">      </span>tasks<span class="p">:</span><span class="w">
-</span><span class="w">      </span>-<span class="w"> </span>debug<span class="p">:</span><span class="w"> </span>var=hostvars<span class="p">[</span>inventory_hostname<span class="p">][</span><span class="s1">&#39;ansible_default_ipv4&#39;</span><span class="p">][</span><span class="s1">&#39;address&#39;</span><span class="p">]</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>debug<span class="p">:</span><span class="w"> </span>var=hostvars<span class="p">[</span>inventory_hostname<span class="p">]</span><span class="p">[</span><span class="s1">&#39;ansible_default_ipv4&#39;</span><span class="p">]</span><span class="p">[</span><span class="s1">&#39;address&#39;</span><span class="p">]</span><span class="w">
 </span><span class="w">      </span>-<span class="w"> </span>debug<span class="p">:</span><span class="w"> </span>var=monitoring_checks<span class="w">
 </span><span class="w">      </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>Disable<span class="w"> </span>the<span class="w"> </span>firewall<span class="w">
 </span><span class="w">        </span>when<span class="p">:</span><span class="w"> </span>ansible_distribution<span class="w"> </span>==<span class="w"> </span><span class="s2">&#34;OracleLinux&#34;</span><span class="w"> </span><span class="c">#TODO handle different firewalls</span><span class="w">
@@ -383,23 +366,17 @@ below.</li>
 </span><span class="w">      </span>tasks<span class="p">:</span><span class="w">
 </span><span class="w">      </span>-<span class="w"> </span>raw<span class="p">:</span><span class="w"> </span><span class="s2">&#34;$(find / -name check_nrpe 2&gt;/dev/null | head -n 1) -H {{ hostvars[item][&#39;ansible_default_ipv4&#39;][&#39;address&#39;] }} -c check_users&#34;</span><span class="w">
 </span><span class="w">        </span>with_items<span class="p">:</span><span class="w"> </span><span class="s2">&#34;{{ groups.monitored_servers }}&#34;</span></code></pre></div>
-
 <p>The host-specific file ubuntu.yml:</p>
-
 <pre><code>---
 # define variables which are specific to the ubuntu setup
 monitoring_checks: monitoring-plugins-common
 </code></pre>
-
 <p>The host-specific file oel.yml:</p>
-
 <pre><code>---
 # define variables which are specific to the oel setup
 monitoring_checks: nagios-plugins-all, nagios-plugins-nrpe
 </code></pre>
-
 <p>The nrpe configuration file:</p>
-
 <pre><code># default: off
 # description: NRPE (Nagios Remote Plugin Executor)
 service nrpe
@@ -418,10 +395,8 @@ service nrpe
         only_from       = 127.0.0.1 localhost monitoring-server
 }
 </code></pre>
-
 <p>Finally, in order to execute the playbook on the hosts defined in /etc/ansible/hosts simply
 execute the following:</p>
-
 <pre><code>ansible-playbook -s nrpe.yml
 </code></pre>
 
@@ -506,7 +481,7 @@ execute the following:</p>
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.40.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.61.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

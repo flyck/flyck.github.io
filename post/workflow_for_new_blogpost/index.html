@@ -8,15 +8,9 @@
   <title>Blogging Setup: Workflow for writing a new blogpost</title>
   <meta property="og:title" content="Blogging Setup: Workflow for writing a new blogpost" />
   <meta name="twitter:title" content="Blogging Setup: Workflow for writing a new blogpost" />
-  <meta name="description" content="Creating a new blog post using the previously describe setup should be easy and comfortable. These are the generic steps for adding a blog-post.
-
-">
-  <meta property="og:description" content="Creating a new blog post using the previously describe setup should be easy and comfortable. These are the generic steps for adding a blog-post.
-
-">
-  <meta name="twitter:description" content="Creating a new blog post using the previously describe setup should be easy and comfortable. These are the generic steps for adding a blog-post.
-
-">
+  <meta name="description" content="Creating a new blog post using the previously describe setup should be easy and comfortable. These are the generic steps for adding a blog-post.">
+  <meta property="og:description" content="Creating a new blog post using the previously describe setup should be easy and comfortable. These are the generic steps for adding a blog-post.">
+  <meta name="twitter:description" content="Creating a new blog post using the previously describe setup should be easy and comfortable. These are the generic steps for adding a blog-post.">
   <meta name="author" content="Felix Brilej"/>
   <link href='https://BubblesToTheLimit.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://BubblesToTheLimit.github.io/img/avatar-icon.png" />
@@ -28,7 +22,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Long Thoughts" />
 
-  <meta name="generator" content="Hugo 0.40.1" />
+  <meta name="generator" content="Hugo 0.61.0" />
   <link rel="canonical" href="https://BubblesToTheLimit.github.io/post/workflow_for_new_blogpost/" />
   <link rel="alternate" href="https://BubblesToTheLimit.github.io/index.xml" type="application/rss+xml" title="Long Thoughts">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -206,48 +200,48 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <p>Creating a new blog post using the previously describe setup should be easy and comfortable. These are the generic steps for adding a blog-post.</p>
-
-<p></p>
-
 <ol>
-<li><strong>Create the content in org-mode</strong>: Open any org-file on the computer and write a blogpost.
-
+<li>
+<p><strong>Create the content in org-mode</strong>: Open any org-file on the computer and write a blogpost.</p>
 <ul>
 <li>Any existing org-mode heading could be turned into a blogpost, but most generic notes dont make for a good blog post. Some of them can be a good basis though.</li>
-</ul></li>
-<li><strong>Tag it so i can find it again later</strong>: Tag it with “blog” so I can find it through the agenda. Enables me to list how much time i spend blogging in a week / month / year.</li>
-<li><strong>Create hugo variable placeholders</strong>: Navigate to the headline and press `M-x hugo`</li>
-
-<li><p><strong>Fill in the hugo variables</strong>. An example is below:</p>
-
-<pre><code class="language-sh">:PROPERTIES:
+</ul>
+</li>
+<li>
+<p><strong>Tag it so i can find it again later</strong>: Tag it with “blog” so I can find it through the agenda. Enables me to list how much time i spend blogging in a week / month / year.</p>
+</li>
+<li>
+<p><strong>Create hugo variable placeholders</strong>: Navigate to the headline and press `M-x hugo`</p>
+</li>
+<li>
+<p><strong>Fill in the hugo variables</strong>. An example is below:</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">:PROPERTIES:
 :TITLE:    Setting up the blog
 :HUGO_TAGS: emacs blogging
 :HUGO_TOPICS: emacs
 :HUGO_FILE: setting_up_the_blog.md
-:HUGO_DATE: [2017-08-15 Di 22:14]
+:HUGO_DATE: <span class="o">[</span>2017-08-15 Di 22:14<span class="o">]</span>
 :END:
-</code></pre>
-
-<ul>
+</code></pre></div><ul>
 <li>It is hidden in an org-mode drawer which makes it easy to hide</li>
-</ul></li>
-
-<li><p><strong>Convert the headline into a markdown file according to the hugo variables</strong>: Navigate to the headline and press `M-x hugo`</p></li>
-
-<li><p><strong>Regenerate the website including the new markdown file</strong>: Open a shell (I use git bash on Windows), navigate to the blog directory and execute `hugo`</p>
-
+</ul>
+</li>
+<li>
+<p><strong>Convert the headline into a markdown file according to the hugo variables</strong>: Navigate to the headline and press `M-x hugo`</p>
+</li>
+<li>
+<p><strong>Regenerate the website including the new markdown file</strong>: Open a shell (I use git bash on Windows), navigate to the blog directory and execute `hugo`</p>
 <ul>
 <li>Optional: Debugging, check the blog post formatting before uploading it</li>
 <li>For this execute “hugo server” and navigate to the local blog</li>
 <li>Downside: pictures dont get resolved correctly</li>
-</ul></li>
-
-<li><p><strong>Publish the website</strong></p>
-
-<pre><code class="language-sh">cd public
-git add * &amp;&amp; git commit -m &quot;site update&quot; &amp;&amp; git push origin master
-</code></pre></li>
+</ul>
+</li>
+<li>
+<p><strong>Publish the website</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> public
+git add * <span class="o">&amp;&amp;</span> git commit -m <span class="s2">&#34;site update&#34;</span> <span class="o">&amp;&amp;</span> git push origin master
+</code></pre></div></li>
 </ol>
       </article>
 
@@ -330,7 +324,7 @@ git add * &amp;&amp; git commit -m &quot;site update&quot; &amp;&amp; git push o
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.40.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.61.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>

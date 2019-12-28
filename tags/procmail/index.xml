@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Procmail on Long Thoughts</title>
+    <title>procmail on Long Thoughts</title>
     <link>https://BubblesToTheLimit.github.io/tags/procmail/</link>
-    <description>Recent content in Procmail on Long Thoughts</description>
+    <description>Recent content in procmail on Long Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
@@ -21,9 +21,7 @@
       <description>&lt;p&gt;Recently I wrote a procmail filter which filters mail for a ticketing system
 (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails
 with attachments bigger than 10 MB. I went through quite a learning curve while writing this
-filter so I&amp;rsquo;d like to share it here.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+filter so I&#39;d like to share it here.&lt;/p&gt;</description>
     </item>
     
   </channel>

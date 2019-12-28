@@ -11,17 +11,11 @@
   <meta name="description" content="Github pages cn are really an optimal way for org-mode nerds to blog. We usually have a github
 account anyway to manage our 1000&#43; commits big emacs config accross multiple devices, and we
 have learned enough about emacs to dish out some knowledge through our own blog.
-
-How can you blog comfortably in this setup? Let&rsquo;s get started&#x2026;
-
-">
+How can you blog comfortably in this setup? Let&#39;s get started…">
   <meta property="og:description" content="Github pages cn are really an optimal way for org-mode nerds to blog. We usually have a github
 account anyway to manage our 1000&#43; commits big emacs config accross multiple devices, and we
 have learned enough about emacs to dish out some knowledge through our own blog.
-
-How can you blog comfortably in this setup? Let&rsquo;s get started&#x2026;
-
-">
+How can you blog comfortably in this setup? Let&#39;s get started…">
   <meta name="twitter:description" content="Github pages cn are really an optimal way for org-mode nerds to blog. We usually have a github
 account anyway to manage our 1000&#43; commits big emacs config accross multiple devices, and we
 have learned …">
@@ -36,7 +30,7 @@ have learned …">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Long Thoughts" />
 
-  <meta name="generator" content="Hugo 0.40.1" />
+  <meta name="generator" content="Hugo 0.61.0" />
   <link rel="canonical" href="https://BubblesToTheLimit.github.io/post/setting_up_the_blog/" />
   <link rel="alternate" href="https://BubblesToTheLimit.github.io/index.xml" type="application/rss+xml" title="Long Thoughts">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -216,35 +210,34 @@ have learned …">
         <p>Github pages <code>cn</code> are really an optimal way for org-mode nerds to blog. We usually have a github
 account anyway to manage our 1000+ commits big emacs config accross multiple devices, and we
 have learned enough about emacs to dish out some knowledge through our own blog.</p>
-
-<p>How can you blog comfortably in this setup? Let&rsquo;s get started&#x2026;</p>
-
-<p></p>
-
+<p>How can you blog comfortably in this setup? Let's get started…</p>
 <p>Steps:</p>
-
-<ul class="task-list">
-<li>Create a directory where I want the blog to be, in my case <code>~/Dropbox/org/blog</code></li>
-<li>Follow the steps from here: <a href="http://www.holgerschurig.de/en/emacs-blog-from-org-to-hugo/">http://www.holgerschurig.de/en/emacs-blog-from-org-to-hugo/</a></li>
-
-<li><p>Install hugo (on Windows 10)</p>
-
+<ul>
+<li>
+<p>Create a directory where I want the blog to be, in my case <code>~/Dropbox/org/blog</code></p>
+</li>
+<li>
+<p>Follow the steps from here: <a href="http://www.holgerschurig.de/en/emacs-blog-from-org-to-hugo/">http://www.holgerschurig.de/en/emacs-blog-from-org-to-hugo/</a></p>
+</li>
+<li>
+<p>Install hugo (on Windows 10)</p>
 <ol>
-<li><p>Install chocolatey <a href="https://chocolatey.org/install#install-with-cmdexe">https://chocolatey.org/install#install-with-cmdexe</a></p>
-
+<li>
+<p>Install chocolatey <a href="https://chocolatey.org/install#install-with-cmdexe">https://chocolatey.org/install#install-with-cmdexe</a></p>
 <pre><code># for the powershell, close it after execution
 Set-ExecutionPolicy Bypass; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-</code></pre></li>
-
-<li><p>Install hugo using chocolatey:</p>
-
+</code></pre>
+</li>
+<li>
+<p>Install hugo using chocolatey:</p>
 <pre><code># on the normal shell
 choco install hugo -confirm
-</code></pre></li>
-</ol></li>
-
-<li><p>Follow the startup steps for hugo to setup a site and get the server running</p>
-
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Follow the startup steps for hugo to setup a site and get the server running</p>
 <pre><code># some command to create a default site from the tutorial
 # then download a theme
 # copy the exampleSite structure from the theme directoy into the main blog directory to have some dummy content
@@ -252,42 +245,44 @@ choco install hugo -confirm
 cp -R theme/$theme_name/exampleSite .
 hugo server
 # look at the site
-</code></pre></li>
-
-<li><p>Create a github.io repository and connect it to the directory</p>
-
+</code></pre>
+</li>
+<li>
+<p>Create a github.io repository and connect it to the directory</p>
 <ul>
-<li>Create the github repository
-
+<li>
+<p>Create the github repository</p>
 <ul>
 <li>Navigate to your github account and create this repo: username.github.io</li>
-</ul></li>
-
-<li><p>Create the local repository</p>
-
+</ul>
+</li>
+<li>
+<p>Create the local repository</p>
 <pre><code>cd ~/Dropbox/org/blog
 git init
 git remote add origin https://github.com/username/username.github.io.git
-</code></pre></li>
-</ul></li>
-
-<li><p>Further steps:</p>
-
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://gohugo.io/themes/customizing/">https://gohugo.io/themes/customizing/</a> Check out the customizing tutorial</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Settle on a theme
-
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Further steps:</p>
+<ul>
+<li><input disabled="" type="checkbox"><a href="https://gohugo.io/themes/customizing/">https://gohugo.io/themes/customizing/</a> Check out the customizing tutorial</li>
+<li><input disabled="" type="checkbox">Settle on a theme
 <ul>
 <li>I tried out ananke, a default theme</li>
 <li>I tried out &ldquo;bluestnight&rdquo;. Now i have to customize it.
-
 <ul>
 <li>Disabled the patreon widget</li>
-</ul></li>
+</ul>
+</li>
 <li>I tried out beautifulhugo</li>
-</ul></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Check out this link: <a href="https://vurt.co.uk/post/blogging-with-emacs-and-hugo/">https://vurt.co.uk/post/blogging-with-emacs-and-hugo/</a></label></li>
-</ul></li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox">Check out this link: <a href="https://vurt.co.uk/post/blogging-with-emacs-and-hugo/">https://vurt.co.uk/post/blogging-with-emacs-and-hugo/</a></li>
+</ul>
+</li>
 </ul>
       </article>
 
@@ -366,7 +361,7 @@ git remote add origin https://github.com/username/username.github.io.git
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="http://gohugo.io">Hugo v0.40.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          <a href="http://gohugo.io">Hugo v0.61.0</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>
