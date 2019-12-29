@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Making Emacs recognize its location - Long Thoughts</title>
-  <meta name="description" content="My emacs behaves differently when I&#39;m at home. This enables me to have my private org-mode files loaded automatically when I&#39;m at home, while I have all my work-settings enabled otherwise.">
+  <title>Making Emacs recognize its physical location - Long Thoughts</title>
+  <meta name="description" content="My emacs now behaves differently when I&#39;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.">
   <meta name="author" content="Felix Brilej"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -45,7 +45,7 @@
         "position": 3,
         "item": {
           "@id": "https:\/\/BubblesToTheLimit.github.io\/post\/emacs_appartment_recognition\/",
-          "name": "Making emacs recognize its location"
+          "name": "Making emacs recognize its physical location"
         }
     }]
 }
@@ -56,10 +56,10 @@
   "author": {
     "name" : "Felix Brilej"
   },
-  "headline": "Making Emacs recognize its location",
-  "description" : "My emacs behaves differently when I\x27m at home. This enables me to have my private org-mode files loaded automatically when I\x27m at home, while I have all my work-settings enabled otherwise.\n",
+  "headline": "Making Emacs recognize its physical location",
+  "description" : "My emacs now behaves differently when I\x27m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.\n",
   "inLanguage" : "en",
-  "wordCount":  343 ,
+  "wordCount":  341 ,
   "datePublished" : "2019-12-27T00:00:00",
   "dateModified" : "2019-12-27T00:00:00",
   "image" : "https:\/\/BubblesToTheLimit.github.io\/img\/avatar-icon.png",
@@ -78,15 +78,15 @@
 }
 </script>
 
-<meta property="og:title" content="Making Emacs recognize its location" />
-<meta property="og:description" content="My emacs behaves differently when I&#39;m at home. This enables me to have my private org-mode files loaded automatically when I&#39;m at home, while I have all my work-settings enabled otherwise.">
+<meta property="og:title" content="Making Emacs recognize its physical location" />
+<meta property="og:description" content="My emacs now behaves differently when I&#39;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.">
 <meta property="og:image" content="https://BubblesToTheLimit.github.io/img/avatar-icon.png" />
 <meta property="og:url" content="https://BubblesToTheLimit.github.io/post/emacs_appartment_recognition/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Long Thoughts" />
 
-  <meta name="twitter:title" content="Making Emacs recognize its location" />
-  <meta name="twitter:description" content="My emacs behaves differently when I&#39;m at home. This enables me to have my private org-mode files loaded automatically when I&#39;m at home, while I have all my work-settings enabled otherwise.">
+  <meta name="twitter:title" content="Making Emacs recognize its physical location" />
+  <meta name="twitter:description" content="My emacs now behaves differently when I&#39;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.">
   <meta name="twitter:image" content="https://BubblesToTheLimit.github.io/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@MondBeton" />
@@ -241,7 +241,7 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Making Emacs recognize its location</h1>
+                <h1>Making Emacs recognize its physical location</h1>
               
               
               
@@ -272,7 +272,7 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>My emacs behaves differently when I'm at home. This enables me to have my private org-mode files loaded automatically when I'm at home, while I have all my work-settings enabled otherwise.</p>
+        <p>My emacs now behaves differently when I'm at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.</p>
 <p>Emacs&rsquo; org-mode is a tool I use almost daily for my note-taking. I don't attempt to capture everything in emacs, but most of my notes eventually end up either there or in one of my physical notebooks. In emacs, I use different notebooks depending on whether I'm at work or not. With the following snippet in my config, the information on the kind of environment is set as the environment variable <code>SYSENV</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(<span style="color:#a6e22e">message</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Updating the SYSENV based on the connected wifi...</span><span style="color:#e6db74">&#34;</span>)
 (setq home-wifi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">FRITZ!Box 7530 RG</span><span style="color:#e6db74">\n</span><span style="color:#e6db74">&#34;</span>)

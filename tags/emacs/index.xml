@@ -13,12 +13,12 @@
     
     
     <item>
-      <title>Making Emacs recognize its location</title>
+      <title>Making Emacs recognize its physical location</title>
       <link>https://BubblesToTheLimit.github.io/post/emacs_appartment_recognition/</link>
       <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://BubblesToTheLimit.github.io/post/emacs_appartment_recognition/</guid>
-      <description>&lt;p&gt;My emacs behaves differently when I&#39;m at home. This enables me to have my private org-mode files loaded automatically when I&#39;m at home, while I have all my work-settings enabled otherwise.&lt;/p&gt;</description>
+      <description>&lt;p&gt;My emacs now behaves differently when I&#39;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.&lt;/p&gt;</description>
     </item>
     
     <item>
