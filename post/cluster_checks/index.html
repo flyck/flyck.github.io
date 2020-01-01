@@ -8,8 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Icinga2 Cluster Checks - Long Thoughts</title>
-  <meta name="description" content="Recently I wrote an icinga cluster check which can currently check whether a service runs on
-atleast on one of two servers.
+  <meta name="description" content="Recently I wrote an icinga cluster check which can currently check whether a service runs on atleast on one of two servers.
 A teaser of the results:
 ">
   <meta name="author" content="Felix Brilej"/><script type="application/ld+json">
@@ -82,8 +81,7 @@ A teaser of the results:
 </script>
 
 <meta property="og:title" content="Icinga2 Cluster Checks" />
-<meta property="og:description" content="Recently I wrote an icinga cluster check which can currently check whether a service runs on
-atleast on one of two servers.
+<meta property="og:description" content="Recently I wrote an icinga cluster check which can currently check whether a service runs on atleast on one of two servers.
 A teaser of the results:
 ">
 <meta property="og:image" content="https://BubblesToTheLimit.github.io/img/avatar-icon.png" />
@@ -92,8 +90,7 @@ A teaser of the results:
 <meta property="og:site_name" content="Long Thoughts" />
 
   <meta name="twitter:title" content="Icinga2 Cluster Checks" />
-  <meta name="twitter:description" content="Recently I wrote an icinga cluster check which can currently check whether a service runs on
-atleast on one of two servers.
+  <meta name="twitter:description" content="Recently I wrote an icinga cluster check which can currently check whether a service runs on atleast on one of two servers.
 A teaser of the results:
 ">
   <meta name="twitter:image" content="https://BubblesToTheLimit.github.io/img/avatar-icon.png" />
@@ -318,20 +315,12 @@ A teaser of the results:
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>Recently I wrote an icinga cluster check which can currently check whether a service runs on
-atleast on one of two servers.</p>
+        <p>Recently I wrote an icinga cluster check which can currently check whether a service runs on atleast on one of two servers.</p>
 <p>A teaser of the results:</p>
 <p><img src="/img/cluster_check_1.png" alt="cluster1"></p>
 <h1 id="looking-at-the-available-options">Looking at the available options</h1>
-<p>This post assumes some basic knowledge about icinga2 and icingaweb2, like the utilization of
-check_nrpe.</p>
-<p>The aim of this post to put the output of cluster-host1:serviceA and cluster-host2:serviceA
-into one service output. This cluster-service should only show an error if serviceA is down
-on <strong>both</strong> cluster-hosts. If we implement the service-checks the standard way and many services
-on cluster-host1 are down our monitoring is full of critical warnings while there is no
-actual problem. This can be solved by acknowledging all the checks, but this is just not
-right. It is the quick-and-dirty solution. What is needed is to create a proper
-cluster-check!</p>
+<p>This post assumes some basic knowledge about icinga2 and icingaweb2, like the utilization of check_nrpe.</p>
+<p>The aim of this post to put the output of cluster-host1:serviceA and cluster-host2:serviceA into one service output. This cluster-service should only show an error if serviceA is down on <strong>both</strong> cluster-hosts. If we implement the service-checks the standard way and many services on cluster-host1 are down our monitoring is full of critical warnings while there is no actual problem. This can be solved by acknowledging all the checks, but this is just not right. It is the quick-and-dirty solution. What is needed is to create a proper cluster-check!</p>
 <p>To do this there are multiple options available:</p>
 <ul>
 <li>check_multi</li>
@@ -339,30 +328,18 @@ cluster-check!</p>
 <li>icinga dependencies</li>
 <li>icinga business process addon</li>
 </ul>
-<p>Investigating these options further I ended up chosing <code>check_multi</code>. Notes on the alternatives
-and why they didn't make it:</p>
+<p>Investigating these options further I ended up chosing <code>check_multi</code>. Notes on the alternatives and why they didn't make it:</p>
 <ul>
 <li>check_cluster
 <ul>
-<li><a href="https://github.com/monitoring-plugins/monitoring-plugins/issues/1453#issuecomment-265238322">https://github.com/monitoring-plugins/monitoring-plugins/issues/1453#issuecomment-265238322</a>
-dnsmichi created a tutorial on check_cluster over here, at the end he however states:
-“Although check_cluster might be reasonable to call, I'd just go for writing functions and
-evaluating the state over there. We'll probably find a way to prevent the call to
-check_dummy at some point, for now it is up to you to choose ;-)”</li>
-<li><a href="https://stackoverflow.com/questions/33279329/icinga2-check-cluster-plugin-and-its-implementation-in-2-3">https://stackoverflow.com/questions/33279329/icinga2-check-cluster-plugin-and-its-implementation-in-2-3</a>
-dnsmichi states the following here: “You should consider dropping the check_cluster plugin
-and use a more generic way to calculate states. Be it using business processes or
-check_multi or - a function to calculate the clusterstate in icinga2's &ldquo;magic&rdquo; language.”</li>
-<li><strong>all in all judging from these suggestions by icinga-god <code>dnsmichi</code> check_cluster just seems
-like a bad option.</strong></li>
+<li><a href="https://github.com/monitoring-plugins/monitoring-plugins/issues/1453#issuecomment-265238322">https://github.com/monitoring-plugins/monitoring-plugins/issues/1453#issuecomment-265238322</a> dnsmichi created a tutorial on check_cluster over here, at the end he however states: “Although check_cluster might be reasonable to call, I'd just go for writing functions and evaluating the state over there. We'll probably find a way to prevent the call to check_dummy at some point, for now it is up to you to choose ;-)”</li>
+<li><a href="https://stackoverflow.com/questions/33279329/icinga2-check-cluster-plugin-and-its-implementation-in-2-3">https://stackoverflow.com/questions/33279329/icinga2-check-cluster-plugin-and-its-implementation-in-2-3</a> dnsmichi states the following here: “You should consider dropping the check_cluster plugin and use a more generic way to calculate states. Be it using business processes or check_multi or - a function to calculate the clusterstate in icinga2's &ldquo;magic&rdquo; language.”</li>
+<li><strong>all in all judging from these suggestions by icinga-god <code>dnsmichi</code> check_cluster just seems like a bad option.</strong></li>
 </ul>
 </li>
 <li>icinga dependencies
 <ul>
-<li>dependencies enable such relations: if host down, then dont notify / check on child
-service. What we want from a cluster checks looks kind of like this though: if
-hostA:service down and hostB:service down then alert. This cannot really be done with
-dependencies as far as I understood the mechanism.</li>
+<li>dependencies enable such relations: if host down, then dont notify / check on child service. What we want from a cluster checks looks kind of like this though: if hostA:service down and hostB:service down then alert. This cannot really be done with dependencies as far as I understood the mechanism.</li>
 <li><a href="https://www.icinga.com/docs/icinga2/latest/doc/03-monitoring-basics/#dependencies">https://www.icinga.com/docs/icinga2/latest/doc/03-monitoring-basics/#dependencies</a></li>
 </ul>
 </li>
@@ -374,29 +351,25 @@ dependencies as far as I understood the mechanism.</li>
 </li>
 </ul>
 <h1 id="special-qualities-of-this-cluster-check-and-the-command-file">Special qualities of this cluster check and the command file</h1>
-<p>For the cluster check I had the following two requirements which complicated the setup, but it
-was worth it:</p>
+<p>For the cluster check I had the following two requirements which complicated the setup, but it was worth it:</p>
 <ul>
 <li><input checked="" disabled="" type="checkbox">display a pie chart for convenience in icingaweb2
 <ul>
 <li>
 <p>requires the perfdata to contain “minValue”, “maxValue” and “value”! From <a href="https://github.com/Icinga/icingaweb2/blob/cd5bc4c4a6554b8db8c3b8d8385c28e62df05a0c/modules/monitoring/library/Monitoring/Plugin/Perfdata.php#L179">here</a>:</p>
-<pre><code>public function isVisualizable()
-{
-    return isset($this-&gt;minValue) &amp;&amp; isset($this-&gt;maxValue) &amp;&amp; isset($this-&gt;value);
-}
-</code></pre>
-</li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">public <span style="color:#66d9ef">function</span> isVisualizable<span style="color:#f92672">(</span><span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> isset<span style="color:#f92672">(</span>$this-&gt;minValue<span style="color:#f92672">)</span> <span style="color:#f92672">&amp;&amp;</span> isset<span style="color:#f92672">(</span>$this-&gt;maxValue<span style="color:#f92672">)</span> <span style="color:#f92672">&amp;&amp;</span> isset<span style="color:#f92672">(</span>$this-&gt;value<span style="color:#f92672">)</span>;
+<span style="color:#f92672">}</span>
+</code></pre></div></li>
 <li>
-<p>for this the result of the service checks have to be interpreted. they are really just text
-and an exit code in this case.</p>
+<p>for this the result of the service checks have to be interpreted. they are really just text and an exit code in this case.</p>
 </li>
 </ul>
 </li>
 <li><input checked="" disabled="" type="checkbox">make it so the pie charts already indicate which host is down / up
 <ul>
-<li>usually icingaweb2 sorts the pie-charts. if this is turned off we can judge which host is
-down without even looking at the exact service output</li>
+<li>usually icingaweb2 sorts the pie-charts. if this is turned off we can judge which host is down without even looking at the exact service output</li>
 <li>/usr/share/icingaweb2/modules/monitoring/application/views/helpers/Perfdata.php</li>
 </ul>
 </li>
@@ -408,90 +381,77 @@ down without even looking at the exact service output</li>
 <li>the .cmd file which contains all the actual magic (configuration for check_multi)</li>
 </ul>
 <!-- raw HTML omitted -->
-<pre><code>object Host &quot;project-host1&quot; {
-  import &quot;generic-linux&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">object Host <span style="color:#e6db74">&#34;project-host1&#34;</span> <span style="color:#f92672">{</span>
+    import <span style="color:#e6db74">&#34;generic-linux&#34;</span>
 
-  address = &quot;10.120.33.178&quot;
-  groups += [ &quot;linux&quot;, &quot;project-hosts&quot; ]
-}
+    address <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;10.120.33.178&#34;</span>
+    groups <span style="color:#f92672">+=</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;linux&#34;</span>, <span style="color:#e6db74">&#34;project-hosts&#34;</span> <span style="color:#f92672">]</span>
+<span style="color:#f92672">}</span>
 
-object Host &quot;project-host2&quot; {
-  import &quot;generic-linux&quot;
+object Host <span style="color:#e6db74">&#34;project-host2&#34;</span> <span style="color:#f92672">{</span>
+    import <span style="color:#e6db74">&#34;generic-linux&#34;</span>
 
-  address = &quot;10.120.33.245&quot;
-  groups += [ &quot;linux&quot;, &quot;project-hosts&quot; ]
-}
+    address <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;10.120.33.245&#34;</span>
+    groups <span style="color:#f92672">+=</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;linux&#34;</span>, <span style="color:#e6db74">&#34;project-hosts&#34;</span> <span style="color:#f92672">]</span>
+<span style="color:#f92672">}</span>
 
-object Host &quot;project-cluster&quot; {
-  import &quot;generic-linux&quot;
+object Host <span style="color:#e6db74">&#34;project-cluster&#34;</span> <span style="color:#f92672">{</span>
+    import <span style="color:#e6db74">&#34;generic-linux&#34;</span>
 
-  check_command = &quot;dummy&quot;
-  vars.dummy_state = 0
-  vars.dummy_text = &quot;Host can not be pinged, should be up, hopefully...&quot;
+    check_command <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;dummy&#34;</span>
+    vars.dummy_state <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    vars.dummy_text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Host can not be pinged, should be up, hopefully...&#34;</span>
 
-  vars.cluster1 = &quot;10.120.33.178&quot;
-  vars.cluster2 = &quot;10.120.33.245&quot;
+    vars.cluster1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;10.120.33.178&#34;</span>
+    vars.cluster2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;10.120.33.245&#34;</span>
 
-  groups += [ &quot;linux&quot;, &quot;project-hosts&quot; ]
-}
-</code></pre>
-<p>Notice how a dummy host is created to execute the cluster_checks. Assigning them to either
-“project-host1” or “project-host2” would not be quite right. However like this we introduced a
-dummy host which doesn't actually exist, but I prefer this solution.</p>
-<pre><code>object CheckCommand &quot;check_multi&quot; {
-        command = [ PluginDir + &quot;/check_multi&quot;,
-        &quot;--libexec&quot;, &quot;/usr/lib64/nagios/plugins&quot;,
-        &quot;-f&quot;, &quot;$multi_command_file$&quot;,
-        &quot;-s&quot;, &quot;CHECK_COMMAND=$multi_command$&quot;,
-        &quot;-s&quot;, &quot;CLUSTER1=$cluster1$&quot;,
-        &quot;-s&quot;, &quot;CLUSTER2=$cluster2$&quot;,
-        &quot;-c&quot;, &quot;$multi_critical$&quot;,
-        &quot;-w&quot;, &quot;$multi_warning$&quot;,
-        &quot;-n&quot;, &quot;$multi_name$&quot;,
-        &quot;-r&quot;, &quot;$report_style$&quot;
-        ]
-}
+    groups <span style="color:#f92672">+=</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;linux&#34;</span>, <span style="color:#e6db74">&#34;project-hosts&#34;</span> <span style="color:#f92672">]</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Notice how a dummy host is created to execute the cluster_checks. Assigning them to either “project-host1” or “project-host2” would not be quite right. However like this we introduced a dummy host which doesn't actually exist, but I prefer this solution.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">object CheckCommand <span style="color:#e6db74">&#34;check_multi&#34;</span> <span style="color:#f92672">{</span>
+        command <span style="color:#f92672">=</span> <span style="color:#f92672">[</span> PluginDir + <span style="color:#e6db74">&#34;/check_multi&#34;</span>,
+        <span style="color:#e6db74">&#34;--libexec&#34;</span>, <span style="color:#e6db74">&#34;/usr/lib64/nagios/plugins&#34;</span>,
+        <span style="color:#e6db74">&#34;-f&#34;</span>, <span style="color:#e6db74">&#34;</span>$multi_command_file$<span style="color:#e6db74">&#34;</span>,
+        <span style="color:#e6db74">&#34;-s&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">CHECK_COMMAND=</span>$multi_command$<span style="color:#e6db74">&#34;</span>,
+        <span style="color:#e6db74">&#34;-s&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">CLUSTER1=</span>$cluster1$<span style="color:#e6db74">&#34;</span>,
+        <span style="color:#e6db74">&#34;-s&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">CLUSTER2=</span>$cluster2$<span style="color:#e6db74">&#34;</span>,
+        <span style="color:#e6db74">&#34;-c&#34;</span>, <span style="color:#e6db74">&#34;</span>$multi_critical$<span style="color:#e6db74">&#34;</span>,
+        <span style="color:#e6db74">&#34;-w&#34;</span>, <span style="color:#e6db74">&#34;</span>$multi_warning$<span style="color:#e6db74">&#34;</span>,
+        <span style="color:#e6db74">&#34;-n&#34;</span>, <span style="color:#e6db74">&#34;</span>$multi_name$<span style="color:#e6db74">&#34;</span>,
+        <span style="color:#e6db74">&#34;-r&#34;</span>, <span style="color:#e6db74">&#34;</span>$report_style$<span style="color:#e6db74">&#34;</span>
+        <span style="color:#f92672">]</span>
+<span style="color:#f92672">}</span>
 
-template Service &quot;generic-cluster-service&quot; {
-  import &quot;generic-service&quot;
+template Service <span style="color:#e6db74">&#34;generic-cluster-service&#34;</span> <span style="color:#f92672">{</span>
+  import <span style="color:#e6db74">&#34;generic-service&#34;</span>
 
-  vars.multi_command = &quot;webservice&quot;
-  vars.multi_warning = &quot;COUNT(CRITICAL)&gt;1&quot;
-  vars.multi_critical = &quot;COUNT(CRITICAL)&gt;1&quot;
-  vars.report_style = &quot;1+4+8&quot;
-  vars.multi_name = &quot;webservice&quot;
-  vars.multi_verbose = &quot;2&quot;
+  vars.multi_command <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;webservice&#34;</span>
+  vars.multi_warning <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;COUNT(CRITICAL)&gt;1&#34;</span>
+  vars.multi_critical <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;COUNT(CRITICAL)&gt;1&#34;</span>
+  vars.report_style <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1+4+8&#34;</span>
+  vars.multi_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;webservice&#34;</span>
+  vars.multi_verbose <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2&#34;</span>
 
-  check_command = &quot;check_multi&quot;
-  vars.multi_command_file = &quot;/usr/lib64/nagios/plugins/distributed_two.cmd&quot;
-}
+  check_command <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;check_multi&#34;</span>
+  vars.multi_command_file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/usr/lib64/nagios/plugins/distributed_two.cmd&#34;</span>
+<span style="color:#f92672">}</span>
 
-apply Service &quot;webservice&quot; {
-  import &quot;generic-cluster-service&quot;
-  vars.multi_command =  &quot;webservice&quot;
-  assign where host.name == &quot;project-cluster&quot;
-}
-</code></pre>
-<p>Notice how we can define the cluster-ips in the host-definition and other variables like the
-nrpe-command to be executed in the service definition, while they can all be pulled together
-equally in the CheckCommand. I like this about icinga2.</p>
-<pre><code>command [ $CLUSTER1$ ] = set -o pipefail; check_nrpe -H $CLUSTER1$ -t $TIMEOUT$ -c $CHECK_COMMAND$ | tee /tmp/check_multi/$CLUSTER1$_$CHECK_COMMAND$
+apply Service <span style="color:#e6db74">&#34;webservice&#34;</span> <span style="color:#f92672">{</span>
+  import <span style="color:#e6db74">&#34;generic-cluster-service&#34;</span>
+  vars.multi_command <span style="color:#f92672">=</span>  <span style="color:#e6db74">&#34;webservice&#34;</span>
+  assign where host.name <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;project-cluster&#34;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Notice how we can define the cluster-ips in the host-definition and other variables like the nrpe-command to be executed in the service definition, while they can all be pulled together equally in the CheckCommand. I like this about icinga2.</p>
+<pre><code class="language-conf" data-lang="conf">command [ $CLUSTER1$ ] = set -o pipefail; check_nrpe -H $CLUSTER1$ -t $TIMEOUT$ -c $CHECK_COMMAND$ | tee /tmp/check_multi/$CLUSTER1$_$CHECK_COMMAND$
 command [ $CLUSTER2$ ] = set -o pipefail; check_nrpe -H $CLUSTER2$ -t $TIMEOUT$ -c $CHECK_COMMAND$ | tee /tmp/check_multi/$CLUSTER2$_$CHECK_COMMAND$
 
 command [ perfdata::insert_servicename_here_cluster ] = /bin/echo &quot;OK|cluster1=$(if grep -q CRITICAL /tmp/check_multi/$CHECK_COMMAND$_cluster1; then echo '2'; else echo '1'; fi);1;1;0;1 cluster2=$(if grep -q CRITICAL /tmp/check_multi/$CHECK_COMMAND$_cluster2; then echo '2'; else echo '1'; fi);1;1;0;1&quot;
-</code></pre>
-<p>Notes on distributed_two.cmd</p>
+</code></pre><p>Notes on distributed_two.cmd</p>
 <ul>
-<li>“set -o pipefail;” carries on any exit status even through piping. otherwise the exit-status
-of check_nrpe gets lost and the checks always return “OK”</li>
-<li>“| tee /tmp/check_multi/” makes it so the output of check_nrpe gets echoed but also written
-to a text-file, so we can digest it later to create the perfdata which is required for the
-piecharts to work
+<li>“set -o pipefail;” carries on any exit status even through piping. otherwise the exit-status of check_nrpe gets lost and the checks always return “OK”</li>
+<li>“| tee /tmp/check_multi/” makes it so the output of check_nrpe gets echoed but also written to a text-file, so we can digest it later to create the perfdata which is required for the piecharts to work
 <ul>
-<li>tee saves the file to the standard check_multi tmp directory (check_multi creates this out
-of the box) and saves them to a file which includes the check_command and the node
-name. This way there should be no confict between multiple of these checks being executed
-at the same time</li>
+<li>tee saves the file to the standard check_multi tmp directory (check_multi creates this out of the box) and saves them to a file which includes the check_command and the node name. This way there should be no confict between multiple of these checks being executed at the same time</li>
 </ul>
 </li>
 <li>the last line, the perfdata command is straight forward, but to break it down:
@@ -509,27 +469,15 @@ at the same time</li>
 <p>I am proud to check clusters this conveniently now!</p>
 <p><img src="/img/cluster_check_1.png" alt="cluster1"></p>
 <p><img src="/img/cluster_check_2.png" alt="cluster1"></p>
-<p>A cluster check as I had imagined can be done as described. I am happy with this solution,
-while I know I have cheated the system at some points. These cheats are included in the
-following downsides:</p>
+<p>A cluster check as I had imagined can be done as described. I am happy with this solution, while I know I have cheated the system at some points. These cheats are included in the following downsides:</p>
 <ul>
 <li>Modification of icingaweb2 code, may bite me in the ass when i update</li>
-<li>I create a bunch of files in /tmp/check_multi. This may bite me in the ass in huge setups
-performance-wise</li>
-<li>The performance data looks as follows if the check returns “critical”: “2;1;1;0;1”. This is
-a way to create a full red chie part. The value of the check is not actually “2”, but this
-results in the desired behavior so I think its fine.</li>
-<li>Check_multi counts the performance data as another command, which results in 3 commands in
-total. This is not actually what I want, I dont want the performance data generation to show
-up as a seperate command but I couldn't find a way around that.</li>
-<li>I can't display the cluster-checks properly with pnp4nagios. This would be the endgame i
-think. However I have to remind myself that I am working with a check which doesn't even
-return performance data on its own, so I think its fine to just have the exit status without
-a pnp4nagios graph.</li>
-<li>I can only check 2 clusters as of now. This is fine for me but it would be cooler to have
-the check_multi command be more generic.</li>
-<li>I have to define the IP of cluster1 and cluster2 and two places. Configuring the same
-information twice is always bad, but in this case its okay for me.</li>
+<li>I create a bunch of files in /tmp/check_multi. This may bite me in the ass in huge setups performance-wise</li>
+<li>The performance data looks as follows if the check returns “critical”: “2;1;1;0;1”. This is a way to create a full red chie part. The value of the check is not actually “2”, but this results in the desired behavior so I think its fine.</li>
+<li>Check_multi counts the performance data as another command, which results in 3 commands in total. This is not actually what I want, I dont want the performance data generation to show up as a seperate command but I couldn't find a way around that.</li>
+<li>I can't display the cluster-checks properly with pnp4nagios. This would be the endgame i think. However I have to remind myself that I am working with a check which doesn't even return performance data on its own, so I think its fine to just have the exit status without a pnp4nagios graph.</li>
+<li>I can only check 2 clusters as of now. This is fine for me but it would be cooler to have the check_multi command be more generic.</li>
+<li>I have to define the IP of cluster1 and cluster2 and two places. Configuring the same information twice is always bad, but in this case its okay for me.</li>
 </ul>
 
         

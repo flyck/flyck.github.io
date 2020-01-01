@@ -106,8 +106,7 @@ The linux world is big, so you might come here asking: &amp;ldquo;Why the hell d
       <pubDate>Wed, 25 Oct 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://BubblesToTheLimit.github.io/post/cluster_checks/</guid>
-      <description>&lt;p&gt;Recently I wrote an icinga cluster check which can currently check whether a service runs on
-atleast on one of two servers.&lt;/p&gt;
+      <description>&lt;p&gt;Recently I wrote an icinga cluster check which can currently check whether a service runs on atleast on one of two servers.&lt;/p&gt;
 &lt;p&gt;A teaser of the results:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://BubblesToTheLimit.github.io/img/cluster_check_1.png&#34; alt=&#34;cluster1&#34;&gt;&lt;/p&gt;</description>
     </item>
@@ -118,10 +117,7 @@ atleast on one of two servers.&lt;/p&gt;
       <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://BubblesToTheLimit.github.io/post/procmail_setup/</guid>
-      <description>&lt;p&gt;Recently I wrote a procmail filter which filters mail for a ticketing system
-(request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails
-with attachments bigger than 10 MB. I went through quite a learning curve while writing this
-filter so I&#39;d like to share it here.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Recently I wrote a procmail filter which filters mail for a ticketing system (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails with attachments bigger than 10 MB. I went through quite a learning curve while writing this filter so I&#39;d like to share it here.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -139,10 +135,7 @@ filter so I&#39;d like to share it here.&lt;/p&gt;</description>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://BubblesToTheLimit.github.io/post/setting_up_the_blog/</guid>
-      <description>&lt;p&gt;Github pages &lt;code&gt;cn&lt;/code&gt; are really an optimal way for org-mode nerds to blog. We usually have a github
-account anyway to manage our 1000+ commits big emacs config accross multiple devices, and we
-have learned enough about emacs to dish out some knowledge through our own blog.&lt;/p&gt;
-&lt;p&gt;How can you blog comfortably in this setup? Let&#39;s get started…&lt;/p&gt;</description>
+      <description>&lt;p&gt;A quick howto on how I used Hugo to setup this blog.&lt;/p&gt;</description>
     </item>
     
   </channel>

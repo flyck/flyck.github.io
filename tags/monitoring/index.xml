@@ -28,8 +28,7 @@ The linux world is big, so you might come here asking: &amp;ldquo;Why the hell d
       <pubDate>Wed, 25 Oct 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://BubblesToTheLimit.github.io/post/cluster_checks/</guid>
-      <description>&lt;p&gt;Recently I wrote an icinga cluster check which can currently check whether a service runs on
-atleast on one of two servers.&lt;/p&gt;
+      <description>&lt;p&gt;Recently I wrote an icinga cluster check which can currently check whether a service runs on atleast on one of two servers.&lt;/p&gt;
 &lt;p&gt;A teaser of the results:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://BubblesToTheLimit.github.io/img/cluster_check_1.png&#34; alt=&#34;cluster1&#34;&gt;&lt;/p&gt;</description>
     </item>
