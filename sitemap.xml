@@ -183,6 +183,11 @@
   </url>
   
   <url>
+    <loc>https://BubblesToTheLimit.github.io/readme/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://BubblesToTheLimit.github.io/page/about/</loc>
   </url>
   
