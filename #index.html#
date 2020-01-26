@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
   <head>
@@ -7,8 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Overview of all pages with the tag #life - Long Thoughts</title>
-  <meta name="description" content="Overview of all pages with the tag #life, such as: The Process of Self-Revelation">
+  <title>Long Thoughts - Long Thoughts</title>
   <meta name="author" content="Felix Brilej"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -30,17 +31,17 @@
 }
 </script>
 
-<meta property="og:title" content="life" />
+<meta property="og:title" content="Long Thoughts" />
 <meta property="og:image" content="https://BubblesToTheLimit.github.io/img/avatar-icon.png" />
-<meta property="og:url" content="https://BubblesToTheLimit.github.io/tags/life/" />
+<meta property="og:url" content="https://BubblesToTheLimit.github.io/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Long Thoughts" />
 
-  <meta name="twitter:title" content="life" />
+  <meta name="twitter:title" content="Long Thoughts" />
   <meta name="twitter:image" content="https://BubblesToTheLimit.github.io/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://BubblesToTheLimit.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.60.0" />
+  <meta name="generator" content="Hugo 0.63.1" />
   <link rel="alternate" href="https://BubblesToTheLimit.github.io/index.xml" type="application/rss+xml" title="Long Thoughts"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -187,13 +188,17 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="tags-heading">
+            <div class="-heading">
               
-                <h1>life</h1>
+                <h1>Long Thoughts</h1>
               
               
                 <hr class="small">
               
+              
+                
+                  <h2 class="-subheading">An IT Engineer&#39;s Blog. Oh Boy.</h2>
+                
               
               
             </div>
@@ -205,11 +210,54 @@
 
 
     
-  <div class="container" role="main">
+  <div role="main" class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
+
         <div class="posts-list">
+          
+          
+            <article class="post-preview">
+    <a href="https://BubblesToTheLimit.github.io/post/emacs_appartment_recognition/">
+        <h2 class="post-title">Making Emacs recognize its physical location</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on December 27, 2019
+  
+  
+  
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>My emacs now behaves differently when I&rsquo;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.</p>
+        <a href="https://BubblesToTheLimit.github.io/post/emacs_appartment_recognition/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://BubblesToTheLimit.github.io//tags/english/">english</a>&nbsp;
+        
+        <a href="https://BubblesToTheLimit.github.io//tags/emacs/">emacs</a>&nbsp;
+        
+    </div>
+    
+
+</article>
           
             <article class="post-preview">
     <a href="https://BubblesToTheLimit.github.io/post/self_revelation/">
@@ -248,6 +296,132 @@
         <a href="https://BubblesToTheLimit.github.io//tags/life/">life</a>&nbsp;
         
         <a href="https://BubblesToTheLimit.github.io//tags/long-thought/">long-thought</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="https://BubblesToTheLimit.github.io/post/organizing_music/">
+        <h2 class="post-title">Organizing Music</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on September 29, 2019
+  
+  
+  
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>I finally found a half-way decent, quick and simple system to organize my music.</p>
+        <a href="https://BubblesToTheLimit.github.io/post/organizing_music/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://BubblesToTheLimit.github.io//tags/english/">english</a>&nbsp;
+        
+        <a href="https://BubblesToTheLimit.github.io//tags/organizing/">organizing</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="https://BubblesToTheLimit.github.io/post/pros_cons_of_religion/">
+        <h2 class="post-title">Religion: Problems and Strenghts</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on September 21, 2019
+  
+  
+  
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>Yesterday, a couple cute Mormon missionaries came over to me and chatted me up. I estimated the three of them to be roughly my age, probably a couple years younger, around 22 to 23. It was a beautiful, sunny Saturday and I incidentally was sitting on a bench near a church. Later they told me they are specifically roaming these areas to do their work. They started out the conversation talking about their strong belief in god, how they talk to him, and how he would answer them their questions. They proceeded asking me what questions I had for god. I didn&rsquo;t have one and couldn&rsquo;t even come up with one, but I was interested in chatting with them, so I invited them to sit down with me.</p>
+        <a href="https://BubblesToTheLimit.github.io/post/pros_cons_of_religion/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://BubblesToTheLimit.github.io//tags/english/">english</a>&nbsp;
+        
+        <a href="https://BubblesToTheLimit.github.io//tags/personal-oppinion/">personal-oppinion</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
+    <a href="https://BubblesToTheLimit.github.io/post/tinder_manifesto/">
+        <h2 class="post-title">Tinder Manifesto</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on August 4, 2019
+  
+  
+  
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>Manifesto: noun. A public declaration of policy and aims, especially one issued before an election by a political party or candidate.</p>
+<p>Tinder could get dirty. Tinder could get tedious. I wrote down my original aims when I started using tinder here, before everything falls into chaos later. Much like with other manifestos ;)</p>
+        <a href="https://BubblesToTheLimit.github.io/post/tinder_manifesto/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://BubblesToTheLimit.github.io//tags/personal-oppinion/">personal-oppinion</a>&nbsp;
+        
+        <a href="https://BubblesToTheLimit.github.io//tags/dating/">dating</a>&nbsp;
+        
+        <a href="https://BubblesToTheLimit.github.io//tags/english/">english</a>&nbsp;
         
     </div>
     
@@ -344,6 +518,52 @@
 </article>
           
             <article class="post-preview">
+    <a href="https://BubblesToTheLimit.github.io/post/monitoring-setup-xinetd-nrpe-ansible/">
+        <h2 class="post-title">Monitoring &amp; Ansible, Part I: NRPE daemon setup</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 19, 2018
+  
+  
+  
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        Monitoring servers using icinga usually requires a small setup on the monitored server. From the different choices of agents, the nrpe daemon ontop of xinetd is easy enough to set up, while it can provide any kind of information that is available on the monitored server locally. To automate this setup task and as a learning exercise I wrote up an Ansible playbook, which I describe here.
+The linux world is big, so you might come here asking: &ldquo;Why the hell do you use xinetd and nrpe for monitoring?
+        <a href="https://BubblesToTheLimit.github.io/post/monitoring-setup-xinetd-nrpe-ansible/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://BubblesToTheLimit.github.io//tags/monitoring/">monitoring</a>&nbsp;
+        
+        <a href="https://BubblesToTheLimit.github.io//tags/linux/">linux</a>&nbsp;
+        
+        <a href="https://BubblesToTheLimit.github.io//tags/ansible/">ansible</a>&nbsp;
+        
+        <a href="https://BubblesToTheLimit.github.io//tags/devops/">devops</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
+            <article class="post-preview">
     <a href="https://BubblesToTheLimit.github.io/post/wie_stehst_du_im_leben/">
         <h2 class="post-title">Wie stehst Du im Leben?</h2>
         
@@ -386,7 +606,62 @@
 
 </article>
           
+            <article class="post-preview">
+    <a href="https://BubblesToTheLimit.github.io/post/cluster_checks/">
+        <h2 class="post-title">Icinga2 Cluster Checks</h2>
+        
+        
+        
+    </a>
+
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on October 25, 2017
+  
+  
+  
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+        
+        <p>Recently I wrote an icinga cluster check which can currently check whether a service runs on atleast on one of two servers.</p>
+<p>A teaser of the results:</p>
+<p><img src="/img/cluster_check_1.png" alt="cluster1"></p>
+        <a href="https://BubblesToTheLimit.github.io/post/cluster_checks/" class="post-read-more">[Read More]</a>
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="https://BubblesToTheLimit.github.io//tags/linux/">linux</a>&nbsp;
+        
+        <a href="https://BubblesToTheLimit.github.io//tags/monitoring/">monitoring</a>&nbsp;
+        
+        <a href="https://BubblesToTheLimit.github.io//tags/icinga/">icinga</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+          
         </div>
+
+        
+          <ul class="pager main-pager">
+            
+            
+              <li class="next">
+                <a href="https://BubblesToTheLimit.github.io/page/2/">Older Posts &rarr;</a>
+              </li>
+            
+          </ul>
         
       </div>
     </div>
@@ -417,7 +692,7 @@
               </li>
           
           <li>
-            <a href="/tags/life/index.xml" title="RSS">
+            <a href="/index.xml" title="RSS">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
@@ -445,7 +720,7 @@
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.60.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.63.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>
