@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
-    <lastBuildDate>Sun, 09 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://BubblesToTheLimit.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Windows 10 vs Ubuntu 18</title>
+      <link>https://BubblesToTheLimit.github.io/post/windows10_vs_ubuntu/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://BubblesToTheLimit.github.io/post/windows10_vs_ubuntu/</guid>
+      <description>&lt;p&gt;As of this month, Windows is still &lt;a href=&#34;https://netmarketshare.com/operating-system-market-share.aspx?options=%7B%22filter%22%3A%7B%22%24and%22%3A%5B%7B%22deviceType%22%3A%7B%22%24in%22%3A%5B%22Desktop%2Flaptop%22%5D%7D%7D%5D%7D%2C%22dateLabel%22%3A%22Trend%22%2C%22attributes%22%3A%22share%22%2C%22group%22%3A%22platform%22%2C%22sort%22%3A%7B%22share%22%3A-1%7D%2C%22id%22%3A%22platformsDesktop%22%2C%22dateInterval%22%3A%22Monthly%22%2C%22dateStart%22%3A%222019-02%22%2C%22dateEnd%22%3A%222020-01%22%2C%22segments%22%3A%22-1000%22%7D&#34;&gt;the dominating desktop / laptop OS globally&lt;/a&gt; with 88%
+market share. Windows for me - and for most users, has always been the default. However,
+coming back from a Linux environment I realized this: Windows is not that great of an OS.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Adults through childrens eyes</title>
