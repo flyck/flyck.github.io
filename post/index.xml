@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
-    <lastBuildDate>Sat, 21 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://BubblesToTheLimit.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Identity and Attention</title>
+      <link>https://BubblesToTheLimit.github.io/post/attention_identity/</link>
+      <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://BubblesToTheLimit.github.io/post/attention_identity/</guid>
+      <description>&lt;p&gt;Identity can be a small thing. It could be my home country, my line of work, monthly salary,
+family name or physical fitness. It could be my hometown, the brand of clothes I wear or a
+degree I achieved. Actually, identity can be a big thing. &lt;strong&gt;Assuming basic knowledge about
+identity and the ego&lt;/strong&gt;, this blog post dives a little bit deeper and adds &lt;em&gt;attention&lt;/em&gt; to the
+picture.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Survival and Living</title>
