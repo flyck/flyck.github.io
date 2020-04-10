@@ -18,7 +18,7 @@
       <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://BubblesToTheLimit.github.io/post/procmail_setup/</guid>
-      <description>&lt;p&gt;Recently I wrote a procmail filter which filters mail for a ticketing system (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails with attachments bigger than 10 MB. I went through quite a learning curve while writing this filter so I&#39;d like to share it here.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Recently I wrote a procmail filter which filters mail for a ticketing system (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails with attachments bigger than 10 MB. I went through quite a learning curve while writing this filter so I&amp;rsquo;d like to share it here.&lt;/p&gt;</description>
     </item>
     
   </channel>
