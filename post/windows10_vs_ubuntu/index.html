@@ -96,7 +96,7 @@ coming back from a …">
   <meta name="twitter:image" content="https://BubblesToTheLimit.github.io/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://BubblesToTheLimit.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.60.0" />
   <link rel="alternate" href="https://BubblesToTheLimit.github.io/index.xml" type="application/rss+xml" title="Long Thoughts"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://BubblesToTheLimit.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -281,29 +281,29 @@ market share. Windows for me - and for most users, has always been the default. 
 coming back from a Linux environment I realized this: Windows is not that great of an OS.</p>
 <p>As many other people, I grew up with a Windows PC in the house. It was only later in my study
 life and during my recent jobs as a systems administrator that I have switched to
-linux. <strong>Recently I bought a new laptop and it had Windows 10 on it.</strong> I didn&rsquo;t need it, but
-the reseller told me it comes as a package, I couldn&rsquo;t get a discount for having the license
+linux. <strong>Recently I bought a new laptop and it had Windows 10 on it.</strong> I didn't need it, but
+the reseller told me it comes as a package, I couldn't get a discount for having the license
 removed.</p>
 <p><strong>So why not return to my old pal, after only a few years of using Linux, right?</strong> <em>Right…</em></p>
 <p>First up, Windows is lacking a <strong>package manager</strong>. Downloading <code>.exe</code> files from the internet
 and installing them manually… <strong>I mean what year is this?</strong> Every other distro or project has
-its own package manager even for <em>unofficial</em> contributions (python&rsquo;s pypi, javascript&rsquo;s npm,
-ubuntu&rsquo;s ppas, docker&rsquo;s dockerhub, etc.).</p>
+its own package manager even for <em>unofficial</em> contributions (python's pypi, javascript's npm,
+ubuntu's ppas, docker's dockerhub, etc.).</p>
 <p>The download-archive portion of <a href="http://www.chip.de">http://www.chip.de</a> is really a functionality of the past. Package
 management, please!</p>
-<p>Second, <strong>it&rsquo;s lacking a good shell</strong> for power users. <code>cmd.exe</code> is laughable, Powershell is a
+<p>Second, <strong>it's lacking a good shell</strong> for power users. <code>cmd.exe</code> is laughable, Powershell is a
 failed product, throwing StackTraces in eye-piercing colors at me left and right, and the
 Windows Subsystem for Linux (WSL) has a terminal, for which you cannot disable the terminal
 bell. Imagine the madness of constant bell ringing! <em>Additionally, you discover the</em>
-<em>limitations of WSL in situations where you really don&rsquo;t want to.</em></p>
+<em>limitations of WSL in situations where you really don't want to.</em></p>
 <p>Windows now has all the capabilities of Linux with WSL? Nope. For example, you cannot start a
 WSL application on PC startup in the background. A normal thing for a user to want to do, but
 <em>no worky-worky</em> with the WSL. <strong>One of the first things I wanted to do, syncing some files</strong>
 <strong>from my phone to laptop using some bash in the WSL, failed</strong>. There are a bunch of tricks you
-can use to get your USB device into the WSL, but it didn&rsquo;t work with my phone. I assume
-because it&rsquo;s doing some kind of file-streaming, instead of being a normal, dumb USB
-device. But I don&rsquo;t want to dig deep into this - <em>I expected functionality</em>.</p>
-<p>Third, <strong>python doesn&rsquo;t work well</strong> on Windows. As of this month, python is the language with
+can use to get your USB device into the WSL, but it didn't work with my phone. I assume
+because it's doing some kind of file-streaming, instead of being a normal, dumb USB
+device. But I don't want to dig deep into this - <em>I expected functionality</em>.</p>
+<p>Third, <strong>python doesn't work well</strong> on Windows. As of this month, python is the language with
 <a href="http://pypl.github.io/PYPL.html">the highest marketshare globally</a> with 29%. My stab at using python with Windows failed
 miserably. Installing it was fine, using the REPL was fine, installing a <code>.whl</code> file of my
 own package? Nope.</p>
@@ -315,13 +315,13 @@ C:\Users\Felix\AppData\Local\Programs\Python\Python36\python.exe: No module name
 </blockquote>
 <p><a href="https://www.quora.com/What-is-the-best-OS-for-python-programming">People on the internet</a> generally agree, that Windows is a poor choice of OS for python
 programming. You <em>can</em> use Visual Studio Code to programm python on the WSL, but what if
-you&rsquo;re programming a tool for your own day-to-day usage, some kind of helper script? If
-you&rsquo;re unlucky you will still have to install this on your main Windows OS, leaving you with
+you're programming a tool for your own day-to-day usage, some kind of helper script? If
+you're unlucky you will still have to install this on your main Windows OS, leaving you with
 all the obstacles you tried to work around.</p>
-<p>Last but not least, <strong>emacs doesn&rsquo;t work great on Windows</strong>. The recommended way is to have it
+<p>Last but not least, <strong>emacs doesn't work great on Windows</strong>. The recommended way is to have it
 run in the WSL and connect it to an X-server on the main OS. This is just not great. The user
 experience is really poor.</p>
-<p>All in all, thanks for reading, and I&rsquo;m now reinstalling my laptop. Goodbye Windows!</p>
+<p>All in all, thanks for reading, and I'm now reinstalling my laptop. Goodbye Windows!</p>
 
         
           <div class="blog-tags">
@@ -445,7 +445,7 @@ experience is really poor.</p>
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.68.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.60.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>
