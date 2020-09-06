@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>monitoring on Long Thoughts</title>
-    <link>https://BubblesToTheLimit.github.io/tags/monitoring/</link>
+    <link>https://flyck.github.io/tags/monitoring/</link>
     <description>Recent content in monitoring on Long Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
     <lastBuildDate>Fri, 19 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://BubblesToTheLimit.github.io/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://flyck.github.io/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Monitoring &amp; Ansible, Part I: NRPE daemon setup</title>
-      <link>https://BubblesToTheLimit.github.io/post/monitoring-setup-xinetd-nrpe-ansible/</link>
+      <link>https://flyck.github.io/post/monitoring-setup-xinetd-nrpe-ansible/</link>
       <pubDate>Fri, 19 Jan 2018 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/monitoring-setup-xinetd-nrpe-ansible/</guid>
+      <guid>https://flyck.github.io/post/monitoring-setup-xinetd-nrpe-ansible/</guid>
       <description>Monitoring servers using icinga usually requires a small setup on the monitored server. From the different choices of agents, the nrpe daemon ontop of xinetd is easy enough to set up, while it can provide any kind of information that is available on the monitored server locally. To automate this setup task and as a learning exercise I wrote up an Ansible playbook, which I describe here.
 The linux world is big, so you might come here asking: &amp;ldquo;Why the hell do you use xinetd and nrpe for monitoring?</description>
     </item>
     
     <item>
       <title>Icinga2 Cluster Checks</title>
-      <link>https://BubblesToTheLimit.github.io/post/cluster_checks/</link>
+      <link>https://flyck.github.io/post/cluster_checks/</link>
       <pubDate>Wed, 25 Oct 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/cluster_checks/</guid>
+      <guid>https://flyck.github.io/post/cluster_checks/</guid>
       <description>&lt;p&gt;Recently I wrote an icinga cluster check which can currently check whether a service runs on atleast on one of two servers.&lt;/p&gt;
 &lt;p&gt;A teaser of the results:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://BubblesToTheLimit.github.io/img/cluster_check_1.png&#34; alt=&#34;cluster1&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://flyck.github.io/img/cluster_check_1.png&#34; alt=&#34;cluster1&#34;&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

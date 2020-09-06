@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Long Thoughts</title>
-    <link>https://BubblesToTheLimit.github.io/post/</link>
+    <link>https://flyck.github.io/post/</link>
     <description>Recent content in Posts on Long Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
     <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://BubblesToTheLimit.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://flyck.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Becoming Greener I</title>
-      <link>https://BubblesToTheLimit.github.io/post/getting_greener_one/</link>
+      <link>https://flyck.github.io/post/getting_greener_one/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/getting_greener_one/</guid>
+      <guid>https://flyck.github.io/post/getting_greener_one/</guid>
       <description>&lt;p&gt;Some notes on steps I&#39;ve taken to become less eco-damaging.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Sinn</title>
-      <link>https://BubblesToTheLimit.github.io/post/sinn/</link>
+      <link>https://flyck.github.io/post/sinn/</link>
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/sinn/</guid>
+      <guid>https://flyck.github.io/post/sinn/</guid>
       <description>&lt;p&gt;Der Sinn des Lebens. Schlaflose Nächte und eine neue Idee.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Nouns and Verbs</title>
-      <link>https://BubblesToTheLimit.github.io/post/nouns_and_verbs/</link>
+      <link>https://flyck.github.io/post/nouns_and_verbs/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/nouns_and_verbs/</guid>
+      <guid>https://flyck.github.io/post/nouns_and_verbs/</guid>
       <description>&lt;p&gt;In our beloved western societies we are very much &lt;!-- raw HTML omitted --&gt;goal oriented&lt;!-- raw HTML omitted --&gt;. Things are achieved
 mostly by communicating goals and commandments, together with a demand of fulfillment.&lt;/p&gt;
 &lt;p&gt;Since goal-orientation is everywhere it can be a challenge to even notice that it is
@@ -44,10 +44,10 @@ constantly going on, and differentiate &amp;ldquo;normal&amp;rdquo; advice with 
     
     <item>
       <title>Germany&#39;s Nuclear Peace Plan</title>
-      <link>https://BubblesToTheLimit.github.io/post/germany_spends_billions_f18f/</link>
+      <link>https://flyck.github.io/post/germany_spends_billions_f18f/</link>
       <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/germany_spends_billions_f18f/</guid>
+      <guid>https://flyck.github.io/post/germany_spends_billions_f18f/</guid>
       <description>&lt;p&gt;In a time when the whole world is under economic pressure due to COVID-19, the German
 government discusses spending billions on purchasing and maintaining 30 new nuclear flight
 jets (F18F).&lt;/p&gt;</description>
@@ -55,10 +55,10 @@ jets (F18F).&lt;/p&gt;</description>
     
     <item>
       <title>Identity and Attention</title>
-      <link>https://BubblesToTheLimit.github.io/post/attention_identity/</link>
+      <link>https://flyck.github.io/post/attention_identity/</link>
       <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/attention_identity/</guid>
+      <guid>https://flyck.github.io/post/attention_identity/</guid>
       <description>&lt;p&gt;Identity can be a small thing. I could identify with my home country, my line of work, my
 monthly salary or my family name. It could be my hometown, the brand of clothes I wear or a
 degree I achieved. Actually, identity &lt;em&gt;can&lt;/em&gt; be a big thing. If that is so, how can the
@@ -67,10 +67,10 @@ identity be picked intelligently and how can that choice be undermined by mere a
     
     <item>
       <title>Survival and Living</title>
-      <link>https://BubblesToTheLimit.github.io/post/survival_living/</link>
+      <link>https://flyck.github.io/post/survival_living/</link>
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/survival_living/</guid>
+      <guid>https://flyck.github.io/post/survival_living/</guid>
       <description>&lt;p&gt;Which differences can we find between survival and living in today&#39;s world? Which of the two
 holds that sweet sweet satisfaction we&#39;re longing for? The meaning we attach to &amp;ldquo;survival&amp;rdquo;
 needs to be refreshed, as in today&#39;s world we have everything we need, while life can seem
@@ -79,10 +79,10 @@ dull and repetitive at times.&lt;/p&gt;</description>
     
     <item>
       <title>Windows 10 vs Ubuntu 18</title>
-      <link>https://BubblesToTheLimit.github.io/post/windows10_vs_ubuntu/</link>
+      <link>https://flyck.github.io/post/windows10_vs_ubuntu/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/windows10_vs_ubuntu/</guid>
+      <guid>https://flyck.github.io/post/windows10_vs_ubuntu/</guid>
       <description>&lt;p&gt;As of this month, Windows is still &lt;a href=&#34;https://netmarketshare.com/operating-system-market-share.aspx?options=%7B%22filter%22%3A%7B%22%24and%22%3A%5B%7B%22deviceType%22%3A%7B%22%24in%22%3A%5B%22Desktop%2Flaptop%22%5D%7D%7D%5D%7D%2C%22dateLabel%22%3A%22Trend%22%2C%22attributes%22%3A%22share%22%2C%22group%22%3A%22platform%22%2C%22sort%22%3A%7B%22share%22%3A-1%7D%2C%22id%22%3A%22platformsDesktop%22%2C%22dateInterval%22%3A%22Monthly%22%2C%22dateStart%22%3A%222019-02%22%2C%22dateEnd%22%3A%222020-01%22%2C%22segments%22%3A%22-1000%22%7D&#34;&gt;the dominating desktop / laptop OS globally&lt;/a&gt; with 88%
 market share. Windows for me - and for most users, has always been the default. However,
 coming back from a Linux environment I realized this: Windows is not that great of an OS.&lt;/p&gt;</description>
@@ -90,10 +90,10 @@ coming back from a Linux environment I realized this: Windows is not that great 
     
     <item>
       <title>Adults through childrens eyes</title>
-      <link>https://BubblesToTheLimit.github.io/post/adults_childs_eyes/</link>
+      <link>https://flyck.github.io/post/adults_childs_eyes/</link>
       <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/adults_childs_eyes/</guid>
+      <guid>https://flyck.github.io/post/adults_childs_eyes/</guid>
       <description>&lt;p&gt;Adults in many ways do have &lt;strong&gt;superpowers&lt;/strong&gt; in the eyes of a child. They have authority. They are
 allowed to do many of the things a child cannot do: eat candy whenever they want, stay up
 late, drive cars, and schedule their days at their own leisure. Despite these superpowers,
@@ -103,65 +103,65 @@ recalling in this blogpost.&lt;/p&gt;</description>
     
     <item>
       <title>Making Emacs recognize its physical location</title>
-      <link>https://BubblesToTheLimit.github.io/post/emacs_appartment_recognition/</link>
+      <link>https://flyck.github.io/post/emacs_appartment_recognition/</link>
       <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/emacs_appartment_recognition/</guid>
+      <guid>https://flyck.github.io/post/emacs_appartment_recognition/</guid>
       <description>&lt;p&gt;My emacs now behaves differently when I&#39;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>The Process of Self-Revelation</title>
-      <link>https://BubblesToTheLimit.github.io/post/self_revelation/</link>
+      <link>https://flyck.github.io/post/self_revelation/</link>
       <pubDate>Tue, 22 Oct 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/self_revelation/</guid>
+      <guid>https://flyck.github.io/post/self_revelation/</guid>
       <description>&lt;p&gt;Today, I gobbled down two chicken-halves and some mashed potatoes. That was a lot. The other time I was still hungry after a single half, and this time around I was stressing out over barely finishing the meal. I needed to sit down for a bit. I picked a sunny spot. Me being me I took some time to meditate and suddenly I had an epiphany: &amp;ldquo;We are afraid of ourselves, and that is what life is.&amp;quot;. Believe me, this was not the chicken talk, but I had finally figured something out. Let me elaborate…&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Organizing Music</title>
-      <link>https://BubblesToTheLimit.github.io/post/organizing_music/</link>
+      <link>https://flyck.github.io/post/organizing_music/</link>
       <pubDate>Sun, 29 Sep 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/organizing_music/</guid>
+      <guid>https://flyck.github.io/post/organizing_music/</guid>
       <description>&lt;p&gt;I finally found a half-way decent, quick and simple system to organize my music.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Religion: Problems and Strenghts</title>
-      <link>https://BubblesToTheLimit.github.io/post/pros_cons_of_religion/</link>
+      <link>https://flyck.github.io/post/pros_cons_of_religion/</link>
       <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/pros_cons_of_religion/</guid>
+      <guid>https://flyck.github.io/post/pros_cons_of_religion/</guid>
       <description>&lt;p&gt;Yesterday, a couple cute Mormon missionaries came over to me and chatted me up. I estimated the three of them to be roughly my age, probably a couple years younger, around 22 to 23. It was a beautiful, sunny Saturday and I incidentally was sitting on a bench near a church. Later they told me they are specifically roaming these areas to do their work. They started out the conversation talking about their strong belief in god, how they talk to him, and how he would answer them their questions. They proceeded asking me what questions I had for god. I didn&#39;t have one and couldn&#39;t even come up with one, but I was interested in chatting with them, so I invited them to sit down with me.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Tinder Manifesto</title>
-      <link>https://BubblesToTheLimit.github.io/post/tinder_manifesto/</link>
+      <link>https://flyck.github.io/post/tinder_manifesto/</link>
       <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/tinder_manifesto/</guid>
+      <guid>https://flyck.github.io/post/tinder_manifesto/</guid>
       <description>&lt;p&gt;Manifesto: noun. A public declaration of policy and aims, especially one issued before an election by a political party or candidate.&lt;/p&gt;
 &lt;p&gt;Tinder could get dirty. Tinder could get tedious. I wrote down my original aims when I started using tinder here, before everything falls into chaos later. Much like with other manifestos ;)&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>What do we know about who we want to be?</title>
-      <link>https://BubblesToTheLimit.github.io/post/what_do_we_know_about_who_we_want_to_be/</link>
+      <link>https://flyck.github.io/post/what_do_we_know_about_who_we_want_to_be/</link>
       <pubDate>Tue, 30 Jul 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/what_do_we_know_about_who_we_want_to_be/</guid>
+      <guid>https://flyck.github.io/post/what_do_we_know_about_who_we_want_to_be/</guid>
       <description>&lt;p&gt;It is pretty important for each of us to be the person we want to be. &lt;em&gt;For survival, for&lt;/em&gt; &lt;em&gt;society, for integrity. But what do we know then about who we want to be?&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>The three most important skills to have as a young adult</title>
-      <link>https://BubblesToTheLimit.github.io/post/young_adult_top_skills/</link>
+      <link>https://flyck.github.io/post/young_adult_top_skills/</link>
       <pubDate>Sun, 28 Jul 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/young_adult_top_skills/</guid>
+      <guid>https://flyck.github.io/post/young_adult_top_skills/</guid>
       <description>&lt;p&gt;TL;DR:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;The skill to change your habits&lt;/strong&gt;, so you could start trying new ones (better or worse than your current ones) to begin with.&lt;/li&gt;
@@ -172,58 +172,58 @@ recalling in this blogpost.&lt;/p&gt;</description>
     
     <item>
       <title>Monitoring &amp; Ansible, Part I: NRPE daemon setup</title>
-      <link>https://BubblesToTheLimit.github.io/post/monitoring-setup-xinetd-nrpe-ansible/</link>
+      <link>https://flyck.github.io/post/monitoring-setup-xinetd-nrpe-ansible/</link>
       <pubDate>Fri, 19 Jan 2018 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/monitoring-setup-xinetd-nrpe-ansible/</guid>
+      <guid>https://flyck.github.io/post/monitoring-setup-xinetd-nrpe-ansible/</guid>
       <description>Monitoring servers using icinga usually requires a small setup on the monitored server. From the different choices of agents, the nrpe daemon ontop of xinetd is easy enough to set up, while it can provide any kind of information that is available on the monitored server locally. To automate this setup task and as a learning exercise I wrote up an Ansible playbook, which I describe here.
 The linux world is big, so you might come here asking: &amp;ldquo;Why the hell do you use xinetd and nrpe for monitoring?</description>
     </item>
     
     <item>
       <title>Wie stehst Du im Leben?</title>
-      <link>https://BubblesToTheLimit.github.io/post/wie_stehst_du_im_leben/</link>
+      <link>https://flyck.github.io/post/wie_stehst_du_im_leben/</link>
       <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/wie_stehst_du_im_leben/</guid>
+      <guid>https://flyck.github.io/post/wie_stehst_du_im_leben/</guid>
       <description>&lt;p&gt;Wie stehst du im Leben? Ein einfaches Beobachten der Körperhaltung kann einem schon buchstäblich zeigen wie man im Leben steht. Es ist eine Art Haltungs-Check. Jeder liest Körperhaltung - zumindest unbewusst, meine Beobachtung dazu teile ich hier.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Icinga2 Cluster Checks</title>
-      <link>https://BubblesToTheLimit.github.io/post/cluster_checks/</link>
+      <link>https://flyck.github.io/post/cluster_checks/</link>
       <pubDate>Wed, 25 Oct 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/cluster_checks/</guid>
+      <guid>https://flyck.github.io/post/cluster_checks/</guid>
       <description>&lt;p&gt;Recently I wrote an icinga cluster check which can currently check whether a service runs on atleast on one of two servers.&lt;/p&gt;
 &lt;p&gt;A teaser of the results:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://BubblesToTheLimit.github.io/img/cluster_check_1.png&#34; alt=&#34;cluster1&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://flyck.github.io/img/cluster_check_1.png&#34; alt=&#34;cluster1&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Procmail learns html</title>
-      <link>https://BubblesToTheLimit.github.io/post/procmail_setup/</link>
+      <link>https://flyck.github.io/post/procmail_setup/</link>
       <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/procmail_setup/</guid>
+      <guid>https://flyck.github.io/post/procmail_setup/</guid>
       <description>&lt;p&gt;Recently I wrote a procmail filter which filters mail for a ticketing system (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails with attachments bigger than 10 MB. I went through quite a learning curve while writing this filter so I&#39;d like to share it here.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Blogging Setup: Workflow for writing a new blogpost</title>
-      <link>https://BubblesToTheLimit.github.io/post/workflow_for_new_blogpost/</link>
+      <link>https://flyck.github.io/post/workflow_for_new_blogpost/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/workflow_for_new_blogpost/</guid>
+      <guid>https://flyck.github.io/post/workflow_for_new_blogpost/</guid>
       <description>&lt;p&gt;Creating a new blog post using the previously describe setup should be easy and comfortable. These are the generic steps for adding a blog-post.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Setting up the blog</title>
-      <link>https://BubblesToTheLimit.github.io/post/setting_up_the_blog/</link>
+      <link>https://flyck.github.io/post/setting_up_the_blog/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/setting_up_the_blog/</guid>
+      <guid>https://flyck.github.io/post/setting_up_the_blog/</guid>
       <description>&lt;p&gt;A quick howto on how I used Hugo to setup this blog.&lt;/p&gt;</description>
     </item>
     

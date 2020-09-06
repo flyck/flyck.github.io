@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>emacs on Long Thoughts</title>
-    <link>https://BubblesToTheLimit.github.io/tags/emacs/</link>
+    <link>https://flyck.github.io/tags/emacs/</link>
     <description>Recent content in emacs on Long Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
     <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://BubblesToTheLimit.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://flyck.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Windows 10 vs Ubuntu 18</title>
-      <link>https://BubblesToTheLimit.github.io/post/windows10_vs_ubuntu/</link>
+      <link>https://flyck.github.io/post/windows10_vs_ubuntu/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/windows10_vs_ubuntu/</guid>
+      <guid>https://flyck.github.io/post/windows10_vs_ubuntu/</guid>
       <description>&lt;p&gt;As of this month, Windows is still &lt;a href=&#34;https://netmarketshare.com/operating-system-market-share.aspx?options=%7B%22filter%22%3A%7B%22%24and%22%3A%5B%7B%22deviceType%22%3A%7B%22%24in%22%3A%5B%22Desktop%2Flaptop%22%5D%7D%7D%5D%7D%2C%22dateLabel%22%3A%22Trend%22%2C%22attributes%22%3A%22share%22%2C%22group%22%3A%22platform%22%2C%22sort%22%3A%7B%22share%22%3A-1%7D%2C%22id%22%3A%22platformsDesktop%22%2C%22dateInterval%22%3A%22Monthly%22%2C%22dateStart%22%3A%222019-02%22%2C%22dateEnd%22%3A%222020-01%22%2C%22segments%22%3A%22-1000%22%7D&#34;&gt;the dominating desktop / laptop OS globally&lt;/a&gt; with 88%
 market share. Windows for me - and for most users, has always been the default. However,
 coming back from a Linux environment I realized this: Windows is not that great of an OS.&lt;/p&gt;</description>
@@ -25,28 +25,28 @@ coming back from a Linux environment I realized this: Windows is not that great 
     
     <item>
       <title>Making Emacs recognize its physical location</title>
-      <link>https://BubblesToTheLimit.github.io/post/emacs_appartment_recognition/</link>
+      <link>https://flyck.github.io/post/emacs_appartment_recognition/</link>
       <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/emacs_appartment_recognition/</guid>
+      <guid>https://flyck.github.io/post/emacs_appartment_recognition/</guid>
       <description>&lt;p&gt;My emacs now behaves differently when I&#39;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Blogging Setup: Workflow for writing a new blogpost</title>
-      <link>https://BubblesToTheLimit.github.io/post/workflow_for_new_blogpost/</link>
+      <link>https://flyck.github.io/post/workflow_for_new_blogpost/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/workflow_for_new_blogpost/</guid>
+      <guid>https://flyck.github.io/post/workflow_for_new_blogpost/</guid>
       <description>&lt;p&gt;Creating a new blog post using the previously describe setup should be easy and comfortable. These are the generic steps for adding a blog-post.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Setting up the blog</title>
-      <link>https://BubblesToTheLimit.github.io/post/setting_up_the_blog/</link>
+      <link>https://flyck.github.io/post/setting_up_the_blog/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/setting_up_the_blog/</guid>
+      <guid>https://flyck.github.io/post/setting_up_the_blog/</guid>
       <description>&lt;p&gt;A quick howto on how I used Hugo to setup this blog.&lt;/p&gt;</description>
     </item>
     

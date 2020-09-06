@@ -2,211 +2,211 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Long Thoughts</title>
-    <link>https://BubblesToTheLimit.github.io/tags/</link>
+    <link>https://flyck.github.io/tags/</link>
     <description>Recent content in Tags on Long Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
     <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://BubblesToTheLimit.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://flyck.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>english</title>
-      <link>https://BubblesToTheLimit.github.io/tags/english/</link>
+      <link>https://flyck.github.io/tags/english/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/english/</guid>
+      <guid>https://flyck.github.io/tags/english/</guid>
       <description></description>
     </item>
     
     <item>
       <title>green</title>
-      <link>https://BubblesToTheLimit.github.io/tags/green/</link>
+      <link>https://flyck.github.io/tags/green/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/green/</guid>
+      <guid>https://flyck.github.io/tags/green/</guid>
       <description></description>
     </item>
     
     <item>
       <title>german</title>
-      <link>https://BubblesToTheLimit.github.io/tags/german/</link>
+      <link>https://flyck.github.io/tags/german/</link>
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/german/</guid>
+      <guid>https://flyck.github.io/tags/german/</guid>
       <description></description>
     </item>
     
     <item>
       <title>life</title>
-      <link>https://BubblesToTheLimit.github.io/tags/life/</link>
+      <link>https://flyck.github.io/tags/life/</link>
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/life/</guid>
+      <guid>https://flyck.github.io/tags/life/</guid>
       <description></description>
     </item>
     
     <item>
       <title>government</title>
-      <link>https://BubblesToTheLimit.github.io/tags/government/</link>
+      <link>https://flyck.github.io/tags/government/</link>
       <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/government/</guid>
+      <guid>https://flyck.github.io/tags/government/</guid>
       <description></description>
     </item>
     
     <item>
       <title>military</title>
-      <link>https://BubblesToTheLimit.github.io/tags/military/</link>
+      <link>https://flyck.github.io/tags/military/</link>
       <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/military/</guid>
+      <guid>https://flyck.github.io/tags/military/</guid>
       <description></description>
     </item>
     
     <item>
       <title>politics</title>
-      <link>https://BubblesToTheLimit.github.io/tags/politics/</link>
+      <link>https://flyck.github.io/tags/politics/</link>
       <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/politics/</guid>
+      <guid>https://flyck.github.io/tags/politics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>emacs</title>
-      <link>https://BubblesToTheLimit.github.io/tags/emacs/</link>
+      <link>https://flyck.github.io/tags/emacs/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/emacs/</guid>
+      <guid>https://flyck.github.io/tags/emacs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>https://BubblesToTheLimit.github.io/tags/linux/</link>
+      <link>https://flyck.github.io/tags/linux/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/linux/</guid>
+      <guid>https://flyck.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tech</title>
-      <link>https://BubblesToTheLimit.github.io/tags/tech/</link>
+      <link>https://flyck.github.io/tags/tech/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/tech/</guid>
+      <guid>https://flyck.github.io/tags/tech/</guid>
       <description></description>
     </item>
     
     <item>
       <title>long-thought</title>
-      <link>https://BubblesToTheLimit.github.io/tags/long-thought/</link>
+      <link>https://flyck.github.io/tags/long-thought/</link>
       <pubDate>Tue, 22 Oct 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/long-thought/</guid>
+      <guid>https://flyck.github.io/tags/long-thought/</guid>
       <description></description>
     </item>
     
     <item>
       <title>organizing</title>
-      <link>https://BubblesToTheLimit.github.io/tags/organizing/</link>
+      <link>https://flyck.github.io/tags/organizing/</link>
       <pubDate>Sun, 29 Sep 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/organizing/</guid>
+      <guid>https://flyck.github.io/tags/organizing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>personal-oppinion</title>
-      <link>https://BubblesToTheLimit.github.io/tags/personal-oppinion/</link>
+      <link>https://flyck.github.io/tags/personal-oppinion/</link>
       <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/personal-oppinion/</guid>
+      <guid>https://flyck.github.io/tags/personal-oppinion/</guid>
       <description></description>
     </item>
     
     <item>
       <title>dating</title>
-      <link>https://BubblesToTheLimit.github.io/tags/dating/</link>
+      <link>https://flyck.github.io/tags/dating/</link>
       <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/dating/</guid>
+      <guid>https://flyck.github.io/tags/dating/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ansible</title>
-      <link>https://BubblesToTheLimit.github.io/tags/ansible/</link>
+      <link>https://flyck.github.io/tags/ansible/</link>
       <pubDate>Fri, 19 Jan 2018 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/ansible/</guid>
+      <guid>https://flyck.github.io/tags/ansible/</guid>
       <description></description>
     </item>
     
     <item>
       <title>devops</title>
-      <link>https://BubblesToTheLimit.github.io/tags/devops/</link>
+      <link>https://flyck.github.io/tags/devops/</link>
       <pubDate>Fri, 19 Jan 2018 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/devops/</guid>
+      <guid>https://flyck.github.io/tags/devops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>monitoring</title>
-      <link>https://BubblesToTheLimit.github.io/tags/monitoring/</link>
+      <link>https://flyck.github.io/tags/monitoring/</link>
       <pubDate>Fri, 19 Jan 2018 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/monitoring/</guid>
+      <guid>https://flyck.github.io/tags/monitoring/</guid>
       <description></description>
     </item>
     
     <item>
       <title>body-language</title>
-      <link>https://BubblesToTheLimit.github.io/tags/body-language/</link>
+      <link>https://flyck.github.io/tags/body-language/</link>
       <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/body-language/</guid>
+      <guid>https://flyck.github.io/tags/body-language/</guid>
       <description></description>
     </item>
     
     <item>
       <title>icinga</title>
-      <link>https://BubblesToTheLimit.github.io/tags/icinga/</link>
+      <link>https://flyck.github.io/tags/icinga/</link>
       <pubDate>Wed, 25 Oct 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/icinga/</guid>
+      <guid>https://flyck.github.io/tags/icinga/</guid>
       <description></description>
     </item>
     
     <item>
       <title>recipes</title>
-      <link>https://BubblesToTheLimit.github.io/tags/recipes/</link>
+      <link>https://flyck.github.io/tags/recipes/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/recipes/</guid>
+      <guid>https://flyck.github.io/tags/recipes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>procmail</title>
-      <link>https://BubblesToTheLimit.github.io/tags/procmail/</link>
+      <link>https://flyck.github.io/tags/procmail/</link>
       <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/procmail/</guid>
+      <guid>https://flyck.github.io/tags/procmail/</guid>
       <description></description>
     </item>
     
     <item>
       <title>blogging</title>
-      <link>https://BubblesToTheLimit.github.io/tags/blogging/</link>
+      <link>https://flyck.github.io/tags/blogging/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/tags/blogging/</guid>
+      <guid>https://flyck.github.io/tags/blogging/</guid>
       <description></description>
     </item>
     

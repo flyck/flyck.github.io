@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on Long Thoughts</title>
-    <link>https://BubblesToTheLimit.github.io/tags/linux/</link>
+    <link>https://flyck.github.io/tags/linux/</link>
     <description>Recent content in linux on Long Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
     <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://BubblesToTheLimit.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://flyck.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Windows 10 vs Ubuntu 18</title>
-      <link>https://BubblesToTheLimit.github.io/post/windows10_vs_ubuntu/</link>
+      <link>https://flyck.github.io/post/windows10_vs_ubuntu/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/windows10_vs_ubuntu/</guid>
+      <guid>https://flyck.github.io/post/windows10_vs_ubuntu/</guid>
       <description>&lt;p&gt;As of this month, Windows is still &lt;a href=&#34;https://netmarketshare.com/operating-system-market-share.aspx?options=%7B%22filter%22%3A%7B%22%24and%22%3A%5B%7B%22deviceType%22%3A%7B%22%24in%22%3A%5B%22Desktop%2Flaptop%22%5D%7D%7D%5D%7D%2C%22dateLabel%22%3A%22Trend%22%2C%22attributes%22%3A%22share%22%2C%22group%22%3A%22platform%22%2C%22sort%22%3A%7B%22share%22%3A-1%7D%2C%22id%22%3A%22platformsDesktop%22%2C%22dateInterval%22%3A%22Monthly%22%2C%22dateStart%22%3A%222019-02%22%2C%22dateEnd%22%3A%222020-01%22%2C%22segments%22%3A%22-1000%22%7D&#34;&gt;the dominating desktop / laptop OS globally&lt;/a&gt; with 88%
 market share. Windows for me - and for most users, has always been the default. However,
 coming back from a Linux environment I realized this: Windows is not that great of an OS.&lt;/p&gt;</description>
@@ -25,31 +25,31 @@ coming back from a Linux environment I realized this: Windows is not that great 
     
     <item>
       <title>Monitoring &amp; Ansible, Part I: NRPE daemon setup</title>
-      <link>https://BubblesToTheLimit.github.io/post/monitoring-setup-xinetd-nrpe-ansible/</link>
+      <link>https://flyck.github.io/post/monitoring-setup-xinetd-nrpe-ansible/</link>
       <pubDate>Fri, 19 Jan 2018 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/monitoring-setup-xinetd-nrpe-ansible/</guid>
+      <guid>https://flyck.github.io/post/monitoring-setup-xinetd-nrpe-ansible/</guid>
       <description>Monitoring servers using icinga usually requires a small setup on the monitored server. From the different choices of agents, the nrpe daemon ontop of xinetd is easy enough to set up, while it can provide any kind of information that is available on the monitored server locally. To automate this setup task and as a learning exercise I wrote up an Ansible playbook, which I describe here.
 The linux world is big, so you might come here asking: &amp;ldquo;Why the hell do you use xinetd and nrpe for monitoring?</description>
     </item>
     
     <item>
       <title>Icinga2 Cluster Checks</title>
-      <link>https://BubblesToTheLimit.github.io/post/cluster_checks/</link>
+      <link>https://flyck.github.io/post/cluster_checks/</link>
       <pubDate>Wed, 25 Oct 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/cluster_checks/</guid>
+      <guid>https://flyck.github.io/post/cluster_checks/</guid>
       <description>&lt;p&gt;Recently I wrote an icinga cluster check which can currently check whether a service runs on atleast on one of two servers.&lt;/p&gt;
 &lt;p&gt;A teaser of the results:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://BubblesToTheLimit.github.io/img/cluster_check_1.png&#34; alt=&#34;cluster1&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://flyck.github.io/img/cluster_check_1.png&#34; alt=&#34;cluster1&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Procmail learns html</title>
-      <link>https://BubblesToTheLimit.github.io/post/procmail_setup/</link>
+      <link>https://flyck.github.io/post/procmail_setup/</link>
       <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://BubblesToTheLimit.github.io/post/procmail_setup/</guid>
+      <guid>https://flyck.github.io/post/procmail_setup/</guid>
       <description>&lt;p&gt;Recently I wrote a procmail filter which filters mail for a ticketing system (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails with attachments bigger than 10 MB. I went through quite a learning curve while writing this filter so I&#39;d like to share it here.&lt;/p&gt;</description>
     </item>
     
