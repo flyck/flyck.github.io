@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
-    <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://flyck.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>School and Agile</title>
+      <link>https://flyck.github.io/post/school_and_agile/</link>
+      <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://flyck.github.io/post/school_and_agile/</guid>
+      <description>&lt;p&gt;A quick read on 3 major differences I found between work in school and work in adult life,
+specifically in my context of working agile.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Becoming Greener I</title>
@@ -18,7 +28,7 @@
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://flyck.github.io/post/getting_greener_one/</guid>
-      <description>&lt;p&gt;Some notes on steps I&#39;ve taken to become less eco-damaging.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Some notes on steps I&amp;rsquo;ve taken to become less eco-damaging.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -71,9 +81,9 @@ identity be picked intelligently and how can that choice be undermined by mere a
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://flyck.github.io/post/survival_living/</guid>
-      <description>&lt;p&gt;Which differences can we find between survival and living in today&#39;s world? Which of the two
-holds that sweet sweet satisfaction we&#39;re longing for? The meaning we attach to &amp;ldquo;survival&amp;rdquo;
-needs to be refreshed, as in today&#39;s world we have everything we need, while life can seem
+      <description>&lt;p&gt;Which differences can we find between survival and living in today&amp;rsquo;s world? Which of the two
+holds that sweet sweet satisfaction we&amp;rsquo;re longing for? The meaning we attach to &amp;ldquo;survival&amp;rdquo;
+needs to be refreshed, as in today&amp;rsquo;s world we have everything we need, while life can seem
 dull and repetitive at times.&lt;/p&gt;</description>
     </item>
     
@@ -97,7 +107,7 @@ coming back from a Linux environment I realized this: Windows is not that great 
       <description>&lt;p&gt;Adults in many ways do have &lt;strong&gt;superpowers&lt;/strong&gt; in the eyes of a child. They have authority. They are
 allowed to do many of the things a child cannot do: eat candy whenever they want, stay up
 late, drive cars, and schedule their days at their own leisure. Despite these superpowers,
-they didn&#39;t seem &lt;em&gt;super&lt;/em&gt; to me as a child. Observing adults faszinated and irritated me, as I&#39;m
+they didn&amp;rsquo;t seem &lt;em&gt;super&lt;/em&gt; to me as a child. Observing adults faszinated and irritated me, as I&amp;rsquo;m
 recalling in this blogpost.&lt;/p&gt;</description>
     </item>
     
@@ -107,7 +117,7 @@ recalling in this blogpost.&lt;/p&gt;</description>
       <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://flyck.github.io/post/emacs_appartment_recognition/</guid>
-      <description>&lt;p&gt;My emacs now behaves differently when I&#39;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.&lt;/p&gt;</description>
+      <description>&lt;p&gt;My emacs now behaves differently when I&amp;rsquo;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -134,7 +144,7 @@ recalling in this blogpost.&lt;/p&gt;</description>
       <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://flyck.github.io/post/pros_cons_of_religion/</guid>
-      <description>&lt;p&gt;Yesterday, a couple cute Mormon missionaries came over to me and chatted me up. I estimated the three of them to be roughly my age, probably a couple years younger, around 22 to 23. It was a beautiful, sunny Saturday and I incidentally was sitting on a bench near a church. Later they told me they are specifically roaming these areas to do their work. They started out the conversation talking about their strong belief in god, how they talk to him, and how he would answer them their questions. They proceeded asking me what questions I had for god. I didn&#39;t have one and couldn&#39;t even come up with one, but I was interested in chatting with them, so I invited them to sit down with me.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Yesterday, a couple cute Mormon missionaries came over to me and chatted me up. I estimated the three of them to be roughly my age, probably a couple years younger, around 22 to 23. It was a beautiful, sunny Saturday and I incidentally was sitting on a bench near a church. Later they told me they are specifically roaming these areas to do their work. They started out the conversation talking about their strong belief in god, how they talk to him, and how he would answer them their questions. They proceeded asking me what questions I had for god. I didn&amp;rsquo;t have one and couldn&amp;rsquo;t even come up with one, but I was interested in chatting with them, so I invited them to sit down with me.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -206,7 +216,7 @@ The linux world is big, so you might come here asking: &amp;ldquo;Why the hell d
       <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://flyck.github.io/post/procmail_setup/</guid>
-      <description>&lt;p&gt;Recently I wrote a procmail filter which filters mail for a ticketing system (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails with attachments bigger than 10 MB. I went through quite a learning curve while writing this filter so I&#39;d like to share it here.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Recently I wrote a procmail filter which filters mail for a ticketing system (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails with attachments bigger than 10 MB. I went through quite a learning curve while writing this filter so I&amp;rsquo;d like to share it here.&lt;/p&gt;</description>
     </item>
     
     <item>
