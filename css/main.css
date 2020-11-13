@@ -35,7 +35,8 @@ p a {
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 800;
+  font-weight: 550;
+  /* font-weight: 800; */ /* Changed font here */
 }
 a {
   color: #008AFF;
@@ -767,7 +768,7 @@ div.splitbox div.right {
     padding: 15px 25px;
   }
 }
-.disqus-comments button:hover, 
+.disqus-comments button:hover,
 .disqus-comments button:focus {
   color: #FFF;
   background: #0085a1;
