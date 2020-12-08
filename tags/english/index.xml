@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
-    <lastBuildDate>Sun, 20 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://flyck.github.io/tags/english/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>On Growing in a company</title>
+      <link>https://flyck.github.io/post/growing_in_a_company/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://flyck.github.io/post/growing_in_a_company/</guid>
+      <description>&lt;p&gt;A quick read on the impact of company style on personal growth.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>School and Agile</title>
