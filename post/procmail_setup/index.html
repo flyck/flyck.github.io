@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Procmail learns html - Long Thoughts</title>
-  <meta name="description" content="Recently I wrote a procmail filter which filters mail for a ticketing system (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails with attachments bigger than 10 MB. I went through quite a learning curve while writing this filter so I&#39;d like to share it here.">
+  <meta name="description" content="Recently I wrote a procmail filter which filters mail for a ticketing system (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails with attachments bigger than 10 MB. I went through quite a learning curve while writing this filter so I&rsquo;d like to share it here.">
   <meta name="author" content="Felix Brilej"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -57,7 +57,7 @@
     "name" : "Felix Brilej"
   },
   "headline": "Procmail learns html",
-  "description" : "Recently I wrote a procmail filter which filters mail for a ticketing system (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails with attachments bigger than 10 MB. I went through quite a learning curve while writing this filter so I\x27d like to share it here.\n",
+  "description" : "Recently I wrote a procmail filter which filters mail for a ticketing system (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails with attachments bigger than 10 MB. I went through quite a learning curve while writing this filter so I\x26rsquo;d like to share it here.\n",
   "inLanguage" : "en",
   "wordCount":  867 ,
   "datePublished" : "2017-10-13T00:00:00",
@@ -79,7 +79,7 @@
 </script>
 
 <meta property="og:title" content="Procmail learns html" />
-<meta property="og:description" content="Recently I wrote a procmail filter which filters mail for a ticketing system (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails with attachments bigger than 10 MB. I went through quite a learning curve while writing this filter so I&#39;d like to share it here.">
+<meta property="og:description" content="Recently I wrote a procmail filter which filters mail for a ticketing system (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails with attachments bigger than 10 MB. I went through quite a learning curve while writing this filter so I&rsquo;d like to share it here.">
 <meta property="og:image" content="https://flyck.github.io/img/avatar-icon.png" />
 <meta property="og:url" content="https://flyck.github.io/post/procmail_setup/" />
 <meta property="og:type" content="website" />
@@ -90,7 +90,7 @@
   <meta name="twitter:image" content="https://flyck.github.io/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://flyck.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.60.0" />
+  <meta name="generator" content="Hugo 0.68.3" />
   <link rel="alternate" href="https://flyck.github.io/index.xml" type="application/rss+xml" title="Long Thoughts"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://flyck.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -289,10 +289,10 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>Recently I wrote a procmail filter which filters mail for a ticketing system (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails with attachments bigger than 10 MB. I went through quite a learning curve while writing this filter so I'd like to share it here.</p>
+        <p>Recently I wrote a procmail filter which filters mail for a ticketing system (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails with attachments bigger than 10 MB. I went through quite a learning curve while writing this filter so I&rsquo;d like to share it here.</p>
 <p>There is a need for an attachment-filter since request-tracker cant deal with big attachments as of now (version 4.4.1) and simply drops them. We ideally want the user to get a response informing him about the attachment limit instead of request-tracker silently dropping the attachment.</p>
 <p>The need for a CC filter comes from the ticketing system functionality. Mails should address the ticketing system in “TO” without Ccs optimally. If the ticketing system gets addressed in Cc there definately is going to be a problem since every following mail from the mail participents is going to create a new ticket with a new ticket id.</p>
-<p>My initial idea was to simply copy together parts from procmail tutorials to have a quick and solid solution, however there aren't many procmail tutorials out there which deal with html emails. There are plenty of procmail filters available to drop html attachments or html emails all together - not very helpful in this case. Procmail as well as its users seem to come from an age when html emails (and html attachments especially) where evil.</p>
+<p>My initial idea was to simply copy together parts from procmail tutorials to have a quick and solid solution, however there aren&rsquo;t many procmail tutorials out there which deal with html emails. There are plenty of procmail filters available to drop html attachments or html emails all together - not very helpful in this case. Procmail as well as its users seem to come from an age when html emails (and html attachments especially) where evil.</p>
 <h1 id="the-basics">The basics</h1>
 <p>I will reference guides here to back my code up. Question the code but dont question the references. ;)</p>
 <p>This guide shows some of the important elements to understand the following filter: <a href="http://porkmail.org/era/procmail/quickref.html">http://porkmail.org/era/procmail/quickref.html</a></p>
@@ -344,9 +344,9 @@ MAILQUEUE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Ge
 </span><span style="color:#ae81ff"></span>    -I <span style="color:#e6db74">&#34;MIME-Version: 1.0&#34;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -I <span style="color:#e6db74">&#34;Content-Type: text/html;&#34;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -I <span style="color:#e6db74">&#34;Content-Transfer-Encoding: quoted-printable&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -A <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">From: </span><span style="color:#e6db74">${</span>MAILBOX<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -A <span style="color:#e6db74">&#34;From: </span><span style="color:#e6db74">${</span>MAILBOX<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -A <span style="color:#e6db74">&#34;Precendence: junk&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -A <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">X-Loop: </span><span style="color:#e6db74">${</span>MAILBOX<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> ; <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -A <span style="color:#e6db74">&#34;X-Loop: </span><span style="color:#e6db74">${</span>MAILBOX<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> ; <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    cat /home/rtracker/procmail-message-size <span style="color:#f92672">)</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    | $SENDMAIL -t -oi
 <span style="color:#f92672">}</span>
@@ -368,9 +368,9 @@ MAILQUEUE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Ge
 </span><span style="color:#ae81ff"></span>    -I <span style="color:#e6db74">&#34;MIME-Version: 1.0&#34;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -I <span style="color:#e6db74">&#34;Content-Type: text/html;&#34;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -I <span style="color:#e6db74">&#34;Content-Transfer-Encoding: quoted-printable&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -A <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">From: </span><span style="color:#e6db74">${</span>MAILBOX<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -A <span style="color:#e6db74">&#34;From: </span><span style="color:#e6db74">${</span>MAILBOX<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    -A <span style="color:#e6db74">&#34;Precendence: junk&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -A <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">X-Loop: </span><span style="color:#e6db74">${</span>MAILBOX<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> ; <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -A <span style="color:#e6db74">&#34;X-Loop: </span><span style="color:#e6db74">${</span>MAILBOX<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> ; <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    cat /home/rtracker/procmail-message ; <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    echo <span style="color:#e6db74">&#34;&lt;hr /&gt;&#34;</span> ; <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    sed -n <span style="color:#e6db74">&#34;/&lt;html/,/&lt;\/html&gt;/p&#34;</span> message.msg <span style="color:#f92672">)</span> <span style="color:#ae81ff">\
@@ -399,7 +399,7 @@ set logfile /var/log/fetchmail.log
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#mda &#34;/opt/rt4/bin/rt-mailgate --url http://request-tracker.com --action correspond --queue Support&#34;</span>
 mda <span style="color:#e6db74">&#34;IFS=&#39; &#39;&amp;&amp;exec /usr/bin/procmail -f- /home/rtracker/procmail.support||exit 75 #rtracker&#34;</span>
 </code></pre></div><h1 id="the-resulting-files">The resulting files</h1>
-<p>You might have noticed that the procmail and fetchmail rules work with a user called “rtracker”. This user exists on the ticketing system server and is basically only needed for fetchmail, since fetchmail doesn't allow to be run by root. I find the resulting filenames to be quite convenient for terminal file navigation.</p>
+<p>You might have noticed that the procmail and fetchmail rules work with a user called “rtracker”. This user exists on the ticketing system server and is basically only needed for fetchmail, since fetchmail doesn&rsquo;t allow to be run by root. I find the resulting filenames to be quite convenient for terminal file navigation.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ls -l /home/rtracker/procmail.*
 -rw-r--r--  rtracker rtracker procmail.support
 -rw-r--r--  rtracker rtracker procmail.support_rejected
@@ -527,7 +527,7 @@ mda <span style="color:#e6db74">&#34;IFS=&#39; &#39;&amp;&amp;exec /usr/bin/proc
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.60.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.68.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>

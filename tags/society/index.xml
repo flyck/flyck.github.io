@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>society on Long Thoughts</title>
+    <link>https://flyck.github.io/tags/society/</link>
+    <description>Recent content in society on Long Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
+    <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
+    <lastBuildDate>Wed, 05 May 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://flyck.github.io/tags/society/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Contributing to Society, Part 1: Money</title>
+      <link>https://flyck.github.io/post/contribution_society/</link>
+      <pubDate>Wed, 05 May 2021 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://flyck.github.io/post/contribution_society/</guid>
+      <description>&lt;p&gt;It has been troubling me what constitutes making a contribution to society. Is it going to
+work? Is it making art? Is it being a helpful neighbor? Since I&amp;rsquo;m benefiting from a working
+society, I sure would want to secure that it keeps thriving, possibly even help elevating it
+to the next level.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
