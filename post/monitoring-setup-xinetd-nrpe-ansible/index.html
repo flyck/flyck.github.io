@@ -92,7 +92,7 @@ The linux world is big, so you might come here asking: &ldquo;Why the hell do yo
   <meta name="twitter:image" content="https://flyck.github.io/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://flyck.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.60.0" />
   <link rel="alternate" href="https://flyck.github.io/index.xml" type="application/rss+xml" title="Long Thoughts"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://flyck.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -304,12 +304,12 @@ The linux world is big, so you might come here asking: &ldquo;Why the hell do yo
 </ul>
 <h1 id="starting-from-the-bottom-configuring-ansible">Starting from the bottom: Configuring Ansible</h1>
 <p>Ansible uses a clientless architecture, but one host still needs to be the &ldquo;master&rdquo; or point-of-execution. Using the following playbook, Ansible can be installed on the monitoring-server or even on a different machine, like a virtual machine on the engineers laptop, which is simply connected to the network during installation or maintenance.</p>
-<p>After an easy installation of Ansible through the package manager we are left with establishing the ssh-connection between the master and the servers involved in the monitoring setup. An article of the <a href="http://www.linuxjournal.com/content/ansible-automation-framework-thinks-sysadmin">Linux Journal</a> is a great ressource on how to go about this. Basically, the more comfortable you are able to connect to the servers you are dealing with using Ansible, the less secure it will be. In my case I decided for an insecure but comfortable solution for the testing setup on my laptop: a password-less ssl-keypair which allows the holder of the private key to log into the remote server&rsquo;s root account. While this really screws any security mechanisms that might have been established before, it is probably <strong>optimal for playing around and learning Ansible</strong>.</p>
+<p>After an easy installation of Ansible through the package manager we are left with establishing the ssh-connection between the master and the servers involved in the monitoring setup. An article of the <a href="http://www.linuxjournal.com/content/ansible-automation-framework-thinks-sysadmin">Linux Journal</a> is a great ressource on how to go about this. Basically, the more comfortable you are able to connect to the servers you are dealing with using Ansible, the less secure it will be. In my case I decided for an insecure but comfortable solution for the testing setup on my laptop: a password-less ssl-keypair which allows the holder of the private key to log into the remote server's root account. While this really screws any security mechanisms that might have been established before, it is probably <strong>optimal for playing around and learning Ansible</strong>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> ssh-keygen
  <span style="color:#75715e"># repeat the step below for every involved server</span>
  ssh-copy-id -i .ssh/id_dsa.pub root@remote.computer.ip
  ssh root@remote.computer.ip
-</code></pre></div><p>After the ssh-setup we need to declare the servers on the Ansible-server. In my setup i declared the exact IPs in /etc/hosts and refered to the declared hostnames in /etc/ansible/hosts. This is due to the fact that my test-environment doesn&rsquo;t have static IP addresses, and I&rsquo;d like to change them conveniently all at one place (/etc/hosts) in case the IP addresses happen to change.</p>
+</code></pre></div><p>After the ssh-setup we need to declare the servers on the Ansible-server. In my setup i declared the exact IPs in /etc/hosts and refered to the declared hostnames in /etc/ansible/hosts. This is due to the fact that my test-environment doesn't have static IP addresses, and I'd like to change them conveniently all at one place (/etc/hosts) in case the IP addresses happen to change.</p>
 <p>The servers involved in the monitoring-setup will be either monitored-servers or monitoring-servers, so it makes sense to declare these two groups for Ansible in /etc/Ansible/hosts something like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#f92672">[</span>monitored_servers<span style="color:#f92672">]</span>
 server1.laptop
@@ -326,80 +326,80 @@ icinga2.laptop
 <li>The playbook copies over the nrpe configuration file, which is expected to be in nrpe.d/nrpe relative to the playbook path. The configuration of this file can also found below.</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-- <span style="color:#66d9ef">name</span>:  Include OS specific variables
-  <span style="color:#66d9ef">hosts</span>: all
-  <span style="color:#66d9ef">tasks</span>:
-  - <span style="color:#66d9ef">debug</span>: var=hostvars[inventory_hostname][<span style="color:#e6db74">&#39;ansible_distribution&#39;</span>]
-  - <span style="color:#66d9ef">include_vars</span>: oel.yml
-    <span style="color:#66d9ef">when</span>: ansible_distribution == <span style="color:#e6db74">&#34;OracleLinux&#34;</span>
-  - <span style="color:#66d9ef">include_vars</span>: ubuntu.yml
-    <span style="color:#66d9ef">when</span>: ansible_distribution == <span style="color:#e6db74">&#34;Ubuntu&#34;</span>
+- name:  Include OS specific variables
+  hosts: all
+  tasks:
+  - debug: var=hostvars[inventory_hostname][<span style="color:#e6db74">&#39;ansible_distribution&#39;</span>]
+  - include_vars: oel.yml
+    when: ansible_distribution == <span style="color:#e6db74">&#34;OracleLinux&#34;</span>
+  - include_vars: ubuntu.yml
+    when: ansible_distribution == <span style="color:#e6db74">&#34;Ubuntu&#34;</span>
   <span style="color:#75715e"># TODO include a default case, for now this works though</span>
-- <span style="color:#66d9ef">name</span>: Install the nrpe check on the monitoring-server
-  <span style="color:#66d9ef">hosts</span>: monitoring_servers
-  <span style="color:#66d9ef">tasks</span>:
-  - <span style="color:#66d9ef">debug</span>: var=monitoring_checks
-  - <span style="color:#66d9ef">name</span>: Install required packages
-    <span style="color:#66d9ef">package</span>:
-      <span style="color:#66d9ef">name</span>: <span style="color:#e6db74">&#34;{{ monitoring_checks }}&#34;</span>
-      <span style="color:#66d9ef">state</span>: latest
-- <span style="color:#66d9ef">name</span>: Install nrpe daemon with monitoring-configuration
-  <span style="color:#66d9ef">hosts</span>: monitored_servers
-  <span style="color:#66d9ef">tasks</span>:
-  - <span style="color:#66d9ef">debug</span>: var=hostvars[inventory_hostname][<span style="color:#e6db74">&#39;ansible_default_ipv4&#39;</span>][<span style="color:#e6db74">&#39;address&#39;</span>]
-  - <span style="color:#66d9ef">debug</span>: var=monitoring_checks
-  - <span style="color:#66d9ef">name</span>: Disable the firewall
-    <span style="color:#66d9ef">when</span>: ansible_distribution == <span style="color:#e6db74">&#34;OracleLinux&#34;</span> <span style="color:#75715e">#TODO handle different firewalls</span>
-    <span style="color:#66d9ef">service</span>:
-      <span style="color:#66d9ef">name</span>: firewalld
-      <span style="color:#66d9ef">enabled</span>: no <span style="color:#75715e">#TODO create a rule instead of just disabling it</span>
-      <span style="color:#66d9ef">state</span>: stopped
-  - <span style="color:#66d9ef">name</span>: Install required packages
-    <span style="color:#66d9ef">package</span>:
-      <span style="color:#66d9ef">name</span>: nrpe, {{ monitoring_checks }}, xinetd
-      <span style="color:#66d9ef">state</span>: latest
-  - <span style="color:#66d9ef">name</span>: Copy over the configuration file for the nrpe daemon
-    <span style="color:#66d9ef">synchronize</span>:
-       <span style="color:#66d9ef">src</span>: nrpe.d/nrpe
-       <span style="color:#66d9ef">dest</span>: /etc/xinetd.d/nrpe
-  - <span style="color:#66d9ef">name</span>: Add xinetd to autostart and start it
-    <span style="color:#66d9ef">service</span>:
-       <span style="color:#66d9ef">name</span>: xinetd
-       <span style="color:#66d9ef">enabled</span>: yes
-       <span style="color:#66d9ef">state</span>: started
-  - <span style="color:#66d9ef">name</span>: Add the required entry to /etc/hosts
-    <span style="color:#66d9ef">lineinfile</span>:
-       <span style="color:#66d9ef">path</span>: /etc/hosts
-       <span style="color:#66d9ef">state</span>: present
-       <span style="color:#66d9ef">line</span>: <span style="color:#e6db74">&#34;{{ hostvars[item][&#39;ansible_default_ipv4&#39;][&#39;address&#39;] }}   monitoring-server&#34;</span>
-    <span style="color:#66d9ef">with_items</span>: <span style="color:#e6db74">&#34;{{ groups.monitoring_servers }}&#34;</span>
+- name: Install the nrpe check on the monitoring-server
+  hosts: monitoring_servers
+  tasks:
+  - debug: var=monitoring_checks
+  - name: Install required packages
+    package:
+      name: <span style="color:#e6db74">&#34;{{ monitoring_checks }}&#34;</span>
+      state: latest
+- name: Install nrpe daemon with monitoring-configuration
+  hosts: monitored_servers
+  tasks:
+  - debug: var=hostvars[inventory_hostname][<span style="color:#e6db74">&#39;ansible_default_ipv4&#39;</span>][<span style="color:#e6db74">&#39;address&#39;</span>]
+  - debug: var=monitoring_checks
+  - name: Disable the firewall
+    when: ansible_distribution == <span style="color:#e6db74">&#34;OracleLinux&#34;</span> <span style="color:#75715e">#TODO handle different firewalls</span>
+    service:
+      name: firewalld
+      enabled: no <span style="color:#75715e">#TODO create a rule instead of just disabling it</span>
+      state: stopped
+  - name: Install required packages
+    package:
+      name: nrpe, {{ monitoring_checks }}, xinetd
+      state: latest
+  - name: Copy over the configuration file for the nrpe daemon
+    synchronize:
+       src: nrpe.d/nrpe
+       dest: /etc/xinetd.d/nrpe
+  - name: Add xinetd to autostart and start it
+    service:
+       name: xinetd
+       enabled: yes
+       state: started
+  - name: Add the required entry to /etc/hosts
+    lineinfile:
+       path: /etc/hosts
+       state: present
+       line: <span style="color:#e6db74">&#34;{{ hostvars[item][&#39;ansible_default_ipv4&#39;][&#39;address&#39;] }}   monitoring-server&#34;</span>
+    with_items: <span style="color:#e6db74">&#34;{{ groups.monitoring_servers }}&#34;</span>
     <span style="color:#75715e"># it should be ok to have multiple IP addresses under the same host-name in case we have multiple</span>
     <span style="color:#75715e"># monitoring-servers. this way we add them all with the same hostname to /etc/hosts</span>
-  - <span style="color:#66d9ef">name</span>: Test the installation by executing the command locally
-    <span style="color:#66d9ef">raw</span>: <span style="color:#e6db74">&#34;$(find / -name check_nrpe 2&gt;/dev/null | head -n 1) -H localhost -c check_users&#34;</span>
+  - name: Test the installation by executing the command locally
+    raw: <span style="color:#e6db74">&#34;$(find / -name check_nrpe 2&gt;/dev/null | head -n 1) -H localhost -c check_users&#34;</span>
     <span style="color:#75715e"># this command searches for the check_nrpe binary and the executes it.</span>
     <span style="color:#75715e"># this is due to the fact, that depending on the OS / packaging the location differs.</span>
-- <span style="color:#66d9ef">name</span>: Install the nrpe check on the monitoring-server
-  <span style="color:#66d9ef">hosts</span>: monitoring_servers
-  <span style="color:#66d9ef">tasks</span>:
-  - <span style="color:#66d9ef">debug</span>: var=monitoring_checks
-  - <span style="color:#66d9ef">name</span>: Install required packages
-    <span style="color:#66d9ef">package</span>:
-      <span style="color:#66d9ef">name</span>: <span style="color:#e6db74">&#34;{{ monitoring_checks }}&#34;</span>
-      <span style="color:#66d9ef">state</span>: latest
-- <span style="color:#66d9ef">name</span>: Test the check_users check from the monitoring_servers
-  <span style="color:#66d9ef">hosts</span>: monitoring_servers
-  <span style="color:#66d9ef">tasks</span>:
-  - <span style="color:#66d9ef">raw</span>: <span style="color:#e6db74">&#34;$(find / -name check_nrpe 2&gt;/dev/null | head -n 1) -H {{ hostvars[item][&#39;ansible_default_ipv4&#39;][&#39;address&#39;] }} -c check_users&#34;</span>
-    <span style="color:#66d9ef">with_items</span>: <span style="color:#e6db74">&#34;{{ groups.monitored_servers }}&#34;</span>
+- name: Install the nrpe check on the monitoring-server
+  hosts: monitoring_servers
+  tasks:
+  - debug: var=monitoring_checks
+  - name: Install required packages
+    package:
+      name: <span style="color:#e6db74">&#34;{{ monitoring_checks }}&#34;</span>
+      state: latest
+- name: Test the check_users check from the monitoring_servers
+  hosts: monitoring_servers
+  tasks:
+  - raw: <span style="color:#e6db74">&#34;$(find / -name check_nrpe 2&gt;/dev/null | head -n 1) -H {{ hostvars[item][&#39;ansible_default_ipv4&#39;][&#39;address&#39;] }} -c check_users&#34;</span>
+    with_items: <span style="color:#e6db74">&#34;{{ groups.monitored_servers }}&#34;</span>
 </code></pre></div><p>The host-specific file ubuntu.yml:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
 <span style="color:#75715e"># define variables which are specific to the ubuntu setup</span>
-<span style="color:#66d9ef">monitoring_checks</span>: monitoring-plugins-common
+monitoring_checks: monitoring-plugins-common
 </code></pre></div><p>The host-specific file oel.yml:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
 <span style="color:#75715e"># define variables which are specific to the oel setup</span>
-<span style="color:#66d9ef">monitoring_checks</span>: nagios-plugins-all, nagios-plugins-nrpe
+monitoring_checks: nagios-plugins-all, nagios-plugins-nrpe
 </code></pre></div><p>The nrpe configuration file:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># default: off</span>
 <span style="color:#75715e"># description: NRPE (Nagios Remote Plugin Executor)</span>
@@ -544,7 +544,7 @@ service nrpe
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.68.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.60.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>
