@@ -294,7 +294,7 @@ The linux world is big, so you might come here asking: &ldquo;Why the hell do yo
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <p>Monitoring servers using icinga usually requires a small setup on the monitored server. From the different choices of agents, the nrpe daemon ontop of xinetd is easy enough to set up, while it can provide any kind of information that is available on the monitored server locally. To automate this setup task and as a learning exercise I wrote up an Ansible playbook, which I describe here.</p>
-<!-- raw HTML omitted -->
+<!-- more -->
 <p>The linux world is big, so you might come here asking: &ldquo;Why the hell do you use xinetd and nrpe for monitoring?&quot;. Well, looking at the available options from the <a href="https://www.icinga.com/docs/icinga2/latest/doc/07-agent-based-monitoring/">official documentation</a> it turns out there are actually many different techniques which can work, I just happen to always use nrpe in an environment of mostly linux servers. Here is the list of all the options which I should probably check out in a future post:</p>
 <ul>
 <li>SNMP</li>
@@ -320,7 +320,7 @@ server2.laptop
 <span style="color:#f92672">[</span>monitoring_servers<span style="color:#f92672">]</span>
 icinga2.laptop
 </code></pre></div><h1 id="the-ansible-playbook">The Ansible Playbook</h1>
-<p>The playbook itself is a .yml file and is easily readable once you get the hang of it. It is helpful to know that in this Ansible file every entry besides &ldquo;name&rdquo;, &ldquo;hosts&rdquo;, &ldquo;tasks&rdquo; and the conditional &ldquo;when&rdquo; refers to an <!-- raw HTML omitted -->Ansible module<!-- raw HTML omitted -->. This means if you stumble across any section of this .yml file and it is not clear to you how it works, simply search for the name in the <a href="http://docs.ansible.com/ansible/latest/modules_by_category.html">Ansible module documentation</a>. To me all the different names where confusing at the start and once I figured this out playbooks became much easier to read.</p>
+<p>The playbook itself is a .yml file and is easily readable once you get the hang of it. It is helpful to know that in this Ansible file every entry besides &ldquo;name&rdquo;, &ldquo;hosts&rdquo;, &ldquo;tasks&rdquo; and the conditional &ldquo;when&rdquo; refers to an <span class="underline">Ansible module</span>. This means if you stumble across any section of this .yml file and it is not clear to you how it works, simply search for the name in the <a href="http://docs.ansible.com/ansible/latest/modules_by_category.html">Ansible module documentation</a>. To me all the different names where confusing at the start and once I figured this out playbooks became much easier to read.</p>
 <p>Things worth pointing out:</p>
 <ul>
 <li>For this task we need a specific monitoring package. This has a different name depending on the platform, which is exactly what we load at the beginning below &ldquo;Include OS specific variables&rdquo;. This depends on two short additional files which can be found below this playbook.</li>
