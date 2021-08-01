@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Making Emacs recognize its physical location - Long Thoughts</title>
-  <meta name="description" content="My emacs now behaves differently when I&#39;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.">
+  <meta name="description" content="My emacs now behaves differently when I&rsquo;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.">
   <meta name="author" content="Felix Brilej"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -57,7 +57,7 @@
     "name" : "Felix Brilej"
   },
   "headline": "Making Emacs recognize its physical location",
-  "description" : "My emacs now behaves differently when I\x27m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.\n",
+  "description" : "My emacs now behaves differently when I\x26rsquo;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.\n",
   "inLanguage" : "en",
   "wordCount":  341 ,
   "datePublished" : "2019-12-27T00:00:00",
@@ -79,18 +79,18 @@
 </script>
 
 <meta property="og:title" content="Making Emacs recognize its physical location" />
-<meta property="og:description" content="My emacs now behaves differently when I&#39;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.">
+<meta property="og:description" content="My emacs now behaves differently when I&rsquo;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.">
 <meta property="og:image" content="https://flyck.github.io/img/avatar-icon.png" />
 <meta property="og:url" content="https://flyck.github.io/post/emacs_appartment_recognition/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Long Thoughts" />
 
   <meta name="twitter:title" content="Making Emacs recognize its physical location" />
-  <meta name="twitter:description" content="My emacs now behaves differently when I&#39;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.">
+  <meta name="twitter:description" content="My emacs now behaves differently when I&rsquo;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.">
   <meta name="twitter:image" content="https://flyck.github.io/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://flyck.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.60.0" />
+  <meta name="generator" content="Hugo 0.68.3" />
   <link rel="alternate" href="https://flyck.github.io/index.xml" type="application/rss+xml" title="Long Thoughts"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://flyck.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -291,25 +291,25 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>My emacs now behaves differently when I'm at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.</p>
-<p>Emacs&rsquo; org-mode is a tool I use almost daily for my note-taking. I don't attempt to capture everything in emacs, but most of my notes eventually end up either there or in one of my physical notebooks. In emacs, I use different notebooks depending on whether I'm at work or not. With the following snippet in my config, the information on the kind of environment is set as the environment variable <code>SYSENV</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(<span style="color:#a6e22e">message</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Updating the SYSENV based on the connected wifi...</span><span style="color:#e6db74">&#34;</span>)
-(setq home-wifi <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">FRITZ!Box 7530 RG</span><span style="color:#e6db74">\n</span><span style="color:#e6db74">&#34;</span>)
-(if (<span style="color:#a6e22e">string-equal</span> home-wifi (shell-command-to-string <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">nmcli -g NAME connection show --active</span><span style="color:#e6db74">&#34;</span>))
-    (setenv <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SYSENV</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">home</span><span style="color:#e6db74">&#34;</span>))
+        <p>My emacs now behaves differently when I&rsquo;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.</p>
+<p>Emacs&rsquo; org-mode is a tool I use almost daily for my note-taking. I don&rsquo;t attempt to capture everything in emacs, but most of my notes eventually end up either there or in one of my physical notebooks. In emacs, I use different notebooks depending on whether I&rsquo;m at work or not. With the following snippet in my config, the information on the kind of environment is set as the environment variable <code>SYSENV</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(<span style="color:#a6e22e">message</span> <span style="color:#e6db74">&#34;Updating the SYSENV based on the connected wifi...&#34;</span>)
+(setq home-wifi <span style="color:#e6db74">&#34;FRITZ!Box 7530 RG\n&#34;</span>)
+(if (<span style="color:#a6e22e">string-equal</span> home-wifi (shell-command-to-string <span style="color:#e6db74">&#34;nmcli -g NAME connection show --active&#34;</span>))
+    (setenv <span style="color:#e6db74">&#34;SYSENV&#34;</span> <span style="color:#e6db74">&#34;home&#34;</span>))
 </code></pre></div><p>I then make use of that information in other places, for example for my shortcut to open my notebook:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(defun fbr/open_main_agenda_file()
   (interactive)
-  (case (<span style="color:#a6e22e">intern</span> (getenv <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">SYSENV</span><span style="color:#e6db74">&#34;</span>))
-    (home (find-file <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">~/Dropbox/org/gtd/tasks.org</span><span style="color:#e6db74">&#34;</span>))
-    (work (find-file <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">~/Documents/org/projects.org</span><span style="color:#e6db74">&#34;</span>))
-    (otherwise (<span style="color:#a6e22e">message</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">No SYSENV found. Don&#39;t know what to open.</span><span style="color:#e6db74">&#34;</span>))
+  (case (<span style="color:#a6e22e">intern</span> (getenv <span style="color:#e6db74">&#34;SYSENV&#34;</span>))
+    (home (find-file <span style="color:#e6db74">&#34;~/Dropbox/org/gtd/tasks.org&#34;</span>))
+    (work (find-file <span style="color:#e6db74">&#34;~/Documents/org/projects.org&#34;</span>))
+    (otherwise (<span style="color:#a6e22e">message</span> <span style="color:#e6db74">&#34;No SYSENV found. Don&#39;t know what to open.&#34;</span>))
     )
   )
 
-(<span style="color:#a6e22e">define-key</span> global-map (kbd <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&lt;f6&gt;</span><span style="color:#e6db74">&#34;</span>) <span style="color:#e6db74">&#39;fbr/open_main_agenda_file</span>)
+(<span style="color:#a6e22e">define-key</span> global-map (kbd <span style="color:#e6db74">&#34;&lt;f6&gt;&#34;</span>) <span style="color:#e6db74">&#39;fbr/open_main_agenda_file</span>)
 </code></pre></div><p>The <code>SYSENV</code> environment variable configuration is an idea I borrowed from some other config. It allows me to set this configuration outside of my emacs, for example in the <code>.bashrc</code>. This helped me out in the past, and allowed me have the same configuration running on a windows home PC, a debian study laptop and a redhat work laptop. Configuration that only worked with a certain OS or was only needed for example for studying could be loaded conditionally and reliably.</p>
-<p>These days I only have a single OS I'm working with and even only a single piece of hardware. In the <code>.bashrc</code> the <code>SYSENV</code> is therefor set to <code>work</code> as a default and conditionally overwritten based on the connected WIFI. Even though the amount of environments has now decreased, the <code>SYSENV</code> is still helping me out with my purpose-dependant org-mode configuration.</p>
+<p>These days I only have a single OS I&rsquo;m working with and even only a single piece of hardware. In the <code>.bashrc</code> the <code>SYSENV</code> is therefor set to <code>work</code> as a default and conditionally overwritten based on the connected WIFI. Even though the amount of environments has now decreased, the <code>SYSENV</code> is still helping me out with my purpose-dependant org-mode configuration.</p>
 <p>I hope you found this small snippet useful or inspiring, as it shows how easy it is to make your emacs smarter.</p>
 
         
@@ -430,7 +430,7 @@
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.60.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.68.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>
