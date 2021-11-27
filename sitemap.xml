@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://flyck.github.io/tags/engineering/</loc>
+    <lastmod>2021-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/post/getting_stuff_done_falacy/</loc>
+    <lastmod>2021-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/</loc>
+    <lastmod>2021-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/post/</loc>
+    <lastmod>2021-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/tags/</loc>
+    <lastmod>2021-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/tags/tech/</loc>
+    <lastmod>2021-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/tags/work/</loc>
+    <lastmod>2021-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://flyck.github.io/post/considerations_about_death/</loc>
     <lastmod>2021-07-18T00:00:00+00:00</lastmod>
   </url>
@@ -18,22 +53,7 @@
   </url>
   
   <url>
-    <loc>https://flyck.github.io/</loc>
-    <lastmod>2021-07-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://flyck.github.io/tags/philosophy/</loc>
-    <lastmod>2021-07-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/post/</loc>
-    <lastmod>2021-07-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/tags/</loc>
     <lastmod>2021-07-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -69,11 +89,6 @@
   
   <url>
     <loc>https://flyck.github.io/post/motivational_tides/</loc>
-    <lastmod>2021-04-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/tags/work/</loc>
     <lastmod>2021-04-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -219,11 +234,6 @@
   
   <url>
     <loc>https://flyck.github.io/tags/linux/</loc>
-    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/tags/tech/</loc>
     <lastmod>2020-02-27T00:00:00+00:00</lastmod>
   </url>
   
