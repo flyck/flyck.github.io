@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
-    <lastBuildDate>Sat, 27 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Dec 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://flyck.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>life</title>
+      <link>https://flyck.github.io/tags/life/</link>
+      <pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://flyck.github.io/tags/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>love</title>
+      <link>https://flyck.github.io/tags/love/</link>
+      <pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://flyck.github.io/tags/love/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>romance</title>
+      <link>https://flyck.github.io/tags/romance/</link>
+      <pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://flyck.github.io/tags/romance/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>engineering</title>
@@ -54,15 +81,6 @@
       <pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://flyck.github.io/tags/death/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>life</title>
-      <link>https://flyck.github.io/tags/life/</link>
-      <pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate>
-      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://flyck.github.io/tags/life/</guid>
       <description></description>
     </item>
     
