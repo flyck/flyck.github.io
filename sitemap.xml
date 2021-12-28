@@ -3,12 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://flyck.github.io/tags/life/</loc>
-    <lastmod>2021-12-23T00:00:00+00:00</lastmod>
+    <loc>https://flyck.github.io/bits/</loc>
+    <lastmod>2021-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/tags/bits/</loc>
+    <lastmod>2021-12-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://flyck.github.io/</loc>
+    <lastmod>2021-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/tags/</loc>
+    <lastmod>2021-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/bits/tantra/</loc>
+    <lastmod>2021-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/tags/life/</loc>
     <lastmod>2021-12-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -29,11 +49,6 @@
   
   <url>
     <loc>https://flyck.github.io/tags/romance/</loc>
-    <lastmod>2021-12-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/tags/</loc>
     <lastmod>2021-12-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -75,16 +90,6 @@
   <url>
     <loc>https://flyck.github.io/tags/philosophy/</loc>
     <lastmod>2021-07-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/bits/</loc>
-    <lastmod>2021-05-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/tags/bits/</loc>
-    <lastmod>2021-05-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -169,6 +174,11 @@
   
   <url>
     <loc>https://flyck.github.io/bits/spirituality/</loc>
+    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/bits/taichi/</loc>
     <lastmod>2020-11-13T00:00:00+00:00</lastmod>
   </url>
   
