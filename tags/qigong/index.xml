@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>qigong on Long Thoughts</title>
+    <link>https://flyck.github.io/tags/qigong/</link>
+    <description>Recent content in qigong on Long Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
+    <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
+    <lastBuildDate>Wed, 29 Dec 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://flyck.github.io/tags/qigong/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tai Chi Learning Resources</title>
+      <link>https://flyck.github.io/post/taichi_learning_resources/</link>
+      <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://flyck.github.io/post/taichi_learning_resources/</guid>
+      <description>&lt;p&gt;Getting by Tai Chi knowledge is not so easy. Most teachers (of the far east) are stingy with
+their knowledge. But it is a dying martial art, so the knowledge is slowly forgotten. And not
+everybody has such amount of time to learn. So let me share the best learning resources I
+know.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
