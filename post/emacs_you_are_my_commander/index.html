@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Sinn - Long Thoughts</title>
-  <meta name="description" content="Der Sinn des Lebens. Schlaflose Nächte und eine neue Idee.">
+  <title>Emacs, you are my commander! - Long Thoughts</title>
+  <meta name="description" content="An ode to my favorite editor and my latest config changes.">
   <meta name="author" content="Felix Brilej"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -44,8 +44,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/flyck.github.io\/post\/sinn\/",
-          "name": "Sinn"
+          "@id": "https:\/\/flyck.github.io\/post\/emacs_you_are_my_commander\/",
+          "name": "Emacs, you are my commander!"
         }
     }]
 }
@@ -56,15 +56,15 @@
   "author": {
     "name" : "Felix Brilej"
   },
-  "headline": "Sinn",
-  "description" : "Der Sinn des Lebens. Schlaflose Nächte und eine neue Idee.\n",
+  "headline": "Emacs, you are my commander!",
+  "description" : "An ode to my favorite editor and my latest config changes.\n",
   "inLanguage" : "en",
-  "wordCount":  506 ,
-  "datePublished" : "2020-05-24T00:00:00",
-  "dateModified" : "2020-05-24T00:00:00",
+  "wordCount":  538 ,
+  "datePublished" : "2022-02-18T00:00:00",
+  "dateModified" : "2022-02-18T00:00:00",
   "image" : "https:\/\/flyck.github.io\/img\/avatar-icon.png",
-  "keywords" : [ "life, german" ],
-  "mainEntityOfPage" : "https:\/\/flyck.github.io\/post\/sinn\/",
+  "keywords" : [ "tech, emacs, work, tech, devops" ],
+  "mainEntityOfPage" : "https:\/\/flyck.github.io\/post\/emacs_you_are_my_commander\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/flyck.github.io",
@@ -78,15 +78,15 @@
 }
 </script>
 
-<meta property="og:title" content="Sinn" />
-<meta property="og:description" content="Der Sinn des Lebens. Schlaflose Nächte und eine neue Idee.">
+<meta property="og:title" content="Emacs, you are my commander!" />
+<meta property="og:description" content="An ode to my favorite editor and my latest config changes.">
 <meta property="og:image" content="https://flyck.github.io/img/avatar-icon.png" />
-<meta property="og:url" content="https://flyck.github.io/post/sinn/" />
+<meta property="og:url" content="https://flyck.github.io/post/emacs_you_are_my_commander/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Long Thoughts" />
 
-  <meta name="twitter:title" content="Sinn" />
-  <meta name="twitter:description" content="Der Sinn des Lebens. Schlaflose Nächte und eine neue Idee.">
+  <meta name="twitter:title" content="Emacs, you are my commander!" />
+  <meta name="twitter:description" content="An ode to my favorite editor and my latest config changes.">
   <meta name="twitter:image" content="https://flyck.github.io/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://flyck.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -266,7 +266,7 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Sinn</h1>
+                <h1>Emacs, you are my commander!</h1>
               
               
               
@@ -274,7 +274,7 @@
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on May 24, 2020
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 18, 2022
   
   
   
@@ -297,59 +297,98 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>Der Sinn des Lebens. Schlaflose Nächte und eine neue Idee.</p>
-<p>Der Frage nach dem Sinn des Lebens haftet eine gewisse <strong>Dringlichkeit</strong> an. Es ist daher
-wahrscheinlich, dass man sich diese beantwortet und sich dabei mehr oder weniger von einem
-der großen Argumentations-Camps bedient.</p>
-<p>Doch die Sinn-Frage hat etwas an sich, das es schwer macht sie ein und für alle Mal zu
-beantworten. <em>Immer wieder kommt sie auf.</em> Unruhig, hungrig und verzweifelt nagt sie einem am
-Gewissen und verlangt nach einer Antwort.</p>
-<p>Hier kurz eine Auflistung der großen Camps:</p>
+        <p>An ode to my favorite editor and my latest config changes.</p>
+<p>Emacs to me is the gift that keeps on giving. It is an old-school editor first published
+in 1985. The core is made of C, but most the functionality is written in lisp. It is not only
+highly but extremely extensible by design.</p>
+<p>Naturally, there are tons of plugins. Helm, Magit and org-mode to name my
+favorites. Absolutely unmatched approaches to file browsing, git management and note taking
+which perfectly fit with emacs&rsquo;s emphasis on mouse-free editing.</p>
+<p>Recently I came on to a couple of small but impactful config changes, which after quite some
+years have again refreshed my experience with this editor. I&rsquo;ll just quickly list them
+below…</p>
+<p>A new font! <a href="https://github.com/belluzj/fantasque-sans">Fantasque sans</a>.</p>
+<pre><code>(set-frame-font &quot;-*-Fantasque Sans Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1&quot; nil t) ;; current frame and future frames
+(add-to-list 'default-frame-alist '(font . &quot;-*-Fantasque Sans Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1&quot; )) ;; default font for new frames
+(set-face-attribute 'default t :font &quot;-*-Fantasque Sans Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1&quot; ) ;; default font for new frames
+</code></pre>
+<p><img src="/img/emacs_new_conf/fantasque_sans.png" alt="img"></p>
+<p>A fun and relaxed font which keeps things interesting. Also light on the eyes.</p>
+<p>Finally great AWS CDK editing! Plus typescript development in general with <a href="https://github.com/ananthakumaran/tide">Tide</a>.</p>
+<pre><code>(use-package tide
+  :ensure t
+  :config
+  (global-set-key (kbd &quot;TAB&quot;) #'company-indent-or-complete-common)
+  (global-set-key (kbd &quot;C-x p&quot;) #'tide-fix)
+  :after (typescript-mode company flycheck)
+  :hook ((typescript-mode . tide-setup)
+         (typescript-mode . tide-hl-identifier-mode)
+         (before-save . tide-format-before-save))
+  )
+</code></pre>
+<p>The above is only the basic config. All the details <a href="https://github.com/flyck/.emacs.d/blob/master/my-usepackages.org#typescript-programming">here</a>.</p>
+<p>The above really satisfies all my current development needs. It can do:</p>
 <ul>
-<li><strong>Zielsetzung</strong>: Gib dir selber einen Sinn indem du auf etwas hinarbeitest. (Vertreter: Vera
-Birkenbihl)</li>
-<li><strong>Glücklich sein</strong>: Sei einfach glücklich und dann erfüllst du schon den Sinn deines
-Lebens. (Vertreter: Deko-Shop Designer)</li>
-<li><strong>Sinnlosigkeit</strong>: Es gibt gar keinen Sinn, deswegen sind auch alle so am suchen. Es gibt nur
-Chaos, Zufälle und Sinnlosigkeiten.</li>
-<li><strong>Verantwortung</strong>: Mein Sinn ist in einer Beziehung zu leben / eine Familie zu haben oder zu
-ernähren und diese nicht zu verlieren. Erfülle ich diese Verantwortung erfülle ich
-meinen Sinn, egal wie es mir dabei geht. (Vertreter: Jordan Peterson)</li>
-<li><strong>Nicht Fragen</strong>: Die Sinn-Frage stellt sich einem nur, wenn man gerade nicht glücklich
-ist. Daher brauch man nicht versuchen diese Frage wirklich zu beantworten, sondern kann sie
-als Wegweiser sehen sich wieder in die eigene Mitte zu bewegen. (Vertreter: Saadhguru)</li>
+<li>syntax checking</li>
+<li>auto-completion on tab</li>
+<li>symbol refactoring</li>
+<li>auto-formatting</li>
+<li>quick fixes of problems in code</li>
 </ul>
-<p><br><p></p></p>
-<p>Hierzu habe ich eine neue Beobachtung gemacht, die ich im Folgenden kurz teile.</p>
-<p>Etwas ist mir an dem Wort Sinn selber klar geworden. Wonach suchen wir bei der Sinn-Frage?
-Nach einem <strong>Ziel</strong>, einer <strong>Technik</strong> oder einer <strong>Weisheit</strong>. Doch was bedeutet das <strong>Wort</strong>? Sinn,
-die fünf Sinne. Es steht für das <strong>Erleben</strong>, für das <strong>Erspüren</strong> und das <strong>Zusammenpassen</strong>.</p>
-<p>Diese Bedeutung des Wortes Sinn kommt einem allerding kaum in Kopf, wenn wir nach dem Sinn
-des Lebens suchen - tatsächlich hat aber das Erspüren und das Sinn Machen einen grossen
-Zusammenhang. Wir sagen etwas macht Sinn, wenn es einen <em>gewissen Effekt</em> hat. Ein Brot auf
-dem Mars zu backen, macht keinen besonderen Sinn. Ein Brot zu backen wenn man keines hat und
-hungrig ist macht wiederum großen Sinn. Es hat einen Effekt, den wir intensiv erleben und
-erspüren - kurz: ersinnen können.</p>
-<p>Davon ausgehend hat der der wenig erlebt und erspürt also einen geringen Lebens-Sinn.</p>
-<p>Wo kann ich selber beobachten, dass ich meine Besinnung verliere? Dies passiert, wenn ich
-mich zu viel auf Ziele konzentriere, mir nicht genug Pausen gönne oder allgemein gesagt: zu
-sehr etwas hinterherhechele.</p>
-<p>Wie komme ich wieder zu Sinnen? Durch ein Wochenende in der Natur, Zeit verbringen mit meinen
-Freunden, sich der Kunst widmen, etwas lernen, meditieren. Urlaub!</p>
-<p>Bin ich also zentriert und bei mir, so hat mein Leben einen großen Sinn - weil ich viel
-erspüre. Es ist sinnvoll, sinnlich und gut.</p>
-<p>Dies passt finde ich gut zu dem Camp von dem ich ausgegangen bin: dem Nicht-Fragen. Bin ich
-bei mir, bin ich bei Sinnen, so stellt sich die Sinnfrage nicht. Sie ist bereits beantwortet,
-allein durch meine Besinnung selbst.</p>
-<p>Diese kleine Erkenntnis über die Sprache selbst wollte ich hier kurz teilen. Danke fürs
-Lesen!</p>
+<br>
+<p>Especially with the AWS CDK where Typescript is the first-class citizen, this config is so
+amazing! I had originally refrained from trying to set emacs up as an IDE for Typescript,
+since I had made some bad experiences trying to do so for Python at one point, but this now
+really works like a charm. A pretty quick setup, great defaults, good docs and it just
+works!! Great for editing CDK files or typescript lambdas / apis.</p>
+<p>I had used VSCode originally since it just had everything out of the box, but now I can
+confidently switch back to emacs with this setup. The only thing I believe it cannot do is
+automatically install missing packages, but I&rsquo;m fine with installing these from the
+terminal. Everything else is great.</p>
+<p>Next up: Open a Terminal or File Browser at point!</p>
+<pre><code>(define-prefix-command 'fbr/launcher)
+(define-key global-map &quot;\C-xl&quot; 'fbr/launcher)
+(define-key fbr/launcher &quot;o&quot; 'fbr/open-file-dir)
+(define-key fbr/launcher &quot;t&quot; 'fbr/open-terminal-in-working-dir)
+
+(defun fbr/open-terminal-in-working-dir ()
+  (if (string-equal system-type &quot;darwin&quot;)
+      (async-shell-command (concat &quot;open -a iTerm &quot; (file-name-directory (buffer-file-name))))
+    ))
+
+(defun fbr/open-file-dir ()
+  (if (string-equal system-type &quot;darwin&quot;)
+      (async-shell-command (concat &quot;open -a Finder &quot; (file-name-directory (buffer-file-name))))
+    ))
+</code></pre>
+<p>While this was something that I had already working for windows and linux, i forgot about
+these keybindings and never used them on my work-Mac. Finally I remembered this workflow and
+I can already see it saving me some time! Especially as a Cloud Engineer where I jump between
+tons of repositories at a time, starting a proper shell in the current file directory is
+great!</p>
+<p>And last but not least I found a great emoji plugin! `emojify-insert-emoji` to insert UTF8
+emojis anywhere!</p>
+<pre><code>(use-package emojify
+  :hook (after-init . global-emojify-mode)
+  :config
+  (custom-set-variables
+   '(emojify-display-style 'image)
+   '(emojify-emoji-styles '(unicode)))
+  )
+</code></pre>
 
         
           <div class="blog-tags">
             
-              <a href="https://flyck.github.io/tags/life/">life</a>&nbsp;
+              <a href="https://flyck.github.io/tags/tech/">tech</a>&nbsp;
             
-              <a href="https://flyck.github.io/tags/german/">german</a>&nbsp;
+              <a href="https://flyck.github.io/tags/emacs/">emacs</a>&nbsp;
+            
+              <a href="https://flyck.github.io/tags/work/">work</a>&nbsp;
+            
+              <a href="https://flyck.github.io/tags/tech/">tech</a>&nbsp;
+            
+              <a href="https://flyck.github.io/tags/devops/">devops</a>&nbsp;
             
           </div>
         
@@ -363,13 +402,9 @@ Lesen!</p>
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://flyck.github.io/post/nouns_and_verbs/" data-toggle="tooltip" data-placement="top" title="Nouns and Verbs">&larr; Previous Post</a>
+              <a href="https://flyck.github.io/post/taichi_learning_resources/" data-toggle="tooltip" data-placement="top" title="Tai Chi Learning Resources">&larr; Previous Post</a>
             </li>
           
-          
-            <li class="next">
-              <a href="https://flyck.github.io/post/getting_greener_one/" data-toggle="tooltip" data-placement="top" title="Becoming Greener, Episode I">Next Post &rarr;</a>
-            </li>
           
         </ul>
       
