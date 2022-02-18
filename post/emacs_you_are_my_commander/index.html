@@ -59,7 +59,7 @@
   "headline": "Emacs, you are my commander!",
   "description" : "An ode to my favorite editor and my latest config changes.\n",
   "inLanguage" : "en",
-  "wordCount":  768 ,
+  "wordCount":  728 ,
   "datePublished" : "2022-02-18T00:00:00",
   "dateModified" : "2022-02-18T00:00:00",
   "image" : "https:\/\/flyck.github.io\/img\/avatar-icon.png",
@@ -309,26 +309,21 @@ years have again refreshed my experience with this editor. I&rsquo;ll just quick
 below…</p>
 <h1 id="1">1</h1>
 <p>A new font! <a href="https://github.com/belluzj/fantasque-sans">Fantasque sans</a>.</p>
-<pre><code>(set-frame-font &quot;-*-Fantasque Sans Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1&quot; nil t) ;; current frame and future frames
-(add-to-list 'default-frame-alist '(font . &quot;-*-Fantasque Sans Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1&quot; )) ;; default font for new frames
-(set-face-attribute 'default t :font &quot;-*-Fantasque Sans Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1&quot; ) ;; default font for new frames
-</code></pre>
 <p><img src="/img/emacs_new_conf/fantasque_sans.png" alt="img"></p>
 <p>A fun and relaxed font which keeps things interesting. Also light on the eyes.</p>
 <h1 id="2">2</h1>
 <p>Finally great AWS CDK editing! Plus typescript development in general with <a href="https://github.com/ananthakumaran/tide">Tide</a>.</p>
-<pre><code>(use-package tide
-  :ensure t
-  :config
-  (global-set-key (kbd &quot;TAB&quot;) #'company-indent-or-complete-common)
-  (global-set-key (kbd &quot;C-x p&quot;) #'tide-fix)
-  :after (typescript-mode company flycheck)
-  :hook ((typescript-mode . tide-setup)
-         (typescript-mode . tide-hl-identifier-mode)
-         (before-save . tide-format-before-save))
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">(<span style="color:#a6e22e">use-package</span> tide
+  <span style="color:#e6db74">:ensure</span> <span style="color:#66d9ef">t</span>
+  <span style="color:#e6db74">:config</span>
+  (global-set-key (kbd <span style="color:#e6db74">&#34;TAB&#34;</span>) <span style="color:#a6e22e">#&#39;</span>company-indent-or-complete-common)
+  (global-set-key (kbd <span style="color:#e6db74">&#34;C-x p&#34;</span>) <span style="color:#a6e22e">#&#39;</span>tide-fix)
+  <span style="color:#e6db74">:after</span> (typescript-mode company flycheck)
+  <span style="color:#e6db74">:hook</span> ((typescript-mode <span style="color:#f92672">.</span> tide-setup)
+         (typescript-mode <span style="color:#f92672">.</span> tide-hl-identifier-mode)
+         (before-save <span style="color:#f92672">.</span> tide-format-before-save))
   )
-</code></pre>
-<p>The above is only the basic config. All the details <a href="https://github.com/flyck/.emacs.d/blob/master/my-usepackages.org#typescript-programming">here</a>.</p>
+</code></pre></div><p>The above is only the basic config. All the details <a href="https://github.com/flyck/.emacs.d/blob/master/my-usepackages.org#typescript-programming">here</a>.</p>
 <p>The above really satisfies all my current development needs. It can do:</p>
 <ul>
 <li>syntax checking</li>
@@ -349,22 +344,21 @@ automatically install missing packages, but I&rsquo;m fine with installing these
 terminal. Everything else is great.</p>
 <h1 id="3">3</h1>
 <p>Next up: Open a Terminal or File Browser at point!</p>
-<pre><code>(define-prefix-command 'fbr/launcher)
-(define-key global-map &quot;\C-xl&quot; 'fbr/launcher)
-(define-key fbr/launcher &quot;o&quot; 'fbr/open-file-dir)
-(define-key fbr/launcher &quot;t&quot; 'fbr/open-terminal-in-working-dir)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">(define-prefix-command <span style="color:#e6db74">&#39;fbr/launcher</span>)
+(define-key global-map <span style="color:#e6db74">&#34;\C-xl&#34;</span> <span style="color:#e6db74">&#39;fbr/launcher</span>)
+(define-key fbr/launcher <span style="color:#e6db74">&#34;o&#34;</span> <span style="color:#e6db74">&#39;fbr/open-file-dir</span>)
+(define-key fbr/launcher <span style="color:#e6db74">&#34;t&#34;</span> <span style="color:#e6db74">&#39;fbr/open-terminal-in-working-dir</span>)
 
 (defun fbr/open-terminal-in-working-dir ()
-  (if (string-equal system-type &quot;darwin&quot;)
-      (async-shell-command (concat &quot;open -a iTerm &quot; (file-name-directory (buffer-file-name))))
+  (<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">string-equal</span> system-type <span style="color:#e6db74">&#34;darwin&#34;</span>)
+      (async-shell-command (concat <span style="color:#e6db74">&#34;open -a iTerm &#34;</span> (file-name-directory (buffer-file-name))))
     ))
 
 (defun fbr/open-file-dir ()
-  (if (string-equal system-type &quot;darwin&quot;)
-      (async-shell-command (concat &quot;open -a Finder &quot; (file-name-directory (buffer-file-name))))
+  (<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">string-equal</span> system-type <span style="color:#e6db74">&#34;darwin&#34;</span>)
+      (async-shell-command (concat <span style="color:#e6db74">&#34;open -a Finder &#34;</span> (file-name-directory (buffer-file-name))))
     ))
-</code></pre>
-<p>While this was something that I had already working for windows and linux, i forgot about
+</code></pre></div><p>While this was something that I had already working for windows and linux, i forgot about
 these keybindings and never used them on my work-Mac. Finally I remembered this workflow and
 I can already see it saving me some time! Especially as a Cloud Engineer where I jump between
 tons of repositories at a time, starting a proper shell in the current file directory is
@@ -372,15 +366,14 @@ great!</p>
 <h1 id="4">4</h1>
 <p>And last but not least I found a great emoji plugin! Run <code>emojify-insert-emoji</code> to insert
 UTF8 emojis anywhere!</p>
-<pre><code>(use-package emojify hello! 👋
-  :hook (after-init . global-emojify-mode)
-  :config
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">(<span style="color:#a6e22e">use-package</span> emojify hello! <span style="color:#960050;background-color:#1e0010">👋</span>
+  <span style="color:#e6db74">:hook</span> (after-init <span style="color:#f92672">.</span> global-emojify-mode)
+  <span style="color:#e6db74">:config</span>
   (custom-set-variables
-   '(emojify-display-style 'image)
-   '(emojify-emoji-styles '(unicode)))
+   <span style="color:#f92672">&#39;</span>(emojify-display-style <span style="color:#e6db74">&#39;image</span>)
+   <span style="color:#f92672">&#39;</span>(emojify-emoji-styles <span style="color:#f92672">&#39;</span>(unicode)))
   )
-</code></pre>
-<p>I read somewhere that emacs will support emojis natively at one point, but for now I&rsquo;m more
+</code></pre></div><p>I read somewhere that emacs will support emojis natively at one point, but for now I&rsquo;m more
 than happy with this handy plugin!</p>
 <h1 id="the-end">The end</h1>
 <p>After again and again finding colleagues who use git without any shortcuts or tool - or even
