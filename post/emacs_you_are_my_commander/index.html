@@ -59,7 +59,7 @@
   "headline": "Emacs, you are my commander!",
   "description" : "An ode to my favorite editor and my latest config changes.\n",
   "inLanguage" : "en",
-  "wordCount":  538 ,
+  "wordCount":  543 ,
   "datePublished" : "2022-02-18T00:00:00",
   "dateModified" : "2022-02-18T00:00:00",
   "image" : "https:\/\/flyck.github.io\/img\/avatar-icon.png",
@@ -299,14 +299,15 @@
       <article role="main" class="blog-post">
         <p>An ode to my favorite editor and my latest config changes.</p>
 <p>Emacs to me is the gift that keeps on giving. It is an old-school editor first published
-in 1985. The core is made of C, but most the functionality is written in lisp. It is not only
-highly but extremely extensible by design.</p>
+in 1985. The core is made of C, but most of the functionality is written in lisp. It is not
+only highly but extremely extensible by design.</p>
 <p>Naturally, there are tons of plugins. Helm, Magit and org-mode to name my
 favorites. Absolutely unmatched approaches to file browsing, git management and note taking
 which perfectly fit with emacs&rsquo;s emphasis on mouse-free editing.</p>
 <p>Recently I came on to a couple of small but impactful config changes, which after quite some
 years have again refreshed my experience with this editor. I&rsquo;ll just quickly list them
 below…</p>
+<h1 id="1">1</h1>
 <p>A new font! <a href="https://github.com/belluzj/fantasque-sans">Fantasque sans</a>.</p>
 <pre><code>(set-frame-font &quot;-*-Fantasque Sans Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1&quot; nil t) ;; current frame and future frames
 (add-to-list 'default-frame-alist '(font . &quot;-*-Fantasque Sans Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1&quot; )) ;; default font for new frames
@@ -314,6 +315,7 @@ below…</p>
 </code></pre>
 <p><img src="/img/emacs_new_conf/fantasque_sans.png" alt="img"></p>
 <p>A fun and relaxed font which keeps things interesting. Also light on the eyes.</p>
+<h1 id="2">2</h1>
 <p>Finally great AWS CDK editing! Plus typescript development in general with <a href="https://github.com/ananthakumaran/tide">Tide</a>.</p>
 <pre><code>(use-package tide
   :ensure t
@@ -345,6 +347,7 @@ works!! Great for editing CDK files or typescript lambdas / apis.</p>
 confidently switch back to emacs with this setup. The only thing I believe it cannot do is
 automatically install missing packages, but I&rsquo;m fine with installing these from the
 terminal. Everything else is great.</p>
+<h1 id="3">3</h1>
 <p>Next up: Open a Terminal or File Browser at point!</p>
 <pre><code>(define-prefix-command 'fbr/launcher)
 (define-key global-map &quot;\C-xl&quot; 'fbr/launcher)
@@ -366,6 +369,7 @@ these keybindings and never used them on my work-Mac. Finally I remembered this 
 I can already see it saving me some time! Especially as a Cloud Engineer where I jump between
 tons of repositories at a time, starting a proper shell in the current file directory is
 great!</p>
+<h1 id="4">4</h1>
 <p>And last but not least I found a great emoji plugin! `emojify-insert-emoji` to insert UTF8
 emojis anywhere!</p>
 <pre><code>(use-package emojify
