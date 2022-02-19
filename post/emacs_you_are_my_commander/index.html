@@ -59,7 +59,7 @@
   "headline": "Emacs, you are my commander!",
   "description" : "An ode to my favorite editor and my latest config changes.\n",
   "inLanguage" : "en",
-  "wordCount":  782 ,
+  "wordCount":  762 ,
   "datePublished" : "2022-02-18T00:00:00",
   "dateModified" : "2022-02-18T00:00:00",
   "image" : "https:\/\/flyck.github.io\/img\/avatar-icon.png",
@@ -298,26 +298,17 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <p>An ode to my favorite editor and my latest config changes.</p>
-<p>Emacs to me is the gift that keeps on giving. It is an old-school editor first published
-in 1985. The core is made of C, but most of the functionality is written in lisp. It is not
-only highly but extremely extensible by design.</p>
+<p>Emacs to me is the gift that keeps on giving. It is an old-school editor first published in 1985. The core is made of C, but most of the functionality is written in lisp. It is not only highly but <strong>extremely</strong> extensible.</p>
 <p><em>Warning: This post will be a compilation of such config items written in lisp!</em></p>
-<p>Naturally, there are tons of plugins. Helm, Magit and org-mode to name the biggest. Absolutely
-unmatched approaches to file browsing, git management and note taking which perfectly fit with
-emacs&rsquo;s emphasis on mouse-free editing.</p>
-<p>Recently I came on to a couple of small but impactful config changes, which after quite some
-years have again refreshed my experience with this editor. I&rsquo;ll just quickly list them
-below…</p>
+<p>Naturally, there are tons of plugins. Helm, Magit and org-mode to the ones at the top. Absolutely unmatched approaches to file browsing, git management and note taking, which perfectly fit with emacs&rsquo;s approach on mouse-free editing.</p>
+<p>Recently I again extended my emacs config slightly. After so many years they have again refreshed my experience with this editor.</p>
 <h1 id="1">1</h1>
 <p>A new font! <a href="https://github.com/belluzj/fantasque-sans">Fantasque sans</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">(set-frame-font <span style="color:#e6db74">&#34;-*-Fantasque Sans Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1&#34;</span> <span style="color:#66d9ef">nil</span> <span style="color:#66d9ef">t</span>) <span style="color:#75715e">;; current frame and future frames</span>
-(add-to-list <span style="color:#e6db74">&#39;default-frame-alist</span> <span style="color:#f92672">&#39;</span>(font <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;-*-Fantasque Sans Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1&#34;</span> )) <span style="color:#75715e">;; default font for new frames</span>
-(set-face-attribute <span style="color:#e6db74">&#39;default</span> <span style="color:#66d9ef">t</span> <span style="color:#e6db74">:font</span> <span style="color:#e6db74">&#34;-*-Fantasque Sans Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1&#34;</span> ) <span style="color:#75715e">;; default font for new frames</span>
-</code></pre></div><br>
 <p><img src="/img/emacs_new_conf/fantasque_sans.png" alt="img"></p>
 <p>A fun and relaxed font which keeps things interesting. Also light on the eyes.</p>
 <h1 id="2">2</h1>
-<p>Finally great <a href="https://github.com/aws/aws-cdk">AWS CDK</a> editing! Plus Typescript development in general with <a href="https://github.com/ananthakumaran/tide">Tide</a>.</p>
+<p>Finally great AWS CDK editing! Plus Typescript development in general with <a href="https://github.com/ananthakumaran/tide">Tide</a>.</p>
+<p><img src="/img/emacs_new_conf/tide_editing.png" alt="img"></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">(<span style="color:#a6e22e">use-package</span> tide
   <span style="color:#e6db74">:ensure</span> <span style="color:#66d9ef">t</span>
   <span style="color:#e6db74">:config</span>
@@ -338,17 +329,10 @@ below…</p>
 <li>quick fixes of problems in code</li>
 </ul>
 <br>
-<p>Especially with the AWS CDK where Typescript is the first-class citizen, this config is so
-amazing! I had originally refrained from trying to set emacs up as an IDE for Typescript,
-since I had made some bad experiences trying to do so for Python at one point, but this now
-really works like a charm. A pretty quick setup, great defaults, good docs and it just
-works!! Great for editing CDK files or Typescript lambdas / apis.</p>
-<p>I had used VSCode originally since it just had everything out of the box, but now I can
-confidently switch back to emacs with this setup. The only thing I believe it cannot do is
-automatically install missing packages, but I&rsquo;m fine with installing these from the
-terminal. Everything else is great.</p>
+<p>Especially with the AWS CDK where Typescript is the first-class citizen, this config is so amazing! I had originally refrained from trying to set emacs up as an IDE for Typescript, since I had made some bad experiences trying to do so for Python at one point, but this now really works like a charm. A pretty quick setup, great defaults, good docs and it just works!! Great for editing CDK files or typescript lambdas / apis.</p>
+<p>I had used VSCode originally since it just had everything out of the box, but now I can confidently switch back to emacs with this setup. The only thing I believe it cannot do is automatically install missing packages, but I&rsquo;m fine with installing these from the terminal. Everything else is great.</p>
 <h1 id="3">3</h1>
-<p>Next up: Open a Terminal or File Browser at point!</p>
+<p>Next up: Open a Terminal or File Browser at point! With emacs I can browse any file or directory on my computer. But sometimes it is handy to open a shell or a file browser at whatever directory I am at.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">(define-prefix-command <span style="color:#e6db74">&#39;fbr/launcher</span>)
 (define-key global-map <span style="color:#e6db74">&#34;\C-xl&#34;</span> <span style="color:#e6db74">&#39;fbr/launcher</span>)
 (define-key fbr/launcher <span style="color:#e6db74">&#34;o&#34;</span> <span style="color:#e6db74">&#39;fbr/open-file-dir</span>)
@@ -363,14 +347,9 @@ terminal. Everything else is great.</p>
   (<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">string-equal</span> system-type <span style="color:#e6db74">&#34;darwin&#34;</span>)
       (async-shell-command (concat <span style="color:#e6db74">&#34;open -a Finder &#34;</span> (file-name-directory (buffer-file-name))))
     ))
-</code></pre></div><p>While this was something that I had already working for windows and linux, i forgot about
-these keybindings and never used them on my work-Mac. Finally I remembered this workflow and
-I can already see it saving me some time! Especially as a Cloud Engineer where I jump between
-tons of repositories at a time, starting a proper shell in the current file directory is
-great!</p>
+</code></pre></div><p>While this was something that I had already working for windows and linux, i forgot about these keybindings and never used them on my work-Mac. Finally I remembered this workflow and I can already see it saving me some time! Especially as a Cloud Engineer where I jump between tons of repositories at a time, starting a proper shell in the current file directory is great!</p>
 <h1 id="4">4</h1>
-<p>And last but not least I found a great emoji plugin! Run <code>emojify-insert-emoji</code> to insert
-UTF8 emojis anywhere!</p>
+<p>And last but not least I found a great emoji plugin! Run <code>emojify-insert-emoji</code> to insert UTF8 emojis anywhere!</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">(<span style="color:#a6e22e">use-package</span> emojify hello! <span style="color:#960050;background-color:#1e0010">👋</span>
   <span style="color:#e6db74">:hook</span> (after-init <span style="color:#f92672">.</span> global-emojify-mode)
   <span style="color:#e6db74">:config</span>
@@ -378,23 +357,12 @@ UTF8 emojis anywhere!</p>
    <span style="color:#f92672">&#39;</span>(emojify-display-style <span style="color:#e6db74">&#39;image</span>)
    <span style="color:#f92672">&#39;</span>(emojify-emoji-styles <span style="color:#f92672">&#39;</span>(unicode)))
   )
-</code></pre></div><p>I read somewhere that emacs will support emojis natively at one point, but for now I&rsquo;m more
-than happy with this handy plugin!</p>
-<h1 id="rounding-up">Rounding up</h1>
-<p>After again and again finding colleagues who use git without any shortcuts or tool - or even
-worse: a sub-par visual editor which abstracts and renames functionality, I am more than
-happy that I can rely on such a powerful commander over the years.</p>
-<p>Just the other week I again paired with a colleague who tried to check his aws cli
-configuration with only the Mac Finder. Seeing him struggle to click through all the
-different folders for what felt like hours, finding the home directory, enabling hidden
-files, I started to feel bad for sending him on this quest. Then moving on to opening and
-closing the files one at a time, it just made me hurt.</p>
-<p>Also keyboard shortcuts (emacs-style readline commands, supported by most shells) to skip
-words or lines, skip to the start or end of line, or even the reverse search on the shell
-are apparently things that are widely unknown.</p>
-<p>At least for me I&rsquo;m happy that I got the chance to learn the shortcuts and I want to thank
-the great bearded man for it! 🙏🏻 For any colleague who would like to learn I will pay this
-forward. 🙌🏻</p>
+</code></pre></div><p>I read somewhere that emacs will support emojis natively at one point, but for now I&rsquo;m more than happy with this handy plugin!</p>
+<h1 id="the-end">The end</h1>
+<p>After again and again finding colleagues who use git without any shortcuts or tool - or even worse: a sub-par visual editor which abstracts and renames functionality, I am more than happy that I can rely on such a powerful commander over the years.</p>
+<p>Just the other week I again paired with a colleague who tried to check his aws cli configuration with only the Mac Finder. Seeing him struggle to click through all the different folders for what felt like hours, finding the home directory, enabling hidden files, I started to feel bad for sending him on this quest. Then moving on to opening and closing the files one at a time, it just made me hurt.</p>
+<p>Also keyboard shortcuts (emacs-style readline commands, supported by most shells) to skip words or lines, skip to the start or end of line, or even the reverse search on the shell are apparently things that are widely unknown.</p>
+<p>At least for me I&rsquo;m happy that I got the chance to learn the shortcuts and I want to thank the great bearded man for it! 🙏🏻 For any colleague who would like to learn I will pay this forward. 🙌🏻</p>
 
         
           <div class="blog-tags">
