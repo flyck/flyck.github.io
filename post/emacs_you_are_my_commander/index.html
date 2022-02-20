@@ -59,7 +59,7 @@
   "headline": "Emacs, you are my commander!",
   "description" : "An ode to my favorite editor and my latest config changes.\n",
   "inLanguage" : "en",
-  "wordCount":  764 ,
+  "wordCount":  706 ,
   "datePublished" : "2022-02-18T00:00:00",
   "dateModified" : "2022-02-18T00:00:00",
   "image" : "https:\/\/flyck.github.io\/img\/avatar-icon.png",
@@ -305,9 +305,9 @@
 <h1 id="1">1</h1>
 <p>A new font! <a href="https://github.com/belluzj/fantasque-sans">Fantasque sans</a>.</p>
 <p><img src="/img/emacs_new_conf/fantasque_sans.png" alt="img"></p>
-<p>A fun and relaxed font which keeps things interesting. Also light on the eyes.</p>
+<p>A fun and relaxed font which keeps things interesting.</p>
 <h1 id="2">2</h1>
-<p>Finally great AWS CDK editing! Plus Typescript development in general with <a href="https://github.com/ananthakumaran/tide">Tide</a>.</p>
+<p>Finally great AWS CDK editing! This is powered by <a href="https://github.com/ananthakumaran/tide">Tide</a>, which also opened the door for me for Typescript development in Emacs in general.</p>
 <p><img src="/img/emacs_new_conf/tide_editing.png" alt="img"></p>
 <br>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">(<span style="color:#a6e22e">use-package</span> tide
@@ -333,7 +333,7 @@
 <p>Especially with the AWS CDK where Typescript is the first-class citizen, this config is so amazing! I had originally refrained from trying to set emacs up as an IDE for Typescript, since I had made some bad experiences trying to do so for Python at one point, but this now really works like a charm. A pretty quick setup, great defaults, good docs and it just works!! Great for editing CDK files or typescript lambdas / apis.</p>
 <p>I had used VSCode originally since it just had everything out of the box, but now I can confidently switch back to emacs with this setup. The only thing I believe it cannot do is automatically install missing packages, but I&rsquo;m fine with installing these from the terminal. Everything else is great.</p>
 <h1 id="3">3</h1>
-<p>Next up: Open a Terminal or File Browser at point! With emacs I can browse any file or directory on my computer. But sometimes it is handy to open a shell or a file browser at whatever directory I am at.</p>
+<p>Next up: Opening a Terminal or File Browser at point. With emacs I frequently browse files at all sorts of different directories. Sometimes it comes in handy to open a shell or a file browser at whatever directory I am currently at.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">(define-prefix-command <span style="color:#e6db74">&#39;fbr/launcher</span>)
 (define-key global-map <span style="color:#e6db74">&#34;\C-xl&#34;</span> <span style="color:#e6db74">&#39;fbr/launcher</span>)
 (define-key fbr/launcher <span style="color:#e6db74">&#34;o&#34;</span> <span style="color:#e6db74">&#39;fbr/open-file-dir</span>)
@@ -348,8 +348,7 @@
   (<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">string-equal</span> system-type <span style="color:#e6db74">&#34;darwin&#34;</span>)
       (async-shell-command (concat <span style="color:#e6db74">&#34;open -a Finder &#34;</span> (file-name-directory (buffer-file-name))))
     ))
-</code></pre></div><p>While this was something that I had already working for windows and linux, i forgot about these keybindings and never used them on my work-Mac. Finally I remembered this workflow and I can already see it saving me some time! Especially as a Cloud Engineer where I jump between tons of repositories at a time, starting a proper shell in the current file directory is great!</p>
-<h1 id="4">4</h1>
+</code></pre></div><h1 id="4">4</h1>
 <p>And last but not least I found a great emoji plugin! Run <code>emojify-insert-emoji</code> to insert UTF8 emojis anywhere!</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">(<span style="color:#a6e22e">use-package</span> emojify hello! <span style="color:#960050;background-color:#1e0010">👋</span>
   <span style="color:#e6db74">:hook</span> (after-init <span style="color:#f92672">.</span> global-emojify-mode)
