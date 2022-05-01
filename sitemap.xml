@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://flyck.github.io/tags/approach/</loc>
+    <lastmod>2022-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/tags/life/</loc>
+    <lastmod>2022-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/</loc>
+    <lastmod>2022-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/post/</loc>
+    <lastmod>2022-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/tags/</loc>
+    <lastmod>2022-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/post/approach_theory/</loc>
+    <lastmod>2022-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://flyck.github.io/tags/devops/</loc>
     <lastmod>2022-02-18T00:00:00+00:00</lastmod>
   </url>
@@ -14,21 +44,6 @@
   
   <url>
     <loc>https://flyck.github.io/post/emacs_you_are_my_commander/</loc>
-    <lastmod>2022-02-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/</loc>
-    <lastmod>2022-02-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/post/</loc>
-    <lastmod>2022-02-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/tags/</loc>
     <lastmod>2022-02-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -90,11 +105,6 @@
   <url>
     <loc>https://flyck.github.io/bits/tantra/</loc>
     <lastmod>2021-12-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/tags/life/</loc>
-    <lastmod>2021-12-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
