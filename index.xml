@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
-    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jun 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://flyck.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Decency in Tech</title>
+      <link>https://flyck.github.io/post/decency_in_tech/</link>
+      <pubDate>Sun, 05 Jun 2022 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://flyck.github.io/post/decency_in_tech/</guid>
+      <description>&lt;p&gt;Pull Requests kicked around and ripped apart, lethal questions barked at a presenter after the &amp;ldquo;thank you&amp;rdquo; slide, the judgmental silence after an ill-placed question. Sometimes I find myself searching for dencency in tech. Does it have its place?&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>The art of approach</title>
