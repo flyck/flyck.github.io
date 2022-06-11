@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
-    <lastBuildDate>Sun, 05 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jun 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://flyck.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Osho in 2022: Media Coverage and Stats</title>
+      <link>https://flyck.github.io/post/osho_in_2022/</link>
+      <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://flyck.github.io/post/osho_in_2022/</guid>
+      <description>&lt;p&gt;The indian guru Bhagwan - or later known as Osho - has been one of the most widely known mystics of our time. After his death on 19.1.1990, in the recent years there has been more media coverage on him.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Decency in Tech</title>
