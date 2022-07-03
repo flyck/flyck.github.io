@@ -103,16 +103,6 @@
   </url>
   
   <url>
-    <loc>https://flyck.github.io/bits/</loc>
-    <lastmod>2021-12-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/tags/bits/</loc>
-    <lastmod>2021-12-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://flyck.github.io/tags/german/</loc>
     <lastmod>2021-12-28T00:00:00+00:00</lastmod>
   </url>
@@ -129,11 +119,6 @@
   
   <url>
     <loc>https://flyck.github.io/recipes/</loc>
-    <lastmod>2021-12-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/bits/tantra/</loc>
     <lastmod>2021-12-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -188,7 +173,12 @@
   </url>
   
   <url>
-    <loc>https://flyck.github.io/bits/healing/</loc>
+    <loc>https://flyck.github.io/creatives/</loc>
+    <lastmod>2021-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/creatives/creatives/</loc>
     <lastmod>2021-05-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -245,36 +235,6 @@
   <url>
     <loc>https://flyck.github.io/post/growing_in_a_company/</loc>
     <lastmod>2020-12-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/bits/lostinthought/</loc>
-    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/bits/meditation/</loc>
-    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/bits/nofilter/</loc>
-    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/bits/spirituality/</loc>
-    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/bits/taichi/</loc>
-    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/bits/theorizing/</loc>
-    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>

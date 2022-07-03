@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Creatives on Long Thoughts</title>
+    <link>https://flyck.github.io/creatives/</link>
+    <description>Recent content in Creatives on Long Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
+    <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
+    <lastBuildDate>Tue, 25 May 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://flyck.github.io/creatives/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Creatives</title>
+      <link>https://flyck.github.io/creatives/creatives/</link>
+      <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://flyck.github.io/creatives/creatives/</guid>
+      <description>Page under constrution ⚠
+Planned content:
+ Dreamhouse Architecture Sketches Visual Animation of Symbols  </description>
+    </item>
+    
+  </channel>
+</rss>
