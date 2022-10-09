@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
-    <lastBuildDate>Sat, 11 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Oct 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://flyck.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>NodeConf EU 2022 Aftermath</title>
+      <link>https://flyck.github.io/post/nodeconf_eu_2022/</link>
+      <pubDate>Sun, 09 Oct 2022 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://flyck.github.io/post/nodeconf_eu_2022/</guid>
+      <description>&lt;p&gt;Visiting was a blast. Notes, links and impressions from this years NodeConf EU.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Osho in 2022: Media Coverage and Stats</title>
@@ -27,7 +36,7 @@
       <pubDate>Sun, 05 Jun 2022 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://flyck.github.io/post/decency_in_tech/</guid>
-      <description>&lt;p&gt;Pull Requests kicked around and ripped apart, questions barked at a presenter after the &amp;ldquo;thank you&amp;rdquo; slide, that judgmental moment of silence after an ill-placed question. Does decency have a place in tech? A question I asked myself 3 years ago, and finally some answers.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Pull Requests kicked around and asked apart, questions flinged at a presenter after the &amp;ldquo;thank you&amp;rdquo; slide, that judgmental moment of silence after an ill-placed question. Does decency have a place in tech? A question I asked myself 3 years ago, and finally some answers.&lt;/p&gt;</description>
     </item>
     
     <item>

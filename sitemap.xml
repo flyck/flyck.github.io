@@ -3,8 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://flyck.github.io/tags/conference/</loc>
+    <lastmod>2022-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://flyck.github.io/</loc>
-    <lastmod>2022-06-11T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/post/nodeconf_eu_2022/</loc>
+    <lastmod>2022-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/post/</loc>
+    <lastmod>2022-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/tags/</loc>
+    <lastmod>2022-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://flyck.github.io/tags/tech/</loc>
+    <lastmod>2022-10-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -18,17 +43,7 @@
   </url>
   
   <url>
-    <loc>https://flyck.github.io/post/</loc>
-    <lastmod>2022-06-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://flyck.github.io/tags/spirituality/</loc>
-    <lastmod>2022-06-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/tags/</loc>
     <lastmod>2022-06-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -39,11 +54,6 @@
   
   <url>
     <loc>https://flyck.github.io/tags/english/</loc>
-    <lastmod>2022-06-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/tags/tech/</loc>
     <lastmod>2022-06-05T00:00:00+00:00</lastmod>
   </url>
   
