@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vacation on Long Thoughts</title>
+    <link>https://flyck.github.io/tags/vacation/</link>
+    <description>Recent content in vacation on Long Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
+    <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
+    <lastBuildDate>Sun, 30 Jul 2023 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://flyck.github.io/tags/vacation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Impressions from Hiking in Harz</title>
+      <link>https://flyck.github.io/post/wandering_harz_impressions/</link>
+      <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://flyck.github.io/post/wandering_harz_impressions/</guid>
+      <description>&lt;p&gt;I decided to take one week off to go hiking while also working on personal projects. Explore with me how this turned out in the great area of Harz!&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
