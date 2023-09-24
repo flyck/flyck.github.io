@@ -137,7 +137,7 @@ useful things can we draw from considering death?&lt;/p&gt;</description>
       <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://flyck.github.io/creatives/creatives/</guid>
-      <description>     const r = new rive.Rive({ // src: &#34;https://cdn.rive.app/animations/vehicles.riv&#34;, // Or the path to a public Rive asset src: &#39;https://www.long-thoughts.com/creatives/meditating_buddha.riv&#39;, canvas: document.getElementById(&#34;canvas&#34;), autoplay: true, stateMachines: &#34;bumpy&#34;, onLoad: () = { r.resizeDrawingSurfaceToCanvas(); }, });   </description>
+      <description>    const r = new rive.Rive({ // src: &#34;https://cdn.rive.app/animations/vehicles.riv&#34;, // Or the path to a public Rive asset // src: &#39;https://www.long-thoughts.com/creatives/meditating_buddha.riv&#39;, src: &#39;/creatives/meditating_buddha.riv&#39;, canvas: document.getElementById(&#34;canvas&#34;), autoplay: true, stateMachines: &#34;bumpy&#34;, onLoad: () = { r.resizeDrawingSurfaceToCanvas(); }, });   </description>
     </item>
     
     <item>
