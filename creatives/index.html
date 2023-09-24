@@ -93,7 +93,7 @@
               <a class="navlinks-parent">Creatives</a>
               <div class="navlinks-children">
                 
-                  <a href="/creatives/creatives/">Floating Symbols</a>
+                  <a href="/creatives/floating-symbols/">Floating Symbols</a>
                 
               </div>
             </li>
@@ -224,7 +224,7 @@
         <div class="posts-list">
           
             <article class="post-preview">
-    <a href="https://flyck.github.io/creatives/creatives/">
+    <a href="https://flyck.github.io/creatives/floating-symbols/">
         <h2 class="post-title">Floating Symbols</h2>
         
         
@@ -247,24 +247,25 @@
     </p>
     <div class="post-entry">
         
-        <div>
+        <div class="absolute border-red-100 border-2">
         <script src="https://unpkg.com/@rive-app/canvas@2.1.0"></script>
-        <canvas id="canvas" width="1000" height="500"></canvas>
+        <canvas id="canvas" width="700" height="500"></canvas>
         <script>
           const r = new rive.Rive({
             // src: "https://cdn.rive.app/animations/vehicles.riv",
             // Or the path to a public Rive asset
-            // src: 'https://www.long-thoughts.com/creatives/meditating_buddha.riv',
-            src: '/creatives/meditating_buddha.riv',
+            src: 'https://www.long-thoughts.com/creatives/meditating_buddha.riv',
+            // src: '/creatives/meditating_buddha.riv',
             canvas: document.getElementById("canvas"),
             autoplay: true,
-            stateMachines: "bumpy",
+            stateMachines: "All Together",
             onLoad: () => {
               r.resizeDrawingSurfaceToCanvas();
             },
           });
         </script>
 </div>
+<p>Artwork collection: &ldquo;Symbols&rdquo;</p>
 
         
     </div>
