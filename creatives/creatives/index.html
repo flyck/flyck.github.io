@@ -7,10 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Creatives - Long Thoughts</title>
-  <meta name="description" content="Page under constrution ⚠
-Planned content:
- Dreamhouse Architecture Sketches Visual Animation of Symbols  ">
+  <title>Floating Symbols - Long Thoughts</title>
+  <meta name="description" content="    const r = new rive.Rive({ // src: &#34;https://cdn.rive.app/animations/vehicles.riv&#34;, // Or the path to a public Rive asset src: &#39;/public/creatives/meditating_buddha.riv&#39;, canvas: document.getElementById(&#34;canvas&#34;), autoplay: true, stateMachines: &#34;bumpy&#34;, onLoad: () = { r.resizeDrawingSurfaceToCanvas(); }, });   ">
   <meta name="author" content="Felix Brilej"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -47,7 +45,7 @@ Planned content:
         "position": 3,
         "item": {
           "@id": "https:\/\/flyck.github.io\/creatives\/creatives\/",
-          "name": "Creatives"
+          "name": "Floating symbols"
         }
     }]
 }
@@ -58,10 +56,10 @@ Planned content:
   "author": {
     "name" : "Felix Brilej"
   },
-  "headline": "Creatives",
-  "description" : "Page under constrution ⚠\nPlanned content:\n Dreamhouse Architecture Sketches Visual Animation of Symbols  ",
+  "headline": "Floating Symbols",
+  "description" : "    const r = new rive.Rive({ \/\/ src: \x22https:\/\/cdn.rive.app\/animations\/vehicles.riv\x22, \/\/ Or the path to a public Rive asset src: \x27\/public\/creatives\/meditating_buddha.riv\x27, canvas: document.getElementById(\x22canvas\x22), autoplay: true, stateMachines: \x22bumpy\x22, onLoad: () = { r.resizeDrawingSurfaceToCanvas(); }, });   ",
   "inLanguage" : "en",
-  "wordCount":  13 ,
+  "wordCount":  32 ,
   "datePublished" : "2021-05-25T00:00:00",
   "dateModified" : "2021-05-25T00:00:00",
   "image" : "https:\/\/flyck.github.io\/img\/avatar-icon.png",
@@ -80,19 +78,15 @@ Planned content:
 }
 </script>
 
-<meta property="og:title" content="Creatives" />
-<meta property="og:description" content="Page under constrution ⚠
-Planned content:
- Dreamhouse Architecture Sketches Visual Animation of Symbols  ">
+<meta property="og:title" content="Floating Symbols" />
+<meta property="og:description" content="    const r = new rive.Rive({ // src: &#34;https://cdn.rive.app/animations/vehicles.riv&#34;, // Or the path to a public Rive asset src: &#39;/public/creatives/meditating_buddha.riv&#39;, canvas: document.getElementById(&#34;canvas&#34;), autoplay: true, stateMachines: &#34;bumpy&#34;, onLoad: () = { r.resizeDrawingSurfaceToCanvas(); }, });   ">
 <meta property="og:image" content="https://flyck.github.io/img/avatar-icon.png" />
 <meta property="og:url" content="https://flyck.github.io/creatives/creatives/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Long Thoughts" />
 
-  <meta name="twitter:title" content="Creatives" />
-  <meta name="twitter:description" content="Page under constrution ⚠
-Planned content:
- Dreamhouse Architecture Sketches Visual Animation of Symbols  ">
+  <meta name="twitter:title" content="Floating Symbols" />
+  <meta name="twitter:description" content="    const r = new rive.Rive({ // src: &#34;https://cdn.rive.app/animations/vehicles.riv&#34;, // Or the path to a public Rive asset src: &#39;/public/creatives/meditating_buddha.riv&#39;, canvas: …">
   <meta name="twitter:image" content="https://flyck.github.io/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://flyck.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -150,7 +144,7 @@ Planned content:
               <a class="navlinks-parent">Creatives</a>
               <div class="navlinks-children">
                 
-                  <a href="/creatives/creatives/">Creatives</a>
+                  <a href="/creatives/creatives/">Floating Symbols</a>
                 
               </div>
             </li>
@@ -258,7 +252,7 @@ Planned content:
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="creatives-heading">
               
-                <h1>Creatives</h1>
+                <h1>Floating Symbols</h1>
               
               
                 <hr class="small">
@@ -278,12 +272,23 @@ Planned content:
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>Page under constrution ⚠</p>
-<p>Planned content:</p>
-<ul>
-<li>Dreamhouse Architecture Sketches</li>
-<li>Visual Animation of Symbols</li>
-</ul>
+        <div>
+        <script src="https://unpkg.com/@rive-app/canvas@2.1.0"></script>
+        <canvas id="canvas" width="1000" height="500"></canvas>
+        <script>
+          const r = new rive.Rive({
+            // src: "https://cdn.rive.app/animations/vehicles.riv",
+            // Or the path to a public Rive asset
+            src: '/public/creatives/meditating_buddha.riv',
+            canvas: document.getElementById("canvas"),
+            autoplay: true,
+            stateMachines: "bumpy",
+            onLoad: () => {
+              r.resizeDrawingSurfaceToCanvas();
+            },
+          });
+        </script>
+</div>
 
 
         

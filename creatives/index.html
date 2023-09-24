@@ -93,7 +93,7 @@
               <a class="navlinks-parent">Creatives</a>
               <div class="navlinks-children">
                 
-                  <a href="/creatives/creatives/">Creatives</a>
+                  <a href="/creatives/creatives/">Floating Symbols</a>
                 
               </div>
             </li>
@@ -225,7 +225,7 @@
           
             <article class="post-preview">
     <a href="https://flyck.github.io/creatives/creatives/">
-        <h2 class="post-title">Creatives</h2>
+        <h2 class="post-title">Floating Symbols</h2>
         
         
         
@@ -247,12 +247,23 @@
     </p>
     <div class="post-entry">
         
-        <p>Page under constrution ⚠</p>
-<p>Planned content:</p>
-<ul>
-<li>Dreamhouse Architecture Sketches</li>
-<li>Visual Animation of Symbols</li>
-</ul>
+        <div>
+        <script src="https://unpkg.com/@rive-app/canvas@2.1.0"></script>
+        <canvas id="canvas" width="1000" height="500"></canvas>
+        <script>
+          const r = new rive.Rive({
+            // src: "https://cdn.rive.app/animations/vehicles.riv",
+            // Or the path to a public Rive asset
+            src: '/public/creatives/meditating_buddha.riv',
+            canvas: document.getElementById("canvas"),
+            autoplay: true,
+            stateMachines: "bumpy",
+            onLoad: () => {
+              r.resizeDrawingSurfaceToCanvas();
+            },
+          });
+        </script>
+</div>
 
         
     </div>
