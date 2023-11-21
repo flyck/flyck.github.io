@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
     <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
-    <lastBuildDate>Sun, 30 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Nov 2023 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://flyck.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>life</title>
+      <link>https://flyck.github.io/tags/life/</link>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://flyck.github.io/tags/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sport</title>
+      <link>https://flyck.github.io/tags/sport/</link>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://flyck.github.io/tags/sport/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>taichi</title>
+      <link>https://flyck.github.io/tags/taichi/</link>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <guid>https://flyck.github.io/tags/taichi/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>hiking</title>
@@ -103,15 +130,6 @@
     </item>
     
     <item>
-      <title>life</title>
-      <link>https://flyck.github.io/tags/life/</link>
-      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
-      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://flyck.github.io/tags/life/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>work</title>
       <link>https://flyck.github.io/tags/work/</link>
       <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
@@ -144,15 +162,6 @@
       <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
       <author>felix.brilej@googlemail.com (Felix Brilej)</author>
       <guid>https://flyck.github.io/tags/qigong/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>taichi</title>
-      <link>https://flyck.github.io/tags/taichi/</link>
-      <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
-      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
-      <guid>https://flyck.github.io/tags/taichi/</guid>
       <description></description>
     </item>
     
