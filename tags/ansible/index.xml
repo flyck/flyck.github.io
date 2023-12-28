@@ -5,8 +5,8 @@
     <link>https://flyck.github.io/tags/ansible/</link>
     <description>Recent content in ansible on Long Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>felix.brilej@googlemail.com (Felix Brilej)</managingEditor>
-    <webMaster>felix.brilej@googlemail.com (Felix Brilej)</webMaster>
+    <managingEditor>long.thoughts.blog@googlemail.com (Felix)</managingEditor>
+    <webMaster>long.thoughts.blog@googlemail.com (Felix)</webMaster>
     <lastBuildDate>Fri, 19 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://flyck.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
@@ -16,7 +16,7 @@
       <title>Monitoring &amp; Ansible, Part I: NRPE daemon setup</title>
       <link>https://flyck.github.io/post/monitoring-setup-xinetd-nrpe-ansible/</link>
       <pubDate>Fri, 19 Jan 2018 00:00:00 +0000</pubDate>
-      <author>felix.brilej@googlemail.com (Felix Brilej)</author>
+      <author>long.thoughts.blog@googlemail.com (Felix)</author>
       <guid>https://flyck.github.io/post/monitoring-setup-xinetd-nrpe-ansible/</guid>
       <description>Monitoring servers using icinga usually requires a small setup on the monitored server. From the different choices of agents, the nrpe daemon ontop of xinetd is easy enough to set up, while it can provide any kind of information that is available on the monitored server locally. To automate this setup task and as a learning exercise I wrote up an Ansible playbook, which I describe here.
 The linux world is big, so you might come here asking: &amp;ldquo;Why the hell do you use xinetd and nrpe for monitoring?</description>
