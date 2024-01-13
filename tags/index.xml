@@ -7,10 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>long.thoughts.blog@googlemail.com (Felix)</managingEditor>
     <webMaster>long.thoughts.blog@googlemail.com (Felix)</webMaster>
-    <lastBuildDate>Tue, 21 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jan 2024 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://flyck.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>meditation</title>
+      <link>https://flyck.github.io/tags/meditation/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+      <author>long.thoughts.blog@googlemail.com (Felix)</author>
+      <guid>https://flyck.github.io/tags/meditation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>metaphor</title>
+      <link>https://flyck.github.io/tags/metaphor/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+      <author>long.thoughts.blog@googlemail.com (Felix)</author>
+      <guid>https://flyck.github.io/tags/metaphor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>movie</title>
+      <link>https://flyck.github.io/tags/movie/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+      <author>long.thoughts.blog@googlemail.com (Felix)</author>
+      <guid>https://flyck.github.io/tags/movie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spirituality</title>
+      <link>https://flyck.github.io/tags/spirituality/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+      <author>long.thoughts.blog@googlemail.com (Felix)</author>
+      <guid>https://flyck.github.io/tags/spirituality/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>life</title>
@@ -90,15 +126,6 @@
       <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
       <guid>https://flyck.github.io/tags/media/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>spirituality</title>
-      <link>https://flyck.github.io/tags/spirituality/</link>
-      <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
-      <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/tags/spirituality/</guid>
       <description></description>
     </item>
     
@@ -252,15 +279,6 @@
       <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
       <guid>https://flyck.github.io/tags/thoughts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>meditation</title>
-      <link>https://flyck.github.io/tags/meditation/</link>
-      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
-      <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/tags/meditation/</guid>
       <description></description>
     </item>
     
