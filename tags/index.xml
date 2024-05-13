@@ -7,10 +7,64 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>long.thoughts.blog@googlemail.com (Felix)</managingEditor>
     <webMaster>long.thoughts.blog@googlemail.com (Felix)</webMaster>
-    <lastBuildDate>Sat, 13 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 May 2024 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://flyck.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>compassion</title>
+      <link>https://flyck.github.io/tags/compassion/</link>
+      <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
+      <author>long.thoughts.blog@googlemail.com (Felix)</author>
+      <guid>https://flyck.github.io/tags/compassion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>https://flyck.github.io/tags/life/</link>
+      <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
+      <author>long.thoughts.blog@googlemail.com (Felix)</author>
+      <guid>https://flyck.github.io/tags/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>metaphor</title>
+      <link>https://flyck.github.io/tags/metaphor/</link>
+      <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
+      <author>long.thoughts.blog@googlemail.com (Felix)</author>
+      <guid>https://flyck.github.io/tags/metaphor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>philosophy</title>
+      <link>https://flyck.github.io/tags/philosophy/</link>
+      <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
+      <author>long.thoughts.blog@googlemail.com (Felix)</author>
+      <guid>https://flyck.github.io/tags/philosophy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>society</title>
+      <link>https://flyck.github.io/tags/society/</link>
+      <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
+      <author>long.thoughts.blog@googlemail.com (Felix)</author>
+      <guid>https://flyck.github.io/tags/society/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thoughts</title>
+      <link>https://flyck.github.io/tags/thoughts/</link>
+      <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
+      <author>long.thoughts.blog@googlemail.com (Felix)</author>
+      <guid>https://flyck.github.io/tags/thoughts/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>death</title>
@@ -31,29 +85,11 @@
     </item>
     
     <item>
-      <title>metaphor</title>
-      <link>https://flyck.github.io/tags/metaphor/</link>
-      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
-      <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/tags/metaphor/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>movie</title>
       <link>https://flyck.github.io/tags/movie/</link>
       <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
       <guid>https://flyck.github.io/tags/movie/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>life</title>
-      <link>https://flyck.github.io/tags/life/</link>
-      <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
-      <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/tags/life/</guid>
       <description></description>
     </item>
     
@@ -238,15 +274,6 @@
     </item>
     
     <item>
-      <title>philosophy</title>
-      <link>https://flyck.github.io/tags/philosophy/</link>
-      <pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate>
-      <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/tags/philosophy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>career</title>
       <link>https://flyck.github.io/tags/career/</link>
       <pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate>
@@ -256,29 +283,11 @@
     </item>
     
     <item>
-      <title>society</title>
-      <link>https://flyck.github.io/tags/society/</link>
-      <pubDate>Wed, 05 May 2021 00:00:00 +0000</pubDate>
-      <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/tags/society/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>science</title>
       <link>https://flyck.github.io/tags/science/</link>
       <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
       <guid>https://flyck.github.io/tags/science/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>thoughts</title>
-      <link>https://flyck.github.io/tags/thoughts/</link>
-      <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
-      <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/tags/thoughts/</guid>
       <description></description>
     </item>
     

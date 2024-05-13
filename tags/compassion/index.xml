@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>thoughts on Long Thoughts</title>
-    <link>https://flyck.github.io/tags/thoughts/</link>
-    <description>Recent content in thoughts on Long Thoughts</description>
+    <title>compassion on Long Thoughts</title>
+    <link>https://flyck.github.io/tags/compassion/</link>
+    <description>Recent content in compassion on Long Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>long.thoughts.blog@googlemail.com (Felix)</managingEditor>
     <webMaster>long.thoughts.blog@googlemail.com (Felix)</webMaster>
     <lastBuildDate>Mon, 13 May 2024 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://flyck.github.io/tags/thoughts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://flyck.github.io/tags/compassion/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,17 +19,6 @@
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
       <guid>https://flyck.github.io/post/game_of_games/</guid>
       <description>&lt;p&gt;Living in a complex world, everyday we&amp;rsquo;re moving from friend groups, to work, to chores, to dreams, to drama. Each and every area of life has such depths, that it seems like a world in itself. What can be gained by looked at it through the metaphor of the game of games?&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Our thoughts are not free</title>
-      <link>https://flyck.github.io/post/our_thoughts_are_not_free/</link>
-      <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
-      <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/our_thoughts_are_not_free/</guid>
-      <description>&lt;p&gt;Opposite to the traditional German folk song &amp;ldquo;Die Gedanken sind frei&amp;rdquo; (All thoughts are free)
-I claim otherwise. I will explain this in strictly logical terms, giving examples and
-scientific evidence, while the insight itself only came after long meditation.&lt;/p&gt;</description>
     </item>
     
   </channel>
