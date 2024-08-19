@@ -73,12 +73,17 @@
   </url>
   
   <url>
+    <loc>https://flyck.github.io/archive/</loc>
+    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://flyck.github.io/tags/sport/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://flyck.github.io/post/tai_chi_reflections/</loc>
+    <loc>https://flyck.github.io/archive/tai_chi_reflections/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
   </url>
   
@@ -98,7 +103,7 @@
   </url>
   
   <url>
-    <loc>https://flyck.github.io/post/hiking_harz_impressions/</loc>
+    <loc>https://flyck.github.io/archive/hiking_harz_impressions/</loc>
     <lastmod>2023-07-30T00:00:00+00:00</lastmod>
   </url>
   
@@ -113,7 +118,7 @@
   </url>
   
   <url>
-    <loc>https://flyck.github.io/post/nodeconf_eu_2022/</loc>
+    <loc>https://flyck.github.io/archive/nodeconf_eu_2022/</loc>
     <lastmod>2022-10-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -245,16 +250,6 @@
   <url>
     <loc>https://flyck.github.io/post/top_5_interview_questions/</loc>
     <lastmod>2021-07-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/creatives/</loc>
-    <lastmod>2021-05-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://flyck.github.io/creatives/floating-symbols/</loc>
-    <lastmod>2021-05-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>

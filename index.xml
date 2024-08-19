@@ -32,28 +32,28 @@
     
     <item>
       <title>Tai Chi &amp; Me after 4 Years</title>
-      <link>https://flyck.github.io/post/tai_chi_reflections/</link>
+      <link>https://flyck.github.io/archive/tai_chi_reflections/</link>
       <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/tai_chi_reflections/</guid>
+      <guid>https://flyck.github.io/archive/tai_chi_reflections/</guid>
       <description>&lt;p&gt;Early 2019 I joined a local Tai Chi school in Hamburg. After 4 years of weekly practice in an unusual sport, the time has come for a pivot. The time has come for reflections.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Impressions from Hiking in Harz</title>
-      <link>https://flyck.github.io/post/hiking_harz_impressions/</link>
+      <link>https://flyck.github.io/archive/hiking_harz_impressions/</link>
       <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/hiking_harz_impressions/</guid>
+      <guid>https://flyck.github.io/archive/hiking_harz_impressions/</guid>
       <description>&lt;p&gt;I decided to take one week off to go hiking while also working on personal projects. Explore with me how this turned out in the great area of Harz!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>NodeConf EU 2022</title>
-      <link>https://flyck.github.io/post/nodeconf_eu_2022/</link>
+      <link>https://flyck.github.io/archive/nodeconf_eu_2022/</link>
       <pubDate>Sun, 09 Oct 2022 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/nodeconf_eu_2022/</guid>
+      <guid>https://flyck.github.io/archive/nodeconf_eu_2022/</guid>
       <description>&lt;p&gt;Visiting was a blast. Notes, links and impressions from this years NodeConf EU.&lt;/p&gt;</description>
     </item>
     
@@ -155,15 +155,6 @@ useful things can we draw from considering death?&lt;/p&gt;</description>
       <guid>https://flyck.github.io/post/top_5_interview_questions/</guid>
       <description>&lt;p&gt;For the past couple months I went on a lengthy job hunt. Let me share with you the top questions I received during that time.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;</description>
-    </item>
-    
-    <item>
-      <title>Floating Symbols</title>
-      <link>https://flyck.github.io/creatives/floating-symbols/</link>
-      <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
-      <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/creatives/floating-symbols/</guid>
-      <description>const r = new rive.Rive({ // src: &#34;https://cdn.rive.app/animations/vehicles.riv&#34;, // Or the path to a public Rive asset src: &#39;https://www.long-thoughts.com/creatives/meditating_buddha.riv&#39;, // src: &#39;/creatives/meditating_buddha.riv&#39;, canvas: document.getElementById(&#34;canvas&#34;), autoplay: true, stateMachines: &#34;All Together&#34;, onLoad: () = { r.resizeDrawingSurfaceToCanvas(); }, });   Animated Artwork collection: &amp;ldquo;Symbols&amp;rdquo;</description>
     </item>
     
     <item>
