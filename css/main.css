@@ -390,6 +390,18 @@ footer .theme-by {
   color: #404040;
   text-decoration: none;
 }
+.recently-updated {
+  cursor: pointer;
+}
+.recently-updated .recently-updated-date {
+  display: none;
+}
+.recently-updated:hover .recently-updated-text {
+  display: none;
+}
+.recently-updated:hover .recently-updated-date {
+  display: inline;
+}
 .post-preview .post-entry {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }

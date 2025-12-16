@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>science on Long Thoughts</title>
-    <link>https://flyck.github.io/tags/science/</link>
+    <link>https://www.long-thoughts.com/tags/science/</link>
     <description>Recent content in science on Long Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>long.thoughts.blog@googlemail.com (Felix)</managingEditor>
     <webMaster>long.thoughts.blog@googlemail.com (Felix)</webMaster>
     <lastBuildDate>Wed, 31 Mar 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://flyck.github.io/tags/science/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.long-thoughts.com/tags/science/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Our thoughts are not free</title>
-      <link>https://flyck.github.io/post/our_thoughts_are_not_free/</link>
+      <link>https://www.long-thoughts.com/post/our_thoughts_are_not_free/</link>
       <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/our_thoughts_are_not_free/</guid>
+      <guid>https://www.long-thoughts.com/post/our_thoughts_are_not_free/</guid>
       <description>&lt;p&gt;Opposite to the traditional German folk song &amp;ldquo;Die Gedanken sind frei&amp;rdquo; (All thoughts are free)
 I claim otherwise. I will explain this in strictly logical terms, giving examples and
 scientific evidence, while the insight itself only came after long meditation.&lt;/p&gt;</description>

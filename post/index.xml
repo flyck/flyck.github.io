@@ -2,85 +2,85 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Long Thoughts</title>
-    <link>https://flyck.github.io/post/</link>
+    <link>https://www.long-thoughts.com/post/</link>
     <description>Recent content in Posts on Long Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>long.thoughts.blog@googlemail.com (Felix)</managingEditor>
     <webMaster>long.thoughts.blog@googlemail.com (Felix)</webMaster>
     <lastBuildDate>Mon, 13 May 2024 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://flyck.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.long-thoughts.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Life: A Game of Games</title>
-      <link>https://flyck.github.io/post/game_of_games/</link>
+      <link>https://www.long-thoughts.com/post/game_of_games/</link>
       <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/game_of_games/</guid>
+      <guid>https://www.long-thoughts.com/post/game_of_games/</guid>
       <description>&lt;p&gt;Living in a complex world, everyday we&amp;rsquo;re moving between friend groups, work, chores, dreams and drama. Each and every area of life has such depths, that it seems like a world in of itself. A game of games, which follows certain rules.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Movie Analysis: The Boy and the Heron</title>
-      <link>https://flyck.github.io/post/movie_analysis_the_boy_and_the_heron/</link>
+      <link>https://www.long-thoughts.com/post/movie_analysis_the_boy_and_the_heron/</link>
       <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/movie_analysis_the_boy_and_the_heron/</guid>
+      <guid>https://www.long-thoughts.com/post/movie_analysis_the_boy_and_the_heron/</guid>
       <description>&lt;p&gt;Yesterday I&amp;rsquo;ve seen &amp;ldquo;The Boy and the Heron&amp;rdquo;, or with its original japanese title &amp;ldquo;How Do You Live?&amp;rdquo; (君たちはどう生きるか). A grandious movie full of symbols, with much room for interpretation.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Media Coverage of a Mystic in 2022</title>
-      <link>https://flyck.github.io/post/osho_in_2022/</link>
+      <link>https://www.long-thoughts.com/post/osho_in_2022/</link>
       <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/osho_in_2022/</guid>
+      <guid>https://www.long-thoughts.com/post/osho_in_2022/</guid>
       <description>&lt;p&gt;The Indian guru Bhagwan - also later known as Osho - has been one of the most widely known mystics of our time. After his death in January 1990, suddenly his media coverage seems to rise again. An investigation in numbers…&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Decency in Tech</title>
-      <link>https://flyck.github.io/post/decency_in_tech/</link>
+      <link>https://www.long-thoughts.com/post/decency_in_tech/</link>
       <pubDate>Sun, 05 Jun 2022 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/decency_in_tech/</guid>
+      <guid>https://www.long-thoughts.com/post/decency_in_tech/</guid>
       <description>&lt;p&gt;Pull Requests kicked around and asked apart, questions flinged at a presenter after the &amp;ldquo;thank you&amp;rdquo; slide, that judgmental moment of silence after an ill-placed question. Does decency have a place in tech? A question I asked myself 3 years ago, and finally some answers.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>The Art of Approach</title>
-      <link>https://flyck.github.io/post/approach_theory/</link>
+      <link>https://www.long-thoughts.com/post/approach_theory/</link>
       <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/approach_theory/</guid>
+      <guid>https://www.long-thoughts.com/post/approach_theory/</guid>
       <description>&lt;p&gt;A post hyperfocussing only on the element of approach, it&amp;rsquo;s impact and implications. Which role does approach play in day-to-day lifes? What significance does it have, and what difference does it make?&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Emacs Config Updates</title>
-      <link>https://flyck.github.io/post/emacs_you_are_my_commander/</link>
+      <link>https://www.long-thoughts.com/post/emacs_you_are_my_commander/</link>
       <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/emacs_you_are_my_commander/</guid>
+      <guid>https://www.long-thoughts.com/post/emacs_you_are_my_commander/</guid>
       <description>&lt;p&gt;Highlights of recent config changes to my code editor, my text vehicle, my passion project: emacs.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Martial Art Knowledge: Tai Chi</title>
-      <link>https://flyck.github.io/post/taichi_learning_resources/</link>
+      <link>https://www.long-thoughts.com/post/taichi_learning_resources/</link>
       <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/taichi_learning_resources/</guid>
+      <guid>https://www.long-thoughts.com/post/taichi_learning_resources/</guid>
       <description>&lt;p&gt;Getting by Tai Chi knowledge is not so easy. Most teachers (of the far east) are stingy with their knowledge. But it is a dying martial art, so the knowledge is slowly forgotten. And not everybody has such amount of time to learn. So let me share the best learning resources I know.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Love &amp; Romance</title>
-      <link>https://flyck.github.io/post/love_and_romance/</link>
+      <link>https://www.long-thoughts.com/post/love_and_romance/</link>
       <pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/love_and_romance/</guid>
+      <guid>https://www.long-thoughts.com/post/love_and_romance/</guid>
       <description>&lt;p&gt;Slowly slipping into my thirties I&amp;rsquo;m talking more to people about marriage and dating. What
 is there to say about the underlying issue of love and romance, when time runs out and it&amp;rsquo;s
 time to mingle?&lt;/p&gt;</description>
@@ -88,19 +88,19 @@ time to mingle?&lt;/p&gt;</description>
     
     <item>
       <title>Getting stuff done is not about getting stuff done</title>
-      <link>https://flyck.github.io/post/getting_stuff_done_falacy/</link>
+      <link>https://www.long-thoughts.com/post/getting_stuff_done_falacy/</link>
       <pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/getting_stuff_done_falacy/</guid>
+      <guid>https://www.long-thoughts.com/post/getting_stuff_done_falacy/</guid>
       <description>&lt;p&gt;About the question whether doing a task is only about getting it done, and why there is no such thing as no progress.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Considerations about Death</title>
-      <link>https://flyck.github.io/post/considerations_about_death/</link>
+      <link>https://www.long-thoughts.com/post/considerations_about_death/</link>
       <pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/considerations_about_death/</guid>
+      <guid>https://www.long-thoughts.com/post/considerations_about_death/</guid>
       <description>&lt;p&gt;Generally the topic of death is largely invisible in our society. Dead people are transported
 off of hospitals only during the night, millions are spend on artificial teeth every year and
 old people take medication during family gatherings to temporarily overshadow the effect of
@@ -111,20 +111,20 @@ useful things can we draw from considering death?&lt;/p&gt;</description>
     
     <item>
       <title>Top 5 Interview Questions</title>
-      <link>https://flyck.github.io/post/top_5_interview_questions/</link>
+      <link>https://www.long-thoughts.com/post/top_5_interview_questions/</link>
       <pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/top_5_interview_questions/</guid>
+      <guid>https://www.long-thoughts.com/post/top_5_interview_questions/</guid>
       <description>&lt;p&gt;For the past couple months I went on a lengthy job hunt. Let me share with you the top questions I received during that time.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;</description>
     </item>
     
     <item>
       <title>Contributing to Society, Part 1: Money</title>
-      <link>https://flyck.github.io/post/contribution_society/</link>
+      <link>https://www.long-thoughts.com/post/contribution_society/</link>
       <pubDate>Wed, 05 May 2021 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/contribution_society/</guid>
+      <guid>https://www.long-thoughts.com/post/contribution_society/</guid>
       <description>&lt;p&gt;It has been troubling me what constitutes making a contribution to society. Is it going to
 work? Is it making art? Is it being a helpful neighbor? Since I&amp;rsquo;m benefiting from a working
 society, I sure would want to secure that it keeps thriving, possibly even help elevating it
@@ -133,20 +133,20 @@ to the next level.&lt;/p&gt;</description>
     
     <item>
       <title>Motivational Tides</title>
-      <link>https://flyck.github.io/post/motivational_tides/</link>
+      <link>https://www.long-thoughts.com/post/motivational_tides/</link>
       <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/motivational_tides/</guid>
+      <guid>https://www.long-thoughts.com/post/motivational_tides/</guid>
       <description>&lt;p&gt;I find motivation at work to adhere to certain laws. How can motivation be fostered and how
 is it drowned? A quick read on the aspect of variance and choice.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Our thoughts are not free</title>
-      <link>https://flyck.github.io/post/our_thoughts_are_not_free/</link>
+      <link>https://www.long-thoughts.com/post/our_thoughts_are_not_free/</link>
       <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/our_thoughts_are_not_free/</guid>
+      <guid>https://www.long-thoughts.com/post/our_thoughts_are_not_free/</guid>
       <description>&lt;p&gt;Opposite to the traditional German folk song &amp;ldquo;Die Gedanken sind frei&amp;rdquo; (All thoughts are free)
 I claim otherwise. I will explain this in strictly logical terms, giving examples and
 scientific evidence, while the insight itself only came after long meditation.&lt;/p&gt;</description>
@@ -154,19 +154,19 @@ scientific evidence, while the insight itself only came after long meditation.&l
     
     <item>
       <title>Your body as a kingdom</title>
-      <link>https://flyck.github.io/post/your_body_as_a_body_kingdom/</link>
+      <link>https://www.long-thoughts.com/post/your_body_as_a_body_kingdom/</link>
       <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/your_body_as_a_body_kingdom/</guid>
+      <guid>https://www.long-thoughts.com/post/your_body_as_a_body_kingdom/</guid>
       <description>&lt;p&gt;A blog post based on a shower thought.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Inspiring Figures</title>
-      <link>https://flyck.github.io/post/inspiring_figures/</link>
+      <link>https://www.long-thoughts.com/post/inspiring_figures/</link>
       <pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/inspiring_figures/</guid>
+      <guid>https://www.long-thoughts.com/post/inspiring_figures/</guid>
       <description>&lt;p&gt;For many years now I really enjoy following inspirational figures of our time. In this post
 I&amp;rsquo;d like take the time to highlight my personal favorites and show how they relate to each
 other.&lt;/p&gt;</description>
@@ -174,57 +174,57 @@ other.&lt;/p&gt;</description>
     
     <item>
       <title>Notes of a Meditator, Part I</title>
-      <link>https://flyck.github.io/post/notes_of_a_meditator_one/</link>
+      <link>https://www.long-thoughts.com/post/notes_of_a_meditator_one/</link>
       <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/notes_of_a_meditator_one/</guid>
+      <guid>https://www.long-thoughts.com/post/notes_of_a_meditator_one/</guid>
       <description>&lt;p&gt;Meditation is a pretty cool hobby, which oftentimes happens alone. In this post I&amp;rsquo;d like to
 share how I go about my daily practices as a meditator.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>On Growing in a Company</title>
-      <link>https://flyck.github.io/post/growing_in_a_company/</link>
+      <link>https://www.long-thoughts.com/post/growing_in_a_company/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/growing_in_a_company/</guid>
+      <guid>https://www.long-thoughts.com/post/growing_in_a_company/</guid>
       <description>&lt;p&gt;A quick read on the impact of company style on personal growth.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>School and Agile</title>
-      <link>https://flyck.github.io/post/school_and_agile/</link>
+      <link>https://www.long-thoughts.com/post/school_and_agile/</link>
       <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/school_and_agile/</guid>
+      <guid>https://www.long-thoughts.com/post/school_and_agile/</guid>
       <description>&lt;p&gt;A quick read on 3 major differences I found between work in school and work in adult life,
 specifically in my context of working agile.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Becoming Greener, Episode I</title>
-      <link>https://flyck.github.io/post/getting_greener_one/</link>
+      <link>https://www.long-thoughts.com/post/getting_greener_one/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/getting_greener_one/</guid>
+      <guid>https://www.long-thoughts.com/post/getting_greener_one/</guid>
       <description>&lt;p&gt;Some notes on recent steps I&amp;rsquo;ve taken to become less eco-damaging.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Sinn</title>
-      <link>https://flyck.github.io/post/sinn/</link>
+      <link>https://www.long-thoughts.com/post/sinn/</link>
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/sinn/</guid>
+      <guid>https://www.long-thoughts.com/post/sinn/</guid>
       <description>&lt;p&gt;Der Sinn des Lebens. Schlaflose Nächte und eine neue Idee.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Nouns and Verbs</title>
-      <link>https://flyck.github.io/post/nouns_and_verbs/</link>
+      <link>https://www.long-thoughts.com/post/nouns_and_verbs/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/nouns_and_verbs/</guid>
+      <guid>https://www.long-thoughts.com/post/nouns_and_verbs/</guid>
       <description>&lt;p&gt;In our beloved western societies we are very much &lt;span class=&#34;underline&#34;&gt;goal oriented&lt;/span&gt;. Things are achieved
 mostly by communicating goals and commandments, together with a demand of fulfillment.&lt;/p&gt;
 &lt;p&gt;Since goal-orientation is everywhere it can be a challenge to even notice that it is
@@ -233,10 +233,10 @@ constantly going on, and differentiate &amp;ldquo;normal&amp;rdquo; advice with 
     
     <item>
       <title>Germany&#39;s Nuclear Peace Plan</title>
-      <link>https://flyck.github.io/post/germany_spends_billions_f18f/</link>
+      <link>https://www.long-thoughts.com/post/germany_spends_billions_f18f/</link>
       <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/germany_spends_billions_f18f/</guid>
+      <guid>https://www.long-thoughts.com/post/germany_spends_billions_f18f/</guid>
       <description>&lt;p&gt;In a time when the whole world is under economic pressure due to COVID-19, the German
 government discusses spending billions on purchasing and maintaining 30 new nuclear flight
 jets (F18F).&lt;/p&gt;</description>
@@ -244,10 +244,10 @@ jets (F18F).&lt;/p&gt;</description>
     
     <item>
       <title>Identity and Attention</title>
-      <link>https://flyck.github.io/post/attention_identity/</link>
+      <link>https://www.long-thoughts.com/post/attention_identity/</link>
       <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/attention_identity/</guid>
+      <guid>https://www.long-thoughts.com/post/attention_identity/</guid>
       <description>&lt;p&gt;Identity can be a small thing. I could identify with my home country, my line of work, my
 monthly salary or my family name. It could be my hometown, the brand of clothes I wear or a
 degree I achieved. Actually, identity &lt;em&gt;can&lt;/em&gt; be a big thing. If that is so, how can the
@@ -256,10 +256,10 @@ identity be picked intelligently and how can that choice be undermined by mere a
     
     <item>
       <title>Survival and Living</title>
-      <link>https://flyck.github.io/post/survival_living/</link>
+      <link>https://www.long-thoughts.com/post/survival_living/</link>
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/survival_living/</guid>
+      <guid>https://www.long-thoughts.com/post/survival_living/</guid>
       <description>&lt;p&gt;Which differences can we find between survival and living in today&amp;rsquo;s world? Which of the two
 holds that sweet sweet satisfaction we&amp;rsquo;re longing for? The meaning we attach to &amp;ldquo;survival&amp;rdquo;
 needs to be refreshed, as in today&amp;rsquo;s world we have everything we need, while life can seem
@@ -268,19 +268,19 @@ dull and repetitive at times.&lt;/p&gt;</description>
     
     <item>
       <title>Windows 10 vs Ubuntu 18</title>
-      <link>https://flyck.github.io/post/windows10_vs_ubuntu/</link>
+      <link>https://www.long-thoughts.com/post/windows10_vs_ubuntu/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/windows10_vs_ubuntu/</guid>
+      <guid>https://www.long-thoughts.com/post/windows10_vs_ubuntu/</guid>
       <description>&lt;p&gt;As of this month, Windows is still &lt;a href=&#34;https://netmarketshare.com/operating-system-market-share.aspx?options=%7B%22filter%22%3A%7B%22%24and%22%3A%5B%7B%22deviceType%22%3A%7B%22%24in%22%3A%5B%22Desktop%2Flaptop%22%5D%7D%7D%5D%7D%2C%22dateLabel%22%3A%22Trend%22%2C%22attributes%22%3A%22share%22%2C%22group%22%3A%22platform%22%2C%22sort%22%3A%7B%22share%22%3A-1%7D%2C%22id%22%3A%22platformsDesktop%22%2C%22dateInterval%22%3A%22Monthly%22%2C%22dateStart%22%3A%222019-02%22%2C%22dateEnd%22%3A%222020-01%22%2C%22segments%22%3A%22-1000%22%7D&#34;&gt;the dominating desktop / laptop OS globally&lt;/a&gt; with 88% market share. Windows for me - and for most users, has always been the default. However, coming back from a Linux environment I realized this: Windows is not that great of an OS.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Adults through childrens eyes</title>
-      <link>https://flyck.github.io/post/adults_childs_eyes/</link>
+      <link>https://www.long-thoughts.com/post/adults_childs_eyes/</link>
       <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/adults_childs_eyes/</guid>
+      <guid>https://www.long-thoughts.com/post/adults_childs_eyes/</guid>
       <description>&lt;p&gt;Adults in many ways do have &lt;strong&gt;superpowers&lt;/strong&gt; in the eyes of a child. They have authority. They are
 allowed to do many of the things a child cannot do: eat candy whenever they want, stay up
 late, drive cars, and schedule their days at their own leisure. Despite these superpowers,
@@ -290,66 +290,66 @@ recalling in this blogpost.&lt;/p&gt;</description>
     
     <item>
       <title>Making Emacs recognize its physical location</title>
-      <link>https://flyck.github.io/post/emacs_appartment_recognition/</link>
+      <link>https://www.long-thoughts.com/post/emacs_appartment_recognition/</link>
       <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/emacs_appartment_recognition/</guid>
+      <guid>https://www.long-thoughts.com/post/emacs_appartment_recognition/</guid>
       <description>&lt;p&gt;My emacs now behaves differently when I&amp;rsquo;m at home! This enables me to have my private configuration loaded automatically when needed, while I have all my work-settings enabled otherwise.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>The Process of Self-Revelation</title>
-      <link>https://flyck.github.io/post/self_revelation/</link>
+      <link>https://www.long-thoughts.com/post/self_revelation/</link>
       <pubDate>Tue, 22 Oct 2019 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/self_revelation/</guid>
+      <guid>https://www.long-thoughts.com/post/self_revelation/</guid>
       <description>&lt;p&gt;Today, I gobbled down two chicken-halves and some mashed potatoes. That was a lot. The other time I was still hungry after a single half, and this time around I was stressing out over barely finishing the meal. I needed to sit down for a bit. I picked a sunny spot. Me being me I took some time to meditate and suddenly I had an epiphany: &amp;ldquo;We are afraid of ourselves, and that is what life is.&amp;quot;. Believe me, this was not the chicken talk, but I had finally figured something out. Let me elaborate…&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Organizing Music</title>
-      <link>https://flyck.github.io/post/organizing_music/</link>
+      <link>https://www.long-thoughts.com/post/organizing_music/</link>
       <pubDate>Sun, 29 Sep 2019 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/organizing_music/</guid>
+      <guid>https://www.long-thoughts.com/post/organizing_music/</guid>
       <description>&lt;p&gt;I finally found a half-way decent, quick and simple system to organize my music.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Religion: Problems and Strenghts</title>
-      <link>https://flyck.github.io/post/pros_cons_of_religion/</link>
+      <link>https://www.long-thoughts.com/post/pros_cons_of_religion/</link>
       <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/pros_cons_of_religion/</guid>
+      <guid>https://www.long-thoughts.com/post/pros_cons_of_religion/</guid>
       <description>&lt;p&gt;Yesterday, a couple cute Mormon missionaries came over to me and chatted me up. I estimated the three of them to be roughly my age, probably a couple years younger, around 22 to 23. It was a beautiful, sunny Saturday and I incidentally was sitting on a bench near a church. Later they told me they are specifically roaming these areas to do their work. They started out the conversation talking about their strong belief in god, how they talk to him, and how he would answer them their questions. They proceeded asking me what questions I had for god. I didn&amp;rsquo;t have one and couldn&amp;rsquo;t even come up with one, but I was interested in chatting with them, so I invited them to sit down with me.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Tinder Manifesto</title>
-      <link>https://flyck.github.io/post/tinder_manifesto/</link>
+      <link>https://www.long-thoughts.com/post/tinder_manifesto/</link>
       <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/tinder_manifesto/</guid>
+      <guid>https://www.long-thoughts.com/post/tinder_manifesto/</guid>
       <description>&lt;p&gt;Manifesto: noun. A public declaration of policy and aims, especially one issued before an election by a political party or candidate.&lt;/p&gt;
 &lt;p&gt;Tinder could get dirty. Tinder could get tedious. I wrote down my original aims when I started using tinder here, before everything falls into chaos later. Much like with other manifestos ;)&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>What do we know about who we want to be?</title>
-      <link>https://flyck.github.io/post/what_do_we_know_about_who_we_want_to_be/</link>
+      <link>https://www.long-thoughts.com/post/what_do_we_know_about_who_we_want_to_be/</link>
       <pubDate>Tue, 30 Jul 2019 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/what_do_we_know_about_who_we_want_to_be/</guid>
+      <guid>https://www.long-thoughts.com/post/what_do_we_know_about_who_we_want_to_be/</guid>
       <description>&lt;p&gt;It is pretty important for each of us to be the person we want to be. &lt;em&gt;For survival, for&lt;/em&gt;
 &lt;em&gt;society, for integrity. But what do we know then about who we want to be?&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>The three most important skills to have as a young adult</title>
-      <link>https://flyck.github.io/post/young_adult_top_skills/</link>
+      <link>https://www.long-thoughts.com/post/young_adult_top_skills/</link>
       <pubDate>Sun, 28 Jul 2019 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/young_adult_top_skills/</guid>
+      <guid>https://www.long-thoughts.com/post/young_adult_top_skills/</guid>
       <description>&lt;p&gt;TL;DR:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;The skill to change your habits&lt;/strong&gt;, so you could start trying new ones (better or worse than your current ones) to begin with.&lt;/li&gt;
@@ -360,58 +360,58 @@ recalling in this blogpost.&lt;/p&gt;</description>
     
     <item>
       <title>Monitoring &amp; Ansible, Part I: NRPE daemon setup</title>
-      <link>https://flyck.github.io/post/monitoring-setup-xinetd-nrpe-ansible/</link>
+      <link>https://www.long-thoughts.com/post/monitoring-setup-xinetd-nrpe-ansible/</link>
       <pubDate>Fri, 19 Jan 2018 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/monitoring-setup-xinetd-nrpe-ansible/</guid>
+      <guid>https://www.long-thoughts.com/post/monitoring-setup-xinetd-nrpe-ansible/</guid>
       <description>Monitoring servers using icinga usually requires a small setup on the monitored server. From the different choices of agents, the nrpe daemon ontop of xinetd is easy enough to set up, while it can provide any kind of information that is available on the monitored server locally. To automate this setup task and as a learning exercise I wrote up an Ansible playbook, which I describe here.
 The linux world is big, so you might come here asking: &amp;ldquo;Why the hell do you use xinetd and nrpe for monitoring?</description>
     </item>
     
     <item>
       <title>Wie stehst Du im Leben?</title>
-      <link>https://flyck.github.io/post/wie_stehst_du_im_leben/</link>
+      <link>https://www.long-thoughts.com/post/wie_stehst_du_im_leben/</link>
       <pubDate>Sun, 05 Nov 2017 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/wie_stehst_du_im_leben/</guid>
+      <guid>https://www.long-thoughts.com/post/wie_stehst_du_im_leben/</guid>
       <description>&lt;p&gt;Wie stehst du im Leben? Ein einfaches Beobachten der Körperhaltung kann einem schon buchstäblich zeigen wie man im Leben steht. Es ist eine Art Haltungs-Check. Jeder liest Körperhaltung - zumindest unbewusst, meine Beobachtung dazu teile ich hier.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Icinga2 Cluster Checks</title>
-      <link>https://flyck.github.io/post/cluster_checks/</link>
+      <link>https://www.long-thoughts.com/post/cluster_checks/</link>
       <pubDate>Wed, 25 Oct 2017 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/cluster_checks/</guid>
+      <guid>https://www.long-thoughts.com/post/cluster_checks/</guid>
       <description>&lt;p&gt;Recently I wrote an icinga cluster check which can currently check whether a service runs on atleast on one of two servers.&lt;/p&gt;
 &lt;p&gt;A teaser of the results:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://flyck.github.io/img/cluster_check_1.png&#34; alt=&#34;cluster1&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://www.long-thoughts.com/img/cluster_check_1.png&#34; alt=&#34;cluster1&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Procmail learns html</title>
-      <link>https://flyck.github.io/post/procmail_setup/</link>
+      <link>https://www.long-thoughts.com/post/procmail_setup/</link>
       <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/procmail_setup/</guid>
+      <guid>https://www.long-thoughts.com/post/procmail_setup/</guid>
       <description>&lt;p&gt;Recently I wrote a procmail filter which filters mail for a ticketing system (request-tracker). It filters mails which addresses the ticketing system in Cc as well as mails with attachments bigger than 10 MB. I went through quite a learning curve while writing this filter so I&amp;rsquo;d like to share it here.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Blogging Setup: Workflow for writing a new blogpost</title>
-      <link>https://flyck.github.io/post/workflow_for_new_blogpost/</link>
+      <link>https://www.long-thoughts.com/post/workflow_for_new_blogpost/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/workflow_for_new_blogpost/</guid>
+      <guid>https://www.long-thoughts.com/post/workflow_for_new_blogpost/</guid>
       <description>&lt;p&gt;Creating a new blog post using the previously describe setup should be easy and comfortable. These are the generic steps for adding a blog-post.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Setting up the blog</title>
-      <link>https://flyck.github.io/post/setting_up_the_blog/</link>
+      <link>https://www.long-thoughts.com/post/setting_up_the_blog/</link>
       <pubDate>Tue, 15 Aug 2017 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/post/setting_up_the_blog/</guid>
+      <guid>https://www.long-thoughts.com/post/setting_up_the_blog/</guid>
       <description>&lt;p&gt;A quick howto on how I used Hugo to setup this blog.&lt;/p&gt;</description>
     </item>
     

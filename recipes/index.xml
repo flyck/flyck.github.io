@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recipes on Long Thoughts</title>
-    <link>https://flyck.github.io/recipes/</link>
+    <link>https://www.long-thoughts.com/recipes/</link>
     <description>Recent content in Recipes on Long Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>long.thoughts.blog@googlemail.com (Felix)</managingEditor>
     <webMaster>long.thoughts.blog@googlemail.com (Felix)</webMaster>
     <lastBuildDate>Tue, 28 Dec 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://flyck.github.io/recipes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.long-thoughts.com/recipes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Potatosalad with Sausage</title>
-      <link>https://flyck.github.io/recipes/kartoffelsalat_mit_wurst/</link>
+      <link>https://www.long-thoughts.com/recipes/kartoffelsalat_mit_wurst/</link>
       <pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/recipes/kartoffelsalat_mit_wurst/</guid>
+      <guid>https://www.long-thoughts.com/recipes/kartoffelsalat_mit_wurst/</guid>
       <description>Rezept von Oma:
  Fest kochende Kartoffeln, 20 minuten kochen Von Kühne Saure Gurken eingelegt kaufen, in Würfel dazuschneiden Majonese hinzufügen, 80%, kleines Glas (Netto) 2-3 Eier 6-7 Minuten kochen (dann sind sie ein bisschen härter) Eine halbe Zwiebel ganz fein schneiden / hacken und dazugeben Fleischwurst (ca. 20 zentimeter) in Würfel, für den Geschmack Salz &amp;amp; Pfeffer + Majo + Gurkenwasser zum Würzen  Dazu:
  Bockwurst von Aldi, lange Dose Senf mittelscharf  </description>
@@ -25,19 +25,19 @@
     
     <item>
       <title>Spicy Chicken Curry with Rice</title>
-      <link>https://flyck.github.io/recipes/indian_chicken/</link>
+      <link>https://www.long-thoughts.com/recipes/indian_chicken/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/recipes/indian_chicken/</guid>
+      <guid>https://www.long-thoughts.com/recipes/indian_chicken/</guid>
       <description>&lt;p&gt;Dieses Gericht hat mir beigebracht was scharfes Essen ist. Chilli-Pulver vorsichtig dosieren!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Monster Chicken Fajita Crunch Wrap</title>
-      <link>https://flyck.github.io/recipes/monster-fajita-crunch-wrap/</link>
+      <link>https://www.long-thoughts.com/recipes/monster-fajita-crunch-wrap/</link>
       <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://flyck.github.io/recipes/monster-fajita-crunch-wrap/</guid>
+      <guid>https://www.long-thoughts.com/recipes/monster-fajita-crunch-wrap/</guid>
       <description>&lt;p&gt;Quelle: &lt;a href=&#34;http://twistedfood.co.uk/monster-chicken-fajita-crunchwrap/&#34;&gt;http://twistedfood.co.uk/monster-chicken-fajita-crunchwrap/&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
