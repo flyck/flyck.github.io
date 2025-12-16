@@ -1,11 +1,43 @@
+/* --- Color Variables --- */
+
+:root {
+  --bg-primary: #FFF;
+  --bg-secondary: #333333;
+  --bg-tertiary: #f8f8f8;
+  --bg-accent: #eee;
+  --text-primary: #404040;
+  --text-secondary: #808080;
+  --text-tertiary: #999;
+  --link-color: var(--link-color);
+  --link-hover: #0085a1;
+  --border-color: #CCC;
+  --code-bg: #F5F5F5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2a2a2a;
+    --bg-tertiary: #252525;
+    --bg-accent: #333;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-tertiary: #888;
+    --link-color: #5ca7ff;
+    --link-hover: #7db9ff;
+    --border-color: #444;
+    --code-bg: #2a2a2a;
+  }
+}
+
 /* --- General --- */
 
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 18px;
-  color: #404040;
+  color: var(--text-primary);
   position: relative;
-  background: #FFF;
+  background: var(--bg-primary);
   display: flex;
   flex-flow: column;
   height: 100vh;
@@ -31,7 +63,7 @@ p + p {
 }
 p a {
   /* text-decoration: underline */
-  color: #008AFF;
+  color: var(--link-color);
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -39,14 +71,14 @@ h1,h2,h3,h4,h5,h6 {
   /* font-weight: 800; */ /* Changed font here */
 }
 a {
-  color: #008AFF;
+  color: var(--link-color);
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: var(--link-hover);
 }
 blockquote {
-  color: #808080;
+  color: var(--text-secondary);
   font-style: italic;
 }
 blockquote p:first-child {
@@ -138,8 +170,8 @@ img {
 /* --- Navbar --- */
 
 .navbar-custom {
-  background: #F5F5F5;
-  border-bottom: 1px solid #EAEAEA;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--bg-accent);
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -152,14 +184,14 @@ img {
 .navbar-custom .navbar-brand,
 .navbar-custom .nav li a {
   font-weight: 800;
-  color: #404040;
+  color: var(--text-primary);
 }
 
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus ,
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
-  color: #0085a1;
+  color: var(--link-hover);
 }
 
 .navbar-custom .navbar-brand-logo {
@@ -263,14 +295,20 @@ img {
   display: block;
   padding: 10px;
   padding-left: 30px;
-  background: #f5f5f5;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   text-decoration: none !important;
   border-width: 0 1px 1px 1px;
+  border-color: var(--bg-accent);
   font-weight: normal;
+}
+.navbar-custom .nav .navlinks-container .navlinks-children a:hover {
+  background: var(--bg-accent);
+  color: var(--link-hover);
 }
 @media only screen and (max-width: 767px) {
   .navbar-custom .nav .navlinks-container.show-children {
-    background: #eee;
+    background: var(--bg-accent);
   }
   .navbar-custom .nav .navlinks-container.show-children .navlinks-children {
     display: block;
@@ -281,7 +319,7 @@ img {
     text-align: center;
   }
   .navbar-custom .nav .navlinks-container:hover {
-    background: #eee;
+    background: var(--bg-accent);
   }
   .navbar-custom .nav .navlinks-container:hover .navlinks-children {
     display: block;
@@ -291,7 +329,7 @@ img {
   }
   .navbar-custom .nav .navlinks-container .navlinks-children a {
     padding-left: 10px;
-    border: 1px solid #eaeaea;
+    border: 1px solid var(--bg-accent);
     border-width: 0 1px 1px;
   }
 }
@@ -300,14 +338,22 @@ img {
 
 footer {
   padding: 30px 0;
-  background: #F5F5F5;
+  background: var(--bg-secondary);
   border-top: 1px #EAEAEA solid;
   margin-top: auto;
   font-size: 14px;
 }
 
 footer a {
-  color: #404040;
+  color: var(--text-primary);
+}
+
+footer .fa-circle {
+  color: var(--text-primary);
+}
+
+footer .fa-inverse {
+  color: var(--bg-primary);
 }
 
 footer .list-inline {
@@ -340,7 +386,7 @@ footer .theme-by {
 
 .post-preview {
   padding: 20px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--bg-accent);
 }
 
 @media only screen and (min-width: 768px) {
@@ -355,13 +401,13 @@ footer .theme-by {
 
 .post-preview a {
   text-decoration: none;
-  color: #404040;
+  color: var(--text-primary);
 }
 
 .post-preview a:focus,
 .post-preview a:hover {
   text-decoration: none;
-  color: #0085a1;
+  color: var(--link-hover);
 }
 
 .post-preview .post-title {
@@ -376,7 +422,7 @@ footer .theme-by {
 .post-preview .post-meta,
 .post-heading .post-meta,
 .page-meta {
-  color: #808080;
+  color: var(--text-secondary);
   font-size: 17px;
   font-style: italic;
   margin: 0 0 10px;
@@ -387,7 +433,7 @@ footer .theme-by {
 .post-preview .post-meta a,
 .post-heading .post-meta a,
 .page-meta a {
-  color: #404040;
+  color: var(--text-primary);
   text-decoration: none;
 }
 .recently-updated {
@@ -443,7 +489,7 @@ footer .theme-by {
 
 .blog-tags {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #999;
+  color: var(--text-tertiary);
   font-size: 15px;
   margin-bottom: 30px;
 }
@@ -453,7 +499,7 @@ footer .theme-by {
 }
 
 .blog-tags a {
-  color: #008AFF;
+  color: var(--link-color);
   text-decoration: none;
   padding: 0px 5px;
 }
@@ -464,8 +510,8 @@ footer .theme-by {
 
 .blog-tags a:hover {
   border-radius: 2px;
-  color: #008AFF;
-  background-color: #CCC;
+  color: var(--link-color);
+  background-color: var(--border-color);
 }
 
 .post-preview .blog-tags {
@@ -654,9 +700,9 @@ footer .theme-by {
   font-weight: 800;
   letter-spacing: 1px;
   padding: 10px 5px;
-  background: #FFF;
+  background: var(--bg-primary);
   border-radius: 0;
-  color: #404040;
+  color: var(--text-primary);
 }
 @media only screen and (min-width: 768px) {
   .pager li a {
@@ -665,9 +711,9 @@ footer .theme-by {
 }
 .pager li a:hover,
 .pager li a:focus {
-  color: #FFF;
-  background: #0085a1;
-  border: 1px solid #0085a1;
+  color: var(--bg-primary);
+  background: var(--link-hover);
+  border: 1px solid var(--link-hover);
 }
 
 .pager {
@@ -695,12 +741,12 @@ table {
 }
 table tr {
   border-top: 1px solid #cccccc;
-  background-color: #ffffff;
+  background-color: var(--bg-primary);
   margin: 0;
   padding: 0;
 }
 table tr:nth-child(2n) {
-  background-color: #f8f8f8;
+  background-color: var(--bg-tertiary);
 }
 table tr th {
   font-weight: bold;
@@ -771,9 +817,9 @@ div.splitbox div.right {
   font-weight: 800;
   letter-spacing: 1px;
   padding: 10px 5px;
-  background: #FFF;
+  background: var(--bg-primary);
   border-radius: 0;
-  color: #404040;
+  color: var(--text-primary);
 }
 @media only screen and (min-width: 768px) {
   .disqus-comments button {
