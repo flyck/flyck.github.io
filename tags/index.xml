@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>long.thoughts.blog@googlemail.com (Felix)</managingEditor>
     <webMaster>long.thoughts.blog@googlemail.com (Felix)</webMaster>
-    <lastBuildDate>Fri, 09 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.long-thoughts.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>life</title>
       <link>https://www.long-thoughts.com/tags/life/</link>
-      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 27 Apr 2026 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
       <guid>https://www.long-thoughts.com/tags/life/</guid>
       <description></description>
@@ -24,9 +24,18 @@
     <item>
       <title>musings</title>
       <link>https://www.long-thoughts.com/tags/musings/</link>
-      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 27 Apr 2026 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
       <guid>https://www.long-thoughts.com/tags/musings/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vacation</title>
+      <link>https://www.long-thoughts.com/tags/vacation/</link>
+      <pubDate>Mon, 27 Apr 2026 00:00:00 +0000</pubDate>
+      <author>long.thoughts.blog@googlemail.com (Felix)</author>
+      <guid>https://www.long-thoughts.com/tags/vacation/</guid>
       <description></description>
     </item>
     
@@ -144,15 +153,6 @@
       <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
       <author>long.thoughts.blog@googlemail.com (Felix)</author>
       <guid>https://www.long-thoughts.com/tags/impressions/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vacation</title>
-      <link>https://www.long-thoughts.com/tags/vacation/</link>
-      <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
-      <author>long.thoughts.blog@googlemail.com (Felix)</author>
-      <guid>https://www.long-thoughts.com/tags/vacation/</guid>
       <description></description>
     </item>
     
